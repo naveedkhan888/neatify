@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Image Box Carousel
  */
-class Xhub_Image_Box_Carousel extends Widget_Base{
+class Xhub_Image_Box_Carousel_new extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -732,5 +732,5 @@ class Xhub_Image_Box_Carousel extends Widget_Base{
 		return [ 'service' ];
 	}
 }
-// After the Xhub_Image_Box_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_Image_Box_Carousel() );
+// After the Xhub_Image_Box_Carousel_new class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Xhub_Image_Box_Carousel_new() );
