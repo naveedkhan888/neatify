@@ -677,7 +677,7 @@ class Xhub_Image_Box_Carousel_new extends Widget_Base{
 		$mgaps  = isset( $settings['w_gaps_mobile']['size'] ) && is_numeric( $settings['w_gaps_mobile']['size'] ) ? $settings['w_gaps_mobile']['size'] : $tgaps;
 
 		?>
-		<div class="image-box-carousel_new"
+		<div class="image-box-carousel-new"
     data-loop="<?php echo esc_attr( $settings['loop'] ); ?>"
     data-auto="<?php echo esc_attr( $settings['autoplay'] ); ?>"
     data-time="<?php echo esc_attr( $settings['timeout']['size'] ); ?>"
