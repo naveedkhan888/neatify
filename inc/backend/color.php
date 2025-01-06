@@ -30,6 +30,7 @@ if(!function_exists('xhub_color_scheme')){
 			/****Secondary Color****/
 			.xptf-btn.xptf-btn-dark,
 			.woocommerce button.button:hover,
+			.woocommerce-mini-cart__buttons a.button.wc-forward:hover, 
 			.post-box .post-cat a:hover,
 			.search-form .search-submit:hover,
 			.woocommerce-mini-cart__buttons a.button.checkout.wc-forward,
@@ -62,6 +63,7 @@ if(!function_exists('xhub_color_scheme')){
 
 			/*Background Color*/
 			.bg-primary,
+			.woocommerce-mini-cart__buttons a.button.wc-forward, 
 			.image-box-price .price-box, 
 			.with-border-yes .icon-main .circle-animate::after, 
 			.elementor-social-icons-wrapper a.elementor-social-icon,
