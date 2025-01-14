@@ -322,6 +322,11 @@
 	 * --------------------------------------------------*/
 	if ($('a[href^="#"]').length) {
 	    $('a[href^="#"]').on('click', function (e) {
+	        // Exclude links within the tab-titles container
+	        if ($(this).closest('.tab-titles').length) {
+	            return; // Do nothing for links in tab-titles
+	        }
+
 	        e.preventDefault();
 
 	        var target = $(this.getAttribute('href'));
