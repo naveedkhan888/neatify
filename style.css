@@ -8354,19 +8354,15 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   justify-content: space-between;
   gap: 20px;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .custom-widget {
   display: flex;
   flex-direction: column;
-  min-width: 0;
   width: 100%;
-  box-sizing: border-box;
   justify-content: space-between;
   padding: 35px 32px;
   transition: transform 0.3s ease;
-  background-color: var(--background-color);
 }
 
 .custom-widget:hover {
