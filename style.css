@@ -8424,3 +8424,234 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .custom-heading-link:hover {
   text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* css for new custom counter widget   */
+.counter-container {
+  display: flex;
+  padding: 0; 
+  flex-direction: column;
+  background-color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.counter-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.counter-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 40px 0px 30px 0px; 
+  position: relative;
+  gap: 40px; 
+  background-color: #fff !important;
+}
+
+.counter-number {
+  font-size: 47px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+  min-width: 60px; 
+  align-items: center;
+  line-height: 1.2; 
+  margin-top: 6px;
+  
+}
+
+.counter-heading {
+  
+  color: #000000 !important;
+  line-height: 1.2;
+  margin: 0;
+  margin-top: 10px;
+  flex-shrink: 0;
+  min-width: 240px; 
+  min-width: 240px;
+  display: flex;
+  align-items: center; 
+}
+
+.counter-description {
+  
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7) !important;
+  margin: 0;
+  margin-top: 12px;
+  flex: 1;
+  max-width: 100%; 
+  padding-right: 0px; 
+  display: block;
+  align-items: center; 
+  height: auto;
+}
+
+
+.counter-icon-wrapper {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.35) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  margin-top: 12px;
+  background-color: transparent; 
+}
+
+
+
+.counter-icon {
+  color: #000000 !important;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px; 
+  height: 24px;
+  transform: rotate(0deg);
+}
+
+.counter-item:hover .counter-icon-wrapper {
+  border-color: #000000 !important;
+}
+
+.counter-item:hover .counter-icon {
+  transform: rotate(-45deg);
+  
+}
+
+.counter-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.35) !important; 
+  pointer-events: none;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .counter-item {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+  }
+
+  .counter-heading-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .counter-number {
+    font-size: 40px;
+    min-width: 50px;
+    margin-top: 0;
+  }
+  
+  .counter-heading {
+    flex: 1;
+    min-width: 0;
+    margin-top: 0;
+  }
+  
+  .counter-description {
+    width: 100%;
+    padding-right: 0;
+    margin-top: 10px;
+  }
+  
+  .counter-icon-wrapper {
+    margin-top: 0;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 767px) {
+
+  .counter-container {
+    width: 100%;
+  }
+
+  .counter-item {
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+    width: 100%;
+  }
+  
+  .counter-number {
+    font-size: 36px;
+    min-width: auto;
+    margin-top: 0;
+    width: 100%;
+  }
+  
+  .counter-heading {
+    min-width: auto;
+    margin-top: 0;
+    width: 100%;
+  }
+  
+  .counter-description {
+    max-width: none;
+    padding: 0;
+    margin: 8px 0 16px 0;
+    width: 100%;
+    display: block;
+  }
+  
+  .counter-icon-wrapper {
+    position: static;
+    margin: 0;
+    width: 48px;
+    height: 48px;
+    align-self: flex-start;
+  }
+  
+  .counter-icon {
+    font-size: 20px;
+    width: 20px; 
+    height: 20px; 
+  }
+
+}
