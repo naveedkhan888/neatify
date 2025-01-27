@@ -8508,7 +8508,6 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.7) !important;
   margin: 0;
-  margin-top: 12px;
   flex: 1;
   max-width: 100%; 
   padding-right: 0px; 
@@ -8597,7 +8596,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   .counter-description {
     width: 100%;
     padding-right: 0;
-    margin-top: 10px;
+    margin-top: 0;
   }
   
   .counter-icon-wrapper {
@@ -8635,7 +8634,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   .counter-description {
     max-width: none;
     padding: 0;
-    margin: 8px 0 16px 0;
+    margin: 0;
     width: 100%;
     display: block;
   }
@@ -8724,18 +8723,16 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   display: grid;
   grid-template-columns: repeat(var(--grid-columns, 3), 1fr);
   gap: 20px;
-  padding: 30px;
   position: relative;
   width: 100%;
 }
 
 .medical-service-item {
-  padding: 30px 20px;
+  padding: 30px 0;
   position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #ffffff;
   transition: background-color 0.3s ease;
   border-right: 1px solid #ccc;
   height: 100%;
@@ -8748,7 +8745,6 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 }
 
 .medical-service-item:hover {
-  background-color: #f0f8ff;
 }
 
 .service-content {
