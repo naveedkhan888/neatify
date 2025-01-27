@@ -8346,3 +8346,45 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
     border-radius: 4px;
 }
 
+
+
+
+
+.custom-widget .elementor-icon {
+  color: var(--icon-color);
+}
+
+
+.custom-widget .elementor-icon svg {
+  fill: var(--icon-color);
+}
+
+
+.custom-widget-bg-1 {
+  --subtitle-color: #000000;
+  --icon-color: #000000;
+  --heading-color: #000000;
+  --divider-color: #CCCBCB;
+  --paragraph-color: #000000;
+  --background-color: #ffffff;
+}
+
+
+.custom-widget-bg-2 {
+  --subtitle-color: #ffffff;
+  --icon-color: #ffffff;
+  --heading-color: #ffffff;
+  --divider-color: #B6AAAA;
+  --paragraph-color: #ffffff;
+  --background-color: #407D88;
+}
+
+
+.custom-widget-bg-3 {
+  --subtitle-color: #ffffff;
+  --icon-color: #ffffff;
+  --heading-color: #ffffff;
+  --divider-color: #797575;
+  --paragraph-color: #ffffff;
+  --background-color: #232727;
+}
