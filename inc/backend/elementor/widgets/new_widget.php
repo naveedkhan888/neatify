@@ -764,17 +764,15 @@ class Triple_Widget_Container extends Widget_Base
                     <div class="custom-widget__bottom">
                         <?php if (!empty($item['heading'])) : ?>
                             <div class="custom-widget__heading">
-                                <?php if (!empty($item['widget_link']['url'])) : ?>
-                                    <a <?php echo $link_attrs; ?> class="custom-heading-link">
-                                        <<?php echo esc_attr($item['heading_tag']); ?> class="custom-heading">
+                                <<?php echo esc_attr($item['heading_tag']); ?> class="custom-heading">
+                                    <?php if (!empty($item['widget_link']['url'])) : ?>
+                                        <a <?php echo $link_attrs; ?> class="custom-heading-link">
                                             <?php echo esc_html($item['heading']); ?>
-                                        </<?php echo esc_attr($item['heading_tag']); ?>>
-                                    </a>
-                                <?php else : ?>
-                                    <<?php echo esc_attr($item['heading_tag']); ?> class="custom-heading">
+                                        </a>
+                                    <?php else : ?>
                                         <?php echo esc_html($item['heading']); ?>
-                                    </<?php echo esc_attr($item['heading_tag']); ?>>
-                                <?php endif; ?>
+                                    <?php endif; ?>
+                                </<?php echo esc_attr($item['heading_tag']); ?>>
                             </div>
                         <?php endif; ?>
 
