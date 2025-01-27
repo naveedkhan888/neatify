@@ -8370,6 +8370,9 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .custom-widget .custom-paragraph {
   margin: 0;
 }
+.custom-widget .custom-widget__icon i {
+  color: #C19977;
+}
 
 .custom-widget:hover {
   transform: translateY(-10px);

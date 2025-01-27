@@ -208,7 +208,8 @@ if(!function_exists('xhub_color_scheme')){
 			.tab-titles .title-item a.tab-active,
 			.tab-titles .title-item a:hover, 
 			.xptf-btn.xptf-btn-light, 
-			.xp-counter-2.icounter .c-number.font-second span.num + span, 
+			.xp-counter-2.icounter .c-number.font-second span.num + span,
+			.custom-widget .custom-widget__icon i,  
 			.woocommerce div.product p.price,.woocommerce div.product span.price{ color: '.xhub_get_option('main_color').'; }
 
 			.main-navigation > ul > li:hover > a,
