@@ -518,7 +518,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
             [
                 'label' => esc_html__('Background Color', 'text-domain'),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#ffffff',
+                'default' => '',
                 'selectors' => [
                     '{{WRAPPER}} .medical-service-item' => 'background-color: {{VALUE}};',
                 ],
