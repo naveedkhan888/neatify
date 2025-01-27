@@ -8472,21 +8472,19 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .counter-item {
   display: flex;
   align-items: flex-start;
-  padding: 40px 0px 30px 0px; 
+  margin: 30px 0; 
   position: relative;
   gap: 40px; 
-  background-color: #fff !important;
 }
 
 .counter-number {
   font-size: 47px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.2);
   flex-shrink: 0;
   min-width: 60px; 
   align-items: center;
   line-height: 1.2; 
-  margin-top: 6px;
+  margin-top: 0;
   
 }
 
@@ -8495,7 +8493,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   color: #000000 !important;
   line-height: 1.2;
   margin: 0;
-  margin-top: 10px;
+  margin-top: 0;
   flex-shrink: 0;
   min-width: 240px; 
   min-width: 240px;
