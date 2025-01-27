@@ -8728,7 +8728,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 }
 
 .medical-service-item {
-  padding: 30px 0;
+  padding: 0 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8863,14 +8863,8 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   transform: translateX(0px);
 }
 
-.use-custom-styles .medical-service-item {
-  background: <?php echo esc_attr($settings['background_color'] ?? '#fff'); ?>;
-  color: <?php echo esc_attr($settings['text_color'] ?? '#333'); ?>;
-}
 
 .use-global-styles .medical-service-item {
-  background: #f9f9f9;
-  color: #000;
 }
 
 .alert {
