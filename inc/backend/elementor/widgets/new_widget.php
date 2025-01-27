@@ -141,7 +141,7 @@ class Triple_Widget_Container extends Widget_Base
         $repeater->add_control('paragraph', [
             'label' => esc_html__('Paragraph', 'text-domain'),
             'type' => Controls_Manager::TEXTAREA,
-            'default' => esc_html__('Your paragraph text here', 'text-domain'),
+            'default' => esc_html__('Sed ut perspiciatis unde omnis iste natus ut perspic iatis unde omnis', 'text-domain'),
             'rows' => 5,
         ]);
 
