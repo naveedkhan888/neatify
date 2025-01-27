@@ -8363,6 +8363,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   justify-content: space-between;
   padding: 35px 32px;
   transition: transform 0.3s ease;
+  background: #fff;
 }
 
 .custom-widget:hover {
@@ -8385,20 +8386,9 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   flex-shrink: 0;
 }
 
-.custom-widget__icon,
-.custom-widget__icon .elementor-icon,
-.custom-widget__icon .elementor-icon i {
-  color: var(--icon-color);
-}
-
 .custom-widget__subtitle {
   word-wrap: break-word;
   overflow-wrap: break-word;
-}
-
-.custom-widget__subtitle,
-.custom-widget__subtitle .custom-subtitle-link {
-  color: var(--subtitle-color);
 }
 
 .custom-widget__bottom {
@@ -8411,29 +8401,16 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   word-wrap: break-word;
 }
 
-.custom-widget__heading,
-.custom-widget__heading .custom-heading-link,
-.custom-widget__heading .custom-heading {
-  color: var(--heading-color);
-}
-
 .custom-widget__divider .custom-divider {
-  border-top: 1px solid var(--divider-color);
+  border-top: 1px solid #ccc;
   width: 100%;
   margin: 15px 0;
 }
-
-.custom-widget__paragraph,
-.custom-widget__paragraph .custom-paragraph {
-  color: var(--paragraph-color);
-}
-
 
 .custom-subtitle-link,
 .custom-heading-link {
   text-decoration: none;
 }
-
 
 .custom-subtitle-link:hover,
 .custom-heading-link:hover {
