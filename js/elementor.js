@@ -567,7 +567,7 @@
     /* --------------------------------------------------
     * image box New carousel
     * --------------------------------------------------*/
-    var imageboxCarouselNew = function ($scope, $) {
+    var imagecardCarousel = function ($scope, $) {
         $scope.find('.image-card-carousel').each( function () {
             var $this     = $(this),
                 $loop     = $this.data('loop'),
