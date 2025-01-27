@@ -805,7 +805,7 @@
 
         /* image box new carousel */
         elementorFrontend.hooks.addAction(
-            "frontend/element_ready/iiiboxcarousel.default",
+            "frontend/element_ready/image_card_carousel.default",
             imagecardCarousel
         );
 
