@@ -73,6 +73,25 @@ class Triple_Widget_Container extends Widget_Base
             'label' => esc_html__('Content', 'text-domain'),
         ]);
 
+        // Add URL Control
+        $repeater->add_control(
+            'widget_link',
+            [
+                'label' => esc_html__('Link', 'text-domain'),
+                'type' => Controls_Manager::URL,
+                'placeholder' => esc_html__('https://your-link.com', 'text-domain'),
+                'show_external' => true,
+                'default' => [
+                    'url' => '',
+                    'is_external' => false,
+                    'nofollow' => false,
+                ],
+                'dynamic' => [
+                    'active' => true,
+                ],
+            ]
+        );
+
         // Content Controls
         $repeater->add_control('subtitle', [
             'label' => esc_html__('Subtitle', 'text-domain'),
@@ -707,15 +726,22 @@ class Triple_Widget_Container extends Widget_Base
             foreach ($settings['widgets'] as $index => $item) :
                 $widget_class = 'elementor-repeater-item-' . $item['_id'];
                 $color_class = 'custom-widget-bg-' . ($index + 1);
+
+                // Build link attributes
+                $link_attrs = '';
+                if (!empty($item['widget_link']['url'])) {
+                    $this->add_link_attributes('widget_link_' . $index, $item['widget_link']);
+                    $link_attrs = $this->get_render_attribute_string('widget_link_' . $index);
+                }
             ?>
                 <div class="custom-widget <?php echo esc_attr($widget_class); ?> <?php echo esc_attr($color_class); ?>">
                     <div class="custom-widget__top">
                         <div class="custom-widget__subtitle-icon-container">
                             <?php if (!empty($item['subtitle'])) : ?>
                                 <div class="custom-widget__subtitle">
-                                    <a href="#" class="custom-subtitle-link">
+                                    <span class="custom-subtitle-link">
                                         <?php echo esc_html($item['subtitle']); ?>
-                                    </a>
+                                    </span>
                                 </div>
                             <?php endif; ?>
 
@@ -738,11 +764,17 @@ class Triple_Widget_Container extends Widget_Base
                     <div class="custom-widget__bottom">
                         <?php if (!empty($item['heading'])) : ?>
                             <div class="custom-widget__heading">
-                                <a href="#" class="custom-heading-link">
+                                <?php if (!empty($item['widget_link']['url'])) : ?>
+                                    <a <?php echo $link_attrs; ?> class="custom-heading-link">
+                                        <<?php echo esc_attr($item['heading_tag']); ?> class="custom-heading">
+                                            <?php echo esc_html($item['heading']); ?>
+                                        </<?php echo esc_attr($item['heading_tag']); ?>>
+                                    </a>
+                                <?php else : ?>
                                     <<?php echo esc_attr($item['heading_tag']); ?> class="custom-heading">
                                         <?php echo esc_html($item['heading']); ?>
                                     </<?php echo esc_attr($item['heading_tag']); ?>>
-                                </a>
+                                <?php endif; ?>
                             </div>
                         <?php endif; ?>
 
