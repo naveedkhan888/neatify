@@ -522,7 +522,7 @@
     * image box carousel
     * --------------------------------------------------*/
     var imageboxCarousel = function ($scope, $) {
-        $scope.find('.image-box-carousel, .image-box-carousel-new').each( function () {
+        $scope.find('.image-box-carousel').each( function () {
             var $this     = $(this),
                 $loop     = $this.data('loop'),
                 $auto     = $this.data('auto'),
@@ -568,7 +568,7 @@
     * image box New carousel
     * --------------------------------------------------*/
     var imageboxCarouselNew = function ($scope, $) {
-        $scope.find('.image-box-carousel-new').each( function () {
+        $scope.find('.image-card-carousel').each( function () {
             var $this     = $(this),
                 $loop     = $this.data('loop'),
                 $auto     = $this.data('auto'),
@@ -806,7 +806,7 @@
         /* image box new carousel */
         elementorFrontend.hooks.addAction(
             "frontend/element_ready/iiiboxcarousel.default",
-            imageboxCarouselNew
+            imagecardCarousel
         );
 
         /* progress bar */
