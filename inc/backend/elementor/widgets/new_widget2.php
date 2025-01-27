@@ -114,7 +114,7 @@ class Counter_Widget extends Widget_Base
         $this->add_control('number_color', [
             'label' => esc_html__('Number Color', 'text-domain'),
             'type' => Controls_Manager::COLOR,
-            'default' => '#666666',
+            'default' => '',
             'selectors' => [
                 '{{WRAPPER}} .counter-number' => 'color: {{VALUE}};',
             ],
@@ -132,7 +132,7 @@ class Counter_Widget extends Widget_Base
         $this->add_control('number_hover_color', [
             'label' => esc_html__('Number Hover Color', 'text-domain'),
             'type' => Controls_Manager::COLOR,
-            'default' => '#ff0000',
+            'default' => '',
             'selectors' => [
                 '{{WRAPPER}} .counter-item:hover .counter-number' => 'color: {{VALUE}} !important;',
             ],
@@ -153,7 +153,7 @@ class Counter_Widget extends Widget_Base
         $this->add_control('heading_color', [
             'label' => esc_html__('Heading Color', 'text-domain'),
             'type' => Controls_Manager::COLOR,
-            'default' => '#ffffff',
+            'default' => '',
             'selectors' => [
                 '{{WRAPPER}} .counter-heading' => 'color: {{VALUE}};',
             ],
@@ -170,7 +170,7 @@ class Counter_Widget extends Widget_Base
         $this->add_control('description_color', [
             'label' => esc_html__('Description Color', 'text-domain'),
             'type' => Controls_Manager::COLOR,
-            'default' => '#888888',
+            'default' => '',
             'selectors' => [
                 '{{WRAPPER}} .counter-description' => 'color: {{VALUE}};',
             ],
@@ -187,7 +187,7 @@ class Counter_Widget extends Widget_Base
         $this->add_control('container_background', [
             'label' => esc_html__('Container Background', 'text-domain'),
             'type' => Controls_Manager::COLOR,
-            'default' => '#111111',
+            'default' => '',
             'selectors' => [
                 '{{WRAPPER}} .counter-item' => 'background-color: {{VALUE}};',
             ],
@@ -373,7 +373,7 @@ class Counter_Widget extends Widget_Base
         $this->add_control('icon_color', [
             'label' => esc_html__('Icon Color', 'text-domain'),
             'type' => Controls_Manager::COLOR,
-            'default' => '#ffffff',
+            'default' => '',
             'selectors' => [
                 '{{WRAPPER}} .counter-icon' => 'color: {{VALUE}};',
             ],
@@ -382,7 +382,7 @@ class Counter_Widget extends Widget_Base
         $this->add_control('icon_border_color', [
             'label' => esc_html__('Border Color', 'text-domain'),
             'type' => Controls_Manager::COLOR,
-            'default' => 'rgba(255, 255, 255, 0.1)',
+            'default' => '',
             'selectors' => [
                 '{{WRAPPER}} .counter-icon-wrapper' => 'border-color: {{VALUE}};',
             ],
@@ -400,7 +400,7 @@ class Counter_Widget extends Widget_Base
         $this->add_control('icon_hover_color', [
             'label' => esc_html__('Icon Hover Color', 'text-domain'),
             'type' => Controls_Manager::COLOR,
-            'default' => '#ffffff',
+            'default' => '',
             'selectors' => [
                 '{{WRAPPER}} .counter-item:hover .counter-icon' => 'color: {{VALUE}};',
             ],
@@ -409,7 +409,7 @@ class Counter_Widget extends Widget_Base
         $this->add_control('icon_hover_border_color', [
             'label' => esc_html__('Border Hover Color', 'text-domain'),
             'type' => Controls_Manager::COLOR,
-            'default' => '#ffffff',
+            'default' => '',
             'selectors' => [
                 '{{WRAPPER}} .counter-item:hover .counter-icon-wrapper' => 'border-color: {{VALUE}};',
             ],
