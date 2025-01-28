@@ -9045,10 +9045,11 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 
 /* Arrow Icon */
 .xpic-title-box a:after {
-  content: '→';
+  content: "\f124";
   opacity: 1;
   transform: rotate(-45deg);
   display: inline-block;
+  font-family: xpicon !important;
   transition: all 0.3s ease-out;
   
 }
