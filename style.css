@@ -9033,8 +9033,6 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 
 .xpic-title-box a {
   color: #fff;
-  font-size: 24px;
-  font-weight: 600;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -9043,7 +9041,6 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 }
 
 .xpic-title-box a:hover {
-  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Arrow Icon */
