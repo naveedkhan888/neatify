@@ -800,7 +800,9 @@ class Custom_Medical_Services_Widget extends Widget_Base
                             </a>
                         </div>
                         <?php if (!empty($service['read_more_text'])) : ?>
-                            <a href="<?php echo esc_url($link_url); ?>" class="service-link" <?php echo $link_target . $link_nofollow; ?>>
+                            <a href="<?php echo esc_url($link_url); ?>" 
+                               class="service-link" 
+                               <?php echo esc_attr($link_target) . ' ' . esc_attr($link_nofollow); ?>>
                                 <span class="read-more-text"><?php echo esc_html($service['read_more_text']); ?></span>
                                 <span class="arrow">→</span>
                             </a>
