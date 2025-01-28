@@ -15,7 +15,7 @@ class Counter_Widget extends Widget_Base
 
     public function get_title()
     {
-        return esc_html__('Counter Widget', 'text-domain');
+        return esc_html__('Counter Widget', 'xhub');
     }
 
     public function get_icon()
@@ -37,35 +37,35 @@ class Counter_Widget extends Widget_Base
     {
         // Content Section
         $this->start_controls_section('content_section', [
-            'label' => esc_html__('Content', 'text-domain'),
+            'label' => esc_html__('Content', 'xhub'),
             'tab' => Controls_Manager::TAB_CONTENT,
         ]);
 
         $repeater = new Repeater();
 
         $repeater->add_control('counter_number', [
-            'label' => esc_html__('Number', 'text-domain'),
+            'label' => esc_html__('Number', 'xhub'),
             'type' => Controls_Manager::TEXT,
             'default' => '01',
             'label_block' => true,
         ]);
 
         $repeater->add_control('heading', [
-            'label' => esc_html__('Heading', 'text-domain'),
+            'label' => esc_html__('Heading', 'xhub'),
             'type' => Controls_Manager::TEXT,
-            'default' => esc_html__('Receive packages', 'text-domain'),
+            'default' => esc_html__('Receive packages', 'xhub'),
             'label_block' => true,
         ]);
 
         $repeater->add_control('description', [
-            'label' => esc_html__('Description', 'text-domain'),
+            'label' => esc_html__('Description', 'xhub'),
             'type' => Controls_Manager::TEXTAREA,
-            'default' => esc_html__('Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus.', 'text-domain'),
+            'default' => esc_html__('Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus.', 'xhub'),
             'rows' => 5,
         ]);
 
         $repeater->add_control('icon', [
-            'label' => esc_html__('Icon', 'text-domain'),
+            'label' => esc_html__('Icon', 'xhub'),
             'type' => Controls_Manager::ICONS,
             'default' => [
                 'value' => 'fas fa-arrow-right',
@@ -74,20 +74,20 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $repeater->add_control('show_divider', [
-            'label' => esc_html__('Show Divider', 'text-domain'),
+            'label' => esc_html__('Show Divider', 'xhub'),
             'type' => Controls_Manager::SWITCHER,
             'default' => 'yes',
         ]);
 
         $this->add_control('counters', [
-            'label' => esc_html__('Counters', 'text-domain'),
+            'label' => esc_html__('Counters', 'xhub'),
             'type' => Controls_Manager::REPEATER,
             'fields' => $repeater->get_controls(),
             'default' => [
                 [
                     'counter_number' => '01',
-                    'heading' => esc_html__('Receive packages', 'text-domain'),
-                    'description' => esc_html__('Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus.', 'text-domain'),
+                    'heading' => esc_html__('Receive packages', 'xhub'),
+                    'description' => esc_html__('Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus.', 'xhub'),
                 ],
             ],
             'title_field' => '{{{ counter_number }}} - {{{ heading }}}',
@@ -97,7 +97,7 @@ class Counter_Widget extends Widget_Base
 
         // Style Section
         $this->start_controls_section('style_section', [
-            'label' => esc_html__('Style', 'text-domain'),
+            'label' => esc_html__('Style', 'xhub'),
             'tab' => Controls_Manager::TAB_STYLE,
         ]);
 
@@ -107,12 +107,12 @@ class Counter_Widget extends Widget_Base
         $this->start_controls_tab(
             'number_normal_tab',
             [
-                'label' => esc_html__('Normal', 'text-domain'),
+                'label' => esc_html__('Normal', 'xhub'),
             ]
         );
 
         $this->add_control('number_color', [
-            'label' => esc_html__('Number Color', 'text-domain'),
+            'label' => esc_html__('Number Color', 'xhub'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -125,12 +125,12 @@ class Counter_Widget extends Widget_Base
         $this->start_controls_tab(
             'number_hover_tab',
             [
-                'label' => esc_html__('Hover', 'text-domain'),
+                'label' => esc_html__('Hover', 'xhub'),
             ]
         );
 
         $this->add_control('number_hover_color', [
-            'label' => esc_html__('Number Hover Color', 'text-domain'),
+            'label' => esc_html__('Number Hover Color', 'xhub'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -144,14 +144,14 @@ class Counter_Widget extends Widget_Base
 
         $this->add_group_control(Group_Control_Typography::get_type(), [
             'name' => 'number_typography',
-            'label' => esc_html__('Number Typography', 'text-domain'),
+            'label' => esc_html__('Number Typography', 'xhub'),
             'selector' => '{{WRAPPER}} .counter-number',
             'separator' => 'before',
         ]);
 
         // Heading Style
         $this->add_control('heading_color', [
-            'label' => esc_html__('Heading Color', 'text-domain'),
+            'label' => esc_html__('Heading Color', 'xhub'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -162,13 +162,13 @@ class Counter_Widget extends Widget_Base
 
         $this->add_group_control(Group_Control_Typography::get_type(), [
             'name' => 'heading_typography',
-            'label' => esc_html__('Heading Typography', 'text-domain'),
+            'label' => esc_html__('Heading Typography', 'xhub'),
             'selector' => '{{WRAPPER}} .counter-heading',
         ]);
 
         // Description Style
         $this->add_control('description_color', [
-            'label' => esc_html__('Description Color', 'text-domain'),
+            'label' => esc_html__('Description Color', 'xhub'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -179,13 +179,13 @@ class Counter_Widget extends Widget_Base
 
         $this->add_group_control(Group_Control_Typography::get_type(), [
             'name' => 'description_typography',
-            'label' => esc_html__('Description Typography', 'text-domain'),
+            'label' => esc_html__('Description Typography', 'xhub'),
             'selector' => '{{WRAPPER}} .counter-description',
         ]);
 
         // Container Style
         $this->add_control('container_background', [
-            'label' => esc_html__('Container Background', 'text-domain'),
+            'label' => esc_html__('Container Background', 'xhub'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -195,7 +195,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_responsive_control('container_padding', [
-            'label' => esc_html__('Container Padding', 'text-domain'),
+            'label' => esc_html__('Container Padding', 'xhub'),
             'type' => Controls_Manager::DIMENSIONS,
             'size_units' => ['px', 'em', '%'],
             'selectors' => [
@@ -204,7 +204,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_responsive_control('container_margin', [
-            'label' => esc_html__('Container Margin', 'text-domain'),
+            'label' => esc_html__('Container Margin', 'xhub'),
             'type' => Controls_Manager::DIMENSIONS,
             'size_units' => ['px', 'em', '%'],
             'selectors' => [
@@ -221,7 +221,7 @@ class Counter_Widget extends Widget_Base
         $this->add_control(
             'element_spacing_heading',
             [
-                'label' => esc_html__('Element Spacing', 'text-domain'),
+                'label' => esc_html__('Element Spacing', 'xhub'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -231,7 +231,7 @@ class Counter_Widget extends Widget_Base
         $this->add_responsive_control(
             'number_spacing',
             [
-                'label' => esc_html__('Number Spacing', 'text-domain'),
+                'label' => esc_html__('Number Spacing', 'xhub'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -262,7 +262,7 @@ class Counter_Widget extends Widget_Base
         $this->add_responsive_control(
             'heading_spacing',
             [
-                'label' => esc_html__('Heading Spacing', 'text-domain'),
+                'label' => esc_html__('Heading Spacing', 'xhub'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -293,7 +293,7 @@ class Counter_Widget extends Widget_Base
         $this->add_responsive_control(
             'description_spacing',
             [
-                'label' => esc_html__('Description Spacing', 'text-domain'),
+                'label' => esc_html__('Description Spacing', 'xhub'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -324,7 +324,7 @@ class Counter_Widget extends Widget_Base
         $this->add_responsive_control(
             'icon_spacing',
             [
-                'label' => esc_html__('Icon Spacing', 'text-domain'),
+                'label' => esc_html__('Icon Spacing', 'xhub'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -357,7 +357,7 @@ class Counter_Widget extends Widget_Base
 
         // Icon Style Section
         $this->start_controls_section('icon_style_section', [
-            'label' => esc_html__('Icon Style', 'text-domain'),
+            'label' => esc_html__('Icon Style', 'xhub'),
             'tab' => Controls_Manager::TAB_STYLE,
         ]);
 
@@ -366,12 +366,12 @@ class Counter_Widget extends Widget_Base
         $this->start_controls_tab(
             'icon_normal_tab',
             [
-                'label' => esc_html__('Normal', 'text-domain'),
+                'label' => esc_html__('Normal', 'xhub'),
             ]
         );
 
         $this->add_control('icon_color', [
-            'label' => esc_html__('Icon Color', 'text-domain'),
+            'label' => esc_html__('Icon Color', 'xhub'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -380,7 +380,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_control('icon_border_color', [
-            'label' => esc_html__('Border Color', 'text-domain'),
+            'label' => esc_html__('Border Color', 'xhub'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -393,12 +393,12 @@ class Counter_Widget extends Widget_Base
         $this->start_controls_tab(
             'icon_hover_tab',
             [
-                'label' => esc_html__('Hover', 'text-domain'),
+                'label' => esc_html__('Hover', 'xhub'),
             ]
         );
 
         $this->add_control('icon_hover_color', [
-            'label' => esc_html__('Icon Hover Color', 'text-domain'),
+            'label' => esc_html__('Icon Hover Color', 'xhub'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -407,7 +407,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_control('icon_hover_border_color', [
-            'label' => esc_html__('Border Hover Color', 'text-domain'),
+            'label' => esc_html__('Border Hover Color', 'xhub'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -420,7 +420,7 @@ class Counter_Widget extends Widget_Base
         $this->end_controls_tabs();
 
         $this->add_control('icon_size', [
-            'label' => esc_html__('Icon Size', 'text-domain'),
+            'label' => esc_html__('Icon Size', 'xhub'),
             'type' => Controls_Manager::SLIDER,
             'size_units' => ['px'],
             'range' => [
@@ -440,7 +440,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_control('icon_wrapper_size', [
-            'label' => esc_html__('Icon Wrapper Size', 'text-domain'),
+            'label' => esc_html__('Icon Wrapper Size', 'xhub'),
             'type' => Controls_Manager::SLIDER,
             'size_units' => ['px'],
             'range' => [
@@ -459,7 +459,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_control('icon_border_width', [
-            'label' => esc_html__('Border Width', 'text-domain'),
+            'label' => esc_html__('Border Width', 'xhub'),
             'type' => Controls_Manager::SLIDER,
             'size_units' => ['px'],
             'range' => [
@@ -481,12 +481,12 @@ class Counter_Widget extends Widget_Base
 
         // Divider Style Section
         $this->start_controls_section('divider_style_section', [
-            'label' => esc_html__('Divider Style', 'text-domain'),
+            'label' => esc_html__('Divider Style', 'xhub'),
             'tab' => Controls_Manager::TAB_STYLE,
         ]);
 
         $this->add_control('divider_color', [
-            'label' => esc_html__('Divider Color', 'text-domain'),
+            'label' => esc_html__('Divider Color', 'xhub'),
             'type' => Controls_Manager::COLOR,
             'default' => 'rgba(255, 255, 255, 0.1)',
             'selectors' => [
@@ -495,7 +495,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_control('divider_width', [
-            'label' => esc_html__('Divider Width', 'text-domain'),
+            'label' => esc_html__('Divider Width', 'xhub'),
             'type' => Controls_Manager::SLIDER,
             'size_units' => ['px', '%'],
             'range' => [
@@ -518,7 +518,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_control('divider_height', [
-            'label' => esc_html__('Divider Height', 'text-domain'),
+            'label' => esc_html__('Divider Height', 'xhub'),
             'type' => Controls_Manager::SLIDER,
             'size_units' => ['px'],
             'range' => [
@@ -542,7 +542,7 @@ class Counter_Widget extends Widget_Base
         $this->add_responsive_control(
             'divider_margin',
             [
-                'label' => esc_html__('Divider Margin', 'text-domain'),
+                'label' => esc_html__('Divider Margin', 'xhub'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'default' => [
