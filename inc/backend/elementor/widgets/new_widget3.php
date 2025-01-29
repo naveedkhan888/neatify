@@ -795,16 +795,23 @@ class Custom_Medical_Services_Widget extends Widget_Base
                             <div class="service-icon-wrapper">
                                 <?php Icons_Manager::render_icon($service['service_icon'], ['aria-hidden' => 'true', 'class' => ['service-icon', 'elementor-icon']]); ?>
                             </div>
-                            <a href="#">
-                                <?php printf('<%1$s class="service-title">%2$s</%1$s>', esc_attr($title_tag), esc_html($service['service_title'])); ?>
-                            </a>
+                            <?php
+                            printf(
+                                '<%1$s class="service-title"><a href="%2$s" class="%3$s" %4$s>%5$s</a></%1$s>',
+                                esc_attr($title_tag), // Heading tag (e.g., h2)
+                                esc_url($link_url), // Link URL
+                                esc_attr($link_class), // Optional link class (if needed)
+                                esc_attr($link_target) . ' ' . esc_attr($link_nofollow), // Link target and rel attributes
+                                esc_html($service['service_title']) // Heading content
+                            );
+                            ?>
                         </div>
                         <?php if (!empty($service['read_more_text'])) : ?>
                             <a href="<?php echo esc_url($link_url); ?>" 
                                class="service-link" 
                                <?php echo esc_attr($link_target) . ' ' . esc_attr($link_nofollow); ?>>
                                 <span class="read-more-text"><?php echo esc_html($service['read_more_text']); ?></span>
-                                <span class="arrow">→</span>
+                                <span class="arrow"></span>
                             </a>
                         <?php endif; ?>
                     </div>
