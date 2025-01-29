@@ -797,10 +797,9 @@ class Custom_Medical_Services_Widget extends Widget_Base
                             </div>
                             <?php
                             printf(
-                                '<%1$s class="service-title"><a href="%2$s" class="%3$s" %4$s>%5$s</a></%1$s>',
+                                '<%1$s class="service-title"><a href="%2$s" %3$s>%4$s</a></%1$s>',
                                 esc_attr($title_tag), // Heading tag (e.g., h2)
                                 esc_url($link_url), // Link URL
-                                esc_attr($link_class), // Optional link class (if needed)
                                 esc_attr($link_target) . ' ' . esc_attr($link_nofollow), // Link target and rel attributes
                                 esc_html($service['service_title']) // Heading content
                             );
