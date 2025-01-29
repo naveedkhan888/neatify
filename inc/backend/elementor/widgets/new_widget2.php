@@ -568,7 +568,7 @@ class Counter_Widget extends Widget_Base
     {
         $settings = $this->get_settings_for_display();
 ?>
-        <a href="#">
+        
             <div class="counter-container">
                 <?php foreach ($settings['counters'] as $index => $item) : ?>
                     <div class="counter-item elementor-repeater-item-<?php echo esc_attr($item['_id']); ?>">
@@ -587,7 +587,7 @@ class Counter_Widget extends Widget_Base
                     </div>
                 <?php endforeach; ?>
             </div>
-        </a>
+       
 
 
 <?php
