@@ -771,6 +771,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
                     'unit' => '%', // Default unit
                     'size' => 100, // Default size
                 ],
+                'responsive' => true, // Enables responsive controls
                 'selectors' => [
                     '{{WRAPPER}} .service-top-content .service-title' => 'width: {{SIZE}}{{UNIT}};',
                 ],
