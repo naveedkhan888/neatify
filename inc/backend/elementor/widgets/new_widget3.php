@@ -537,7 +537,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
 
         // Add the new hover color control right after the icon_size control:
         $repeater->add_control(
-            'icon_hover_color',
+            'icon_hover_color_simple',
             [
                 'label' => esc_html__('Icon Color', 'xhub'),
                 'type' => Controls_Manager::COLOR,
@@ -800,7 +800,6 @@ class Custom_Medical_Services_Widget extends Widget_Base
                                 '<%1$s class="service-title"><a href="%2$s" class="%3$s" %4$s>%5$s</a></%1$s>',
                                 esc_attr($title_tag), // Heading tag (e.g., h2)
                                 esc_url($link_url), // Link URL
-                                esc_attr($link_class), // Optional link class (if needed)
                                 esc_attr($link_target) . ' ' . esc_attr($link_nofollow), // Link target and rel attributes
                                 esc_html($service['service_title']) // Heading content
                             );
