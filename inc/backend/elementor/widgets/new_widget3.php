@@ -739,7 +739,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'width_control',
             [
                 'label' => esc_html__('Width', 'xhub'),
