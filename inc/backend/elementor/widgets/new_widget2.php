@@ -15,7 +15,7 @@ class Counter_Widget extends Widget_Base
 
     public function get_title()
     {
-        return esc_html__('Counter Widget', 'xhub');
+        return esc_html__('XP Membership', 'xhub');
     }
 
     public function get_icon()
@@ -25,7 +25,7 @@ class Counter_Widget extends Widget_Base
 
     public function get_categories()
     {
-        return ['general'];
+        return ['category_xhub'];
     }
 
     public function get_keywords()

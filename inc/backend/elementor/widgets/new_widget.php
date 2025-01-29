@@ -15,7 +15,7 @@ class Triple_Widget_Container extends Widget_Base
 
     public function get_title()
     {
-        return esc_html__('Triple Widget Container', 'xhub');
+        return esc_html__('XP Service 1', 'xhub');
     }
 
     public function get_icon()
@@ -25,7 +25,7 @@ class Triple_Widget_Container extends Widget_Base
 
     public function get_categories()
     {
-        return ['general'];
+        return ['category_xhub'];
     }
 
     public function get_keywords()
@@ -304,17 +304,17 @@ class Triple_Widget_Container extends Widget_Base
             'default' => [
                 [
                     'subtitle' => esc_html__('Your Subtitle', 'xhub'),
-                    'heading' => esc_html__('Your Heading', 'xhub'),
+                    'heading' => esc_html__('Title 1', 'xhub'),
                     
                 ],
                 [
                     'subtitle' => esc_html__('Your Subtitle', 'xhub'),
-                    'heading' => esc_html__('Your Heading', 'xhub'),
+                    'heading' => esc_html__('Title 2', 'xhub'),
                     
                 ],
                 [
                     'subtitle' => esc_html__('Your Subtitle', 'xhub'),
-                    'heading' => esc_html__('Your Heading', 'xhub'),
+                    'heading' => esc_html__('Title 3', 'xhub'),
                     
                 ],
             ],

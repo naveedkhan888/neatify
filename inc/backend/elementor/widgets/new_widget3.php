@@ -15,7 +15,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
 
     public function get_title()
     {
-        return esc_html__('Custom Medical Services', 'xhub');
+        return esc_html__('XP Service 2', 'xhub');
     }
 
     public function get_icon()
@@ -25,7 +25,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
 
     public function get_categories()
     {
-        return ['general'];
+        return ['category_xhub'];
     }
 
     protected function register_controls()
