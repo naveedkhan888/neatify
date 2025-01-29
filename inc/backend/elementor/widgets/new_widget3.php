@@ -739,6 +739,24 @@ class Custom_Medical_Services_Widget extends Widget_Base
             ]
         );
 
+        $this->add_responsive_control(
+            'title_spacing_width',
+            [
+                'label' => esc_html__('Title Width', 'xhub'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['%'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .service-top-content .service-title' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
         $this->end_controls_section();
     }
 
