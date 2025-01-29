@@ -464,21 +464,21 @@ class Custom_Medical_Services_Widget extends Widget_Base
                 'fields' => $repeater->get_controls(),
                 'default' => [
                     [
-                        'service_title' => esc_html__('Emergency care', 'xhub'),
+                        'service_title' => esc_html__('Service 1', 'xhub'),
                         'service_icon' => [
                             'value' => 'fas fa-phone-alt',
                             'library' => 'fa-solid',
                         ],
                     ],
                     [
-                        'service_title' => esc_html__('Modern laboratory', 'xhub'),
+                        'service_title' => esc_html__('Service 2', 'xhub'),
                         'service_icon' => [
                             'value' => 'fas fa-microscope',
                             'library' => 'fa-solid',
                         ],
                     ],
                     [
-                        'service_title' => esc_html__('Annual checkup', 'xhub'),
+                        'service_title' => esc_html__('Service 3', 'xhub'),
                         'service_icon' => [
                             'value' => 'fas fa-stethoscope',
                             'library' => 'fa-solid',
@@ -557,7 +557,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
             [
                 'label' => esc_html__('Color', 'xhub'),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#0088FF',
+                'default' => '',
                 'selectors' => [
                     '{{WRAPPER}} .service-icon' => 'color: {{VALUE}};',
                 ],
@@ -570,7 +570,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
             [
                 'label' => esc_html__('Hover Color', 'xhub'),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#000000',
+                'default' => '',
                 'selectors' => [
                     '{{WRAPPER}} .medical-service-item:hover .service-icon-wrapper i' => 'color: {{VALUE}} !important;',
                     '{{WRAPPER}} .medical-service-item:hover .service-icon-wrapper svg' => 'fill: {{VALUE}} !important; color: {{VALUE}} !important;',
@@ -585,7 +585,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
                 'label' => esc_html__('Size', 'xhub'),
                 'type' => Controls_Manager::SLIDER,
                 'default' => [
-                    'size' => 40,
+                    'size' => 70,
                 ],
                 'range' => [
                     'px' => [
@@ -663,7 +663,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
             [
                 'label' => esc_html__('Text Color', 'xhub'),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#0088FF',
+                'default' => '',
                 'selectors' => [
                     '{{WRAPPER}} .service-link' => 'color: {{VALUE}};',
                 ],
@@ -675,7 +675,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
             [
                 'label' => esc_html__('Text Hover Color', 'xhub'),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#0066CC',
+                'default' => '',
                 'selectors' => [
                     '{{WRAPPER}} .service-link:hover' => 'color: {{VALUE}};',
                 ],
