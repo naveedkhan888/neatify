@@ -68,7 +68,7 @@ class Counter_Widget extends Widget_Base
             'label' => esc_html__('Icon', 'xhub'),
             'type' => Controls_Manager::ICONS,
             'default' => [
-                'value' => 'fas fa-arrow-right',
+                'value' => 'xpicon xpicon-next-4',
                 'library' => 'solid',
             ],
         ]);

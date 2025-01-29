@@ -114,7 +114,7 @@ class Triple_Widget_Container extends Widget_Base
         $repeater->add_control('heading', [
             'label' => esc_html__('Heading', 'xhub'),
             'type' => Controls_Manager::TEXT,
-            'default' => esc_html__('Your Heading', 'xhub'),
+            'default' => esc_html__('Service Title', 'xhub'),
             'label_block' => true,
         ]);
 
@@ -304,17 +304,17 @@ class Triple_Widget_Container extends Widget_Base
             'default' => [
                 [
                     'subtitle' => esc_html__('Your Subtitle', 'xhub'),
-                    'heading' => esc_html__('Your Heading', 'xhub'),
+                    'heading' => esc_html__('Service 1', 'xhub'),
                     
                 ],
                 [
                     'subtitle' => esc_html__('Your Subtitle', 'xhub'),
-                    'heading' => esc_html__('Your Heading', 'xhub'),
+                    'heading' => esc_html__('Service 2', 'xhub'),
                     
                 ],
                 [
                     'subtitle' => esc_html__('Your Subtitle', 'xhub'),
-                    'heading' => esc_html__('Your Heading', 'xhub'),
+                    'heading' => esc_html__('Service 3', 'xhub'),
                     
                 ],
             ],

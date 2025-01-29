@@ -81,7 +81,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
             [
                 'label' => __('Title', 'xhub'),
                 'type' => Controls_Manager::TEXTAREA,
-                'default' => 'Accounting',
+                'default' => 'Service Title',
             ]
         );
 
