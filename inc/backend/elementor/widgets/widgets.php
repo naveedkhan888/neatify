@@ -40,7 +40,6 @@ locate_template('/inc/backend/elementor/widgets/text-marquee.php', true, true);
 locate_template('/inc/backend/elementor/widgets/image-box-2.php', true, true);
 locate_template('/inc/backend/elementor/widgets/dynamic-title.php', true, true);
 locate_template('/inc/backend/elementor/widgets/heading_dual.php', true, true);
-locate_template('/inc/backend/elementor/widgets/membership_options.php', true, true);
 locate_template('/inc/backend/elementor/widgets/new_widget.php', true, true);
 locate_template('/inc/backend/elementor/widgets/new_widget2.php', true, true);
 locate_template('/inc/backend/elementor/widgets/new_widget3.php', true, true);
