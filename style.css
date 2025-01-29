@@ -8766,13 +8766,15 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   justify-content: center;
   vertical-align: top;
   transition: all 0.3s ease;
-  fill: currentColor;
+  fill: #C19977;
+  color: #C19977;
   font-size: 70px;
 }
 
 .medical-service-item:hover .service-icon-wrapper i,
 .medical-service-item:hover .service-icon-wrapper svg {
-  
+  fill: #1a1b1e;
+  color: #1a1b1e;
 }
 
 .elementor-widget-custom_medical_services .service-icon-wrapper i,

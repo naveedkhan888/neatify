@@ -230,10 +230,14 @@ if(!function_exists('xhub_color_scheme')){
 			}
 
 			/*Other*/
+			.service-icon-wrapper i, 
+			.service-icon-wrapper svg, 
 			.border_clr.elementor-widget-divider.elementor-view-framed .elementor-icon, 
 			.border_clr.elementor-widget-divider.elementor-view-default .elementor-icon svg {
 			  fill: '.xhub_get_option('main_color').';
 			}
+			.service-icon-wrapper i, 
+			.service-icon-wrapper svg, 
 			.border_clr.elementor-widget-divider.elementor-view-framed .elementor-icon, 
 			.border_clr.elementor-widget-divider.elementor-view-default .elementor-icon {
 			  color: '.xhub_get_option('main_color').';
