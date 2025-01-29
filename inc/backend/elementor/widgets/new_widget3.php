@@ -585,7 +585,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
                 'label' => esc_html__('Size', 'xhub'),
                 'type' => Controls_Manager::SLIDER,
                 'default' => [
-                    'size' => 70,
+                    'size' => 80,
                 ],
                 'range' => [
                     'px' => [

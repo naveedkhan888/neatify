@@ -8751,7 +8751,6 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 }
 
 .service-icon-wrapper {
-  margin-bottom: 20px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -8773,17 +8772,12 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 
 .medical-service-item:hover .service-icon-wrapper i,
 .medical-service-item:hover .service-icon-wrapper svg {
-  color: #000;
+  
 }
 
 .elementor-widget-custom_medical_services .service-icon-wrapper i,
 .elementor-widget-custom_medical_services .service-icon-wrapper svg {
   transition: all 0.3s ease;
-}
-
-.use-custom-styles .medical-service-item:hover .service-icon-wrapper i,
-.use-custom-styles .medical-service-item:hover .service-icon-wrapper svg {
-  color: inherit;
 }
 
 .elementor-grid-1 .medical-services-grid { --grid-columns: 1; }
@@ -8801,9 +8795,9 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   border-right: none;
 }
 
-.service-title {
-  width: 100%;
-  margin: 15px 0;
+.service-top-content .service-title {
+  width: 44%;
+  margin: 2.35em 0 0 0;
 }
 
 .service-link {
@@ -8812,11 +8806,10 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   width: 100%;
   text-decoration: none;
   font-weight: 500;
-  color: #000 !important;
   position: relative;
   overflow: hidden;
-  margin-top: auto;
-  padding-top: 15px;
+  margin-top: 3.2em;
+  padding-top: 0;
 }
 
 .service-link .read-more-text {
@@ -8895,10 +8888,6 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 
   .service-top-content {
     gap: 10px;
-  }
-
-  .service-icon-wrapper {
-    margin-bottom: 15px;
   }
 
   .service-title {
