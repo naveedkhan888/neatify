@@ -172,7 +172,7 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 				'selectors' => [
 
-					'{{WRAPPER}} .vertical-services-menu a::before' => 'background-color: linear-gradient(120deg, transparent, {{VALUE}}, transparent);',
+					'{{WRAPPER}} .vertical-services-menu a:before' => 'background-color: linear-gradient(120deg, transparent, {{VALUE}}, transparent);',
 
 				],
 
