@@ -7979,17 +7979,14 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   background-size: cover;
 }
 .error-404 .error-logo {
-  position: absolute;
-  top: 75px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 160px;
 }
 .error-404 h1 {
-  font-size: 180px;
+  font-size: 130px;
   line-height: 1;
-  font-weight: 300;
+  font-weight: 600;
   color: #fff;
+  margin: 20px 0 0 0;
 }
 .error-404 h2 {
   font-size: 42px;

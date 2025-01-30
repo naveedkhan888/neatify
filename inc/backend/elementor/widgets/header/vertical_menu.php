@@ -136,6 +136,50 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 		);
 
+		// Background Color for Vertical Menu
+
+		$this->add_control(
+
+			'vertical_menu_bg_hover_color',
+
+			[
+
+				'label' => __( 'Background Hover Color', 'xhub' ),
+
+				'type' => Controls_Manager::COLOR,
+
+				'selectors' => [
+
+					'{{WRAPPER}} .vertical-services-menu a:hover' => 'background-color: {{VALUE}};',
+
+				],
+
+			]
+
+		);
+
+		// Background Color for Vertical Menu
+
+		$this->add_control(
+
+			'vertical_menu_bg_flash_color',
+
+			[
+
+				'label' => __( 'Background Flash Color', 'xhub' ),
+
+				'type' => Controls_Manager::COLOR,
+
+				'selectors' => [
+
+					'{{WRAPPER}} .vertical-services-menu a::before' => 'background-color: linear-gradient(120deg, transparent, {{VALUE}}, transparent);',
+
+				],
+
+			]
+
+		);
+
 
 
 		// Text Color for Menu Items
