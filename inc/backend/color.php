@@ -150,6 +150,8 @@ if(!function_exists('xhub_color_scheme')){
 
 			/*Color*/
 			blockquote:before,
+			.vertical-services-menu a:hover, 
+			.vertical-services-menu .current-menu-item a, 
 			.xp-text-marquee .content-wrapper .icon i, 
 			.xp-text-marquee .content-wrapper-2 .icon i, 
 			.hl-text, 
