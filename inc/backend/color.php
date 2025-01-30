@@ -116,9 +116,12 @@ if(!function_exists('xhub_color_scheme')){
 			}
 			.post-box .entry-meta .btn-details:hover, 
 			.blog-post .tagcloud a:hover, 
+			.vertical-services-menu li:hover,  
+			.vertical-services-menu .current-menu-item, 
 			.widget .tagcloud a:hover,
 			.icon-box-1 .icon-main{background: '.hex2rgba(xhub_get_option('main_color'), 0.1).';}
 			.team-3 .team-thumb a:before{background: '.hex2rgba(xhub_get_option('main_color'), 0.8).';}
+			.vertical-services-menu a::before{background: linear-gradient(120deg, transparent, '.hex2rgba(xhub_get_option('main_color'), 0.1).', transparent); }
 			.projects-grid .projects-box .portfolio-info,
 			.projects-grid.style-3 .projects-thumbnail .overlay{background: '.hex2rgba(xhub_get_option('main_color'), 0.9).';}
 
