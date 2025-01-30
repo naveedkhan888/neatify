@@ -5,14 +5,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Heading 
  */
-class Xhub_Heading_dual extends Widget_Base{
+class Neatify_Heading_dual extends Widget_Base{
 
  	public function get_name() {
 		return 'iheading2';
 	}
 
 	public function get_title() {
-		return __( 'XP Heading Dual', 'xhub' );
+		return __( 'XP Heading Dual', 'neatify' );
 	}
 
 	public function get_icon() {
@@ -20,14 +20,14 @@ class Xhub_Heading_dual extends Widget_Base{
 	}
 
 	public function get_categories() {
-		return [ 'category_xhub' ];
+		return [ 'category_neatify' ];
 	}
 
 	public static function get_subtitle_style() {
 		return [
-			'' 				=> __( 'Default', 'xhub' ),
-			'is_highlight' 	=> __( 'Highlight', 'xhub' ),
-			'is_line' 		=> __( 'Line', 'xhub' ),
+			'' 				=> __( 'Default', 'neatify' ),
+			'is_highlight' 	=> __( 'Highlight', 'neatify' ),
+			'is_line' 		=> __( 'Line', 'neatify' ),
 		];
 	}
 
@@ -36,7 +36,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Content', 'xhub' ),
+				'label' => __( 'Content', 'neatify' ),
 			]
 		);
 
@@ -44,13 +44,13 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'sub',
 			[
-				'label' => __( 'Subtitle', 'xhub' ),
+				'label' => __( 'Subtitle', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'our services', 'xhub' ),
-				'placeholder' => __( 'Enter your subtitle', 'xhub' ),
+				'default' => __( 'our services', 'neatify' ),
+				'placeholder' => __( 'Enter your subtitle', 'neatify' ),
 				'label_block' => true,
 			]
 		);
@@ -60,13 +60,13 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Main Title', 'xhub' ),
+				'label' => __( 'Main Title', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'What we do', 'xhub' ),
-				'placeholder' => __( 'Enter your title', 'xhub' ),
+				'default' => __( 'What we do', 'neatify' ),
+				'placeholder' => __( 'Enter your title', 'neatify' ),
 				'label_block' => true,
 			]
 		);
@@ -75,13 +75,13 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'parent_title_1',
 			[
-				'label' => __( 'First Parent Title', 'xhub' ),
+				'label' => __( 'First Parent Title', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'First', 'xhub' ),
-				'placeholder' => __( 'Enter first parent title', 'xhub' ),
+				'default' => __( 'First', 'neatify' ),
+				'placeholder' => __( 'Enter first parent title', 'neatify' ),
 				'label_block' => true,
 			]
 		);
@@ -90,13 +90,13 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'parent_title_2',
 			[
-				'label' => __( 'Second Parent Title', 'xhub' ),
+				'label' => __( 'Second Parent Title', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'Second', 'xhub' ),
-				'placeholder' => __( 'Enter second parent title', 'xhub' ),
+				'default' => __( 'Second', 'neatify' ),
+				'placeholder' => __( 'Enter second parent title', 'neatify' ),
 				'label_block' => true,
 			]
 		);
@@ -104,7 +104,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'xhub' ),
+				'label' => __( 'Title HTML Tag', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -124,19 +124,19 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'xhub' ),
+				'label' => __( 'Alignment', 'neatify' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xhub' ),
+						'title' => __( 'Left', 'neatify' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xhub' ),
+						'title' => __( 'Center', 'neatify' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xhub' ),
+						'title' => __( 'Right', 'neatify' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -153,7 +153,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Heading', 'xhub' ),
+				'label' => __( 'Heading', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -162,7 +162,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'heading_stitle',
 			[
-				'label' => __( 'Subtitle', 'xhub' ),
+				'label' => __( 'Subtitle', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -171,7 +171,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'subtitle_style',
 			[
-				'label' => __( 'Subtitle Style', 'xhub' ),
+				'label' => __( 'Subtitle Style', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => self::get_subtitle_style(),
@@ -180,7 +180,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_responsive_control(
 			'line_width',
 			[
-				'label' => __( 'Width', 'xhub' ),
+				'label' => __( 'Width', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -205,7 +205,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'stitle_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -217,7 +217,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'stitle_bg',
 			[
-				'label' => __( 'Background color', 'xhub' ),
+				'label' => __( 'Background color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -231,7 +231,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'stitle_border',
 			[
-				'label' => __( 'Border Color', 'xhub' ),
+				'label' => __( 'Border Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -252,7 +252,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_responsive_control(
 			'stitle_bottom_space',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -270,7 +270,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'heading_parent_title_1',
 			[
-				'label' => __( 'First Parent Title', 'xhub' ),
+				'label' => __( 'First Parent Title', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -279,7 +279,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'parent_title_1_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -300,7 +300,7 @@ class Xhub_Heading_dual extends Widget_Base{
         $this->add_control(
             'heading_parent_title_1_colors',
             [
-                'label' => __( 'First Parent Title Colors', 'xhub' ),
+                'label' => __( 'First Parent Title Colors', 'neatify' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -310,15 +310,15 @@ class Xhub_Heading_dual extends Widget_Base{
         $this->add_control(
             'parent_title_1_stroke_enable',
             [
-                'label' => __( 'Text Stroke Effect', 'xhub' ),
+                'label' => __( 'Text Stroke Effect', 'neatify' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'no' => [
-                        'title' => __( 'No', 'xhub' ),
+                        'title' => __( 'No', 'neatify' ),
                         'icon' => 'eicon-close',
                     ],
                     'yes' => [
-                        'title' => __( 'Yes', 'xhub' ),
+                        'title' => __( 'Yes', 'neatify' ),
                         'icon' => 'eicon-check',
                     ],
                 ],
@@ -329,7 +329,7 @@ class Xhub_Heading_dual extends Widget_Base{
         $this->add_control(
             'parent_title_1_stroke_color',
             [
-                'label' => __( 'Stroke Color', 'xhub' ),
+                'label' => __( 'Stroke Color', 'neatify' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
@@ -344,7 +344,7 @@ class Xhub_Heading_dual extends Widget_Base{
         $this->add_responsive_control(
             'parent_title_1_stroke_width',
             [
-                'label' => __( 'Stroke Width', 'xhub' ),
+                'label' => __( 'Stroke Width', 'neatify' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -371,7 +371,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'heading_parent_title_2_colors',
 			[
-				'label' => __( 'Second Parent Title Colors', 'xhub' ),
+				'label' => __( 'Second Parent Title Colors', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -380,7 +380,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'parent_title_2_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -401,7 +401,7 @@ class Xhub_Heading_dual extends Widget_Base{
         $this->add_control(
             'heading_parent_title_2',
             [
-                'label' => __( 'Second Parent Title', 'xhub' ),
+                'label' => __( 'Second Parent Title', 'neatify' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -411,15 +411,15 @@ class Xhub_Heading_dual extends Widget_Base{
         $this->add_control(
             'parent_title_2_stroke_enable',
             [
-                'label' => __( 'Text Stroke Effect', 'xhub' ),
+                'label' => __( 'Text Stroke Effect', 'neatify' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'no' => [
-                        'title' => __( 'No', 'xhub' ),
+                        'title' => __( 'No', 'neatify' ),
                         'icon' => 'eicon-close',
                     ],
                     'yes' => [
-                        'title' => __( 'Yes', 'xhub' ),
+                        'title' => __( 'Yes', 'neatify' ),
                         'icon' => 'eicon-check',
                     ],
                 ],
@@ -430,7 +430,7 @@ class Xhub_Heading_dual extends Widget_Base{
         $this->add_control(
             'parent_title_2_stroke_color',
             [
-                'label' => __( 'Stroke Color', 'xhub' ),
+                'label' => __( 'Stroke Color', 'neatify' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
@@ -445,7 +445,7 @@ class Xhub_Heading_dual extends Widget_Base{
         $this->add_responsive_control(
             'parent_title_2_stroke_width',
             [
-                'label' => __( 'Stroke Width', 'xhub' ),
+                'label' => __( 'Stroke Width', 'neatify' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -471,7 +471,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xhub' ),
+				'label' => __( 'Title', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -479,7 +479,7 @@ class Xhub_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -541,4 +541,4 @@ class Xhub_Heading_dual extends Widget_Base{
     }
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_Heading_dual() );
+Plugin::instance()->widgets_manager->register( new Neatify_Heading_dual() );

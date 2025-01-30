@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Sidepanel
  */
-class Xhub_Sidepanel extends Widget_Base{
+class Neatify_Sidepanel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Xhub_Sidepanel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Side Panel', 'xhub' );
+		return __( 'XP Side Panel', 'neatify' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Xhub_Sidepanel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xhub_header' ];
+		return [ 'category_neatify_header' ];
 	}
 
 	protected function register_controls() {
@@ -33,14 +33,14 @@ class Xhub_Sidepanel extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'xhub' ),
+				'label' => __( 'Icon', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Icon Color', 'xhub' ),
+				'label' => __( 'Icon Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -51,7 +51,7 @@ class Xhub_Sidepanel extends Widget_Base{
 		$this->add_control(
 			'icon_size',
 			[
-				'label' => __( 'Icon Size', 'xhub' ),
+				'label' => __( 'Icon Size', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -70,14 +70,14 @@ class Xhub_Sidepanel extends Widget_Base{
 		$this->start_controls_section(
 			'style_panel_section',
 			[
-				'label' => __( 'Side Panel', 'xhub' ),
+				'label' => __( 'Side Panel', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'panel_size',
 			[
-				'label' => __( 'Width', 'xhub' ),
+				'label' => __( 'Width', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -94,7 +94,7 @@ class Xhub_Sidepanel extends Widget_Base{
 		$this->add_control(
 			'bg_panel',
 			[
-				'label' => __( 'Background', 'xhub' ),
+				'label' => __( 'Background', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -105,7 +105,7 @@ class Xhub_Sidepanel extends Widget_Base{
 		$this->add_control(
 			'bg_close',
 			[
-				'label' => __( 'Background Close Button', 'xhub' ),
+				'label' => __( 'Background Close Button', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -116,7 +116,7 @@ class Xhub_Sidepanel extends Widget_Base{
 		$this->add_control(
 			'color_close',
 			[
-				'label' => __( 'Color Close Button', 'xhub' ),
+				'label' => __( 'Color Close Button', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -143,5 +143,5 @@ class Xhub_Sidepanel extends Widget_Base{
 	}
 
 }
-// After the Xhub_Sidepanel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_Sidepanel() );
+// After the Neatify_Sidepanel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Neatify_Sidepanel() );

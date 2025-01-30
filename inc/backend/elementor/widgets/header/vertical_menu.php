@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 
  */
 
-class Xhub_Vertical_Menu extends Widget_Base{
+class Neatify_Vertical_Menu extends Widget_Base{
 
 
 
@@ -26,7 +26,7 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 	public function get_title() {
 
-		return __( 'XP Vertical Services Menu', 'xhub' );
+		return __( 'XP Vertical Services Menu', 'neatify' );
 
 	}
 
@@ -42,7 +42,7 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 	public function get_categories() {
 
-		return [ 'category_xhub_sidebar' ];
+		return [ 'category_neatify_sidebar' ];
 
 	}
 
@@ -58,7 +58,7 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Menu', 'xhub' ),
+				'label' => __( 'Menu', 'neatify' ),
 
 			]
 
@@ -74,7 +74,7 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => esc_html__( 'Select Services Menu', 'xhub' ),
+				'label' => esc_html__( 'Select Services Menu', 'neatify' ),
 
 				'type' => Controls_Manager::SELECT,
 
@@ -104,7 +104,7 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Vertical Menu Style', 'xhub' ),
+				'label' => __( 'Vertical Menu Style', 'neatify' ),
 
 				'tab'   => Controls_Manager::TAB_STYLE,
 
@@ -122,7 +122,7 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Background Color', 'xhub' ),
+				'label' => __( 'Background Color', 'neatify' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -144,7 +144,7 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Background Hover Color', 'xhub' ),
+				'label' => __( 'Background Hover Color', 'neatify' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -166,7 +166,7 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Background Flash Color', 'xhub' ),
+				'label' => __( 'Background Flash Color', 'neatify' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -190,7 +190,7 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Text Color', 'xhub' ),
+				'label' => __( 'Text Color', 'neatify' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -214,7 +214,7 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Hover Text Color', 'xhub' ),
+				'label' => __( 'Hover Text Color', 'neatify' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -238,7 +238,7 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Active Menu Item Color', 'xhub' ),
+				'label' => __( 'Active Menu Item Color', 'neatify' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -280,7 +280,7 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Item Padding', 'xhub' ),
+				'label' => __( 'Item Padding', 'neatify' ),
 
 				'type' => Controls_Manager::DIMENSIONS,
 
@@ -366,4 +366,4 @@ class Xhub_Vertical_Menu extends Widget_Base{
 
 // Register the new vertical menu widget with Elementor
 
-Plugin::instance()->widgets_manager->register( new Xhub_Vertical_Menu() );
+Plugin::instance()->widgets_manager->register( new Neatify_Vertical_Menu() );

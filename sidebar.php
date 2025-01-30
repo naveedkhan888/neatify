@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Xhub
+ * @package Neatify
  */
 
-if ( xhub_get_layout() === 'full-content' ) {
+if ( neatify_get_layout() === 'full-content' ) {
 	return;
 }
 

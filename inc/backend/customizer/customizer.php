@@ -2,7 +2,7 @@
 /**
  * Theme customizer
  *
- * @package Xhub
+ * @package Neatify
  */
 
 // Exit if accessed directly
@@ -17,7 +17,7 @@ add_action('after_setup_theme', function() {
     }
 }, 20);
 
-class Xhub_Customize {
+class Neatify_Customize {
 	/**
 	 * Customize settings
 	 *
@@ -143,18 +143,18 @@ class Xhub_Customize {
  *
  * @return bool|string
  */
-function xhub_get_option( $name ) {
-	global $xhub_customize;
+function neatify_get_option( $name ) {
+	global $neatify_customize;
 
 	$value = false;
 
 	if ( class_exists( 'Kirki' ) ) {
-		$value = Kirki::get_option( 'xhub', $name );
-	} elseif ( ! empty( $xhub_customize ) ) {
-		$value = $xhub_customize->get_option( $name );
+		$value = Kirki::get_option( 'neatify', $name );
+	} elseif ( ! empty( $neatify_customize ) ) {
+		$value = $neatify_customize->get_option( $name );
 	}
 
-	return apply_filters( 'xhub_get_option', $value, $name );
+	return apply_filters( 'neatify_get_option', $value, $name );
 }
 
 /**
@@ -164,14 +164,14 @@ function xhub_get_option( $name ) {
  *
  * @return mixed
  */
-function xhub_get_option_default( $name ) {
-	global $xhub_customize;
+function neatify_get_option_default( $name ) {
+	global $neatify_customize;
 
-	if ( empty( $xhub_customize ) ) {
+	if ( empty( $neatify_customize ) ) {
 		return false;
 	}
 
-	return $xhub_customize->get_option_default( $name );
+	return $neatify_customize->get_option_default( $name );
 }
 
 /**
@@ -179,12 +179,12 @@ function xhub_get_option_default( $name ) {
  *
  * @param object $wp_customize
  */
-function xhub_customize_modify( $wp_customize ) {
+function neatify_customize_modify( $wp_customize ) {
 	$wp_customize->get_section( 'title_tagline' )->panel     = 'general';
 	$wp_customize->get_section( 'static_front_page' )->panel = 'general';
 }
 
-add_action( 'customize_register', 'xhub_customize_modify' );
+add_action( 'customize_register', 'neatify_customize_modify' );
 
 
 /**
@@ -195,27 +195,27 @@ add_action( 'customize_register', 'xhub_customize_modify' );
  *
  * @return array
  */
-function xhub_customize_settings() {
+function neatify_customize_settings() {
 	/**
 	 * Customizer configuration
 	 */
 
 	$settings = array(
-		'theme' => 'xhub',
+		'theme' => 'neatify',
 	);
 
 	$panels = array(
 		'general'         => array(
 			'priority'    => 5,
-			'title'       => esc_html__( 'General', 'xhub' ),
+			'title'       => esc_html__( 'General', 'neatify' ),
         ),
         'blog'        => array(
-			'title'      => esc_html__( 'Blog', 'xhub' ),
+			'title'      => esc_html__( 'Blog', 'neatify' ),
 			'priority'   => 10,
 			'capability' => 'edit_theme_options',
 		),
         'portfolio'       => array(
-			'title'       => esc_html__( 'Portfolio', 'xhub' ),
+			'title'       => esc_html__( 'Portfolio', 'neatify' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',			
 		),
@@ -224,28 +224,28 @@ function xhub_customize_settings() {
 	$sections = array(
         /* header */
         'main_header'     => array(
-            'title'       => esc_html__( 'Header', 'xhub' ),
+            'title'       => esc_html__( 'Header', 'neatify' ),
             'description' => '',
             'priority'    => 8,
             'capability'  => 'edit_theme_options',
         ),
         /* page header */
         'page_header'     => array(
-            'title'       => esc_html__( 'Page Header', 'xhub' ),
+            'title'       => esc_html__( 'Page Header', 'neatify' ),
             'description' => '',
             'priority'    => 9,
             'capability'  => 'edit_theme_options',
         ),
         /* blog */
         'blog_page'           => array(
-			'title'       => esc_html__( 'Blog Page', 'xhub' ),
+			'title'       => esc_html__( 'Blog Page', 'neatify' ),
 			'description' => '',
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'blog',
 		),
         'single_post'           => array(
-			'title'       => esc_html__( 'Single Post', 'xhub' ),
+			'title'       => esc_html__( 'Single Post', 'neatify' ),
 			'description' => '',
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
@@ -253,46 +253,46 @@ function xhub_customize_settings() {
         ),
         /* footer */
         'footer'         => array(
-			'title'      => esc_html__( 'Footer', 'xhub' ),
+			'title'      => esc_html__( 'Footer', 'neatify' ),
 			'priority'   => 10,
 			'capability' => 'edit_theme_options',
 		),
         /* portfolio */
         'portfolio_page'  => array(
-			'title'       => esc_html__( 'Archive Page', 'xhub' ),
+			'title'       => esc_html__( 'Archive Page', 'neatify' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'portfolio',			
 		),
 		'portfolio_post'  => array(
-			'title'       => esc_html__( 'Single Page', 'xhub' ),
+			'title'       => esc_html__( 'Single Page', 'neatify' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'portfolio',			
 		),
 		/* typography */
 		'typography'           => array(
-            'title'       => esc_html__( 'Typography', 'xhub' ),
+            'title'       => esc_html__( 'Typography', 'neatify' ),
             'description' => '',
             'priority'    => 15,
             'capability'  => 'edit_theme_options',
         ),
 		/* 404 */
 		'error_404'       => array(
-            'title'       => esc_html__( '404', 'xhub' ),
+            'title'       => esc_html__( '404', 'neatify' ),
             'description' => '',
             'priority'    => 11,
             'capability'  => 'edit_theme_options',
         ),
         /* color scheme */
         'color_scheme'   => array(
-			'title'      => esc_html__( 'Color Scheme', 'xhub' ),
+			'title'      => esc_html__( 'Color Scheme', 'neatify' ),
 			'priority'   => 200,
 			'capability' => 'edit_theme_options',
 		),
 		/* js code */
 		'script_code'   => array(
-			'title'      => esc_html__( 'Google Analytics(Script Code)', 'xhub' ),
+			'title'      => esc_html__( 'Google Analytics(Script Code)', 'neatify' ),
 			'priority'   => 210,
 			'capability' => 'edit_theme_options',
 		),
@@ -302,47 +302,47 @@ function xhub_customize_settings() {
         /* header settings */
 		'header_layout'   => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Header Desktop', 'xhub' ), 
-	 		'description' => esc_attr__( 'Choose the header on desktop.', 'xhub' ), 
+	 		'label'       => esc_attr__( 'Select Header Desktop', 'neatify' ), 
+	 		'description' => esc_attr__( 'Choose the header on desktop.', 'neatify' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 3,
-	 		'placeholder' => esc_attr__( 'Select a header', 'xhub' ), 
+	 		'placeholder' => esc_attr__( 'Select a header', 'neatify' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
 		),
 		'header_fixed'    => array(
             'type'        => 'toggle',
-			'label'       => esc_html__( 'Header Transparent?', 'xhub' ),
-	 		'description' => esc_attr__( 'Enable when your header is transparent.', 'xhub' ), 
+			'label'       => esc_html__( 'Header Transparent?', 'neatify' ),
+	 		'description' => esc_attr__( 'Enable when your header is transparent.', 'neatify' ), 
             'section'     => 'main_header',
 			'default'     => '1',
 			'priority'    => 4,
         ),
         'header_mobile'   => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Header Mobile', 'xhub' ), 
-	 		'description' => esc_attr__( 'Choose the header on mobile.', 'xhub' ), 
+	 		'label'       => esc_attr__( 'Select Header Mobile', 'neatify' ), 
+	 		'description' => esc_attr__( 'Choose the header on mobile.', 'neatify' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 5,
-	 		'placeholder' => esc_attr__( 'Select a header', 'xhub' ), 
+	 		'placeholder' => esc_attr__( 'Select a header', 'neatify' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
         ),
         'is_sidepanel'    => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Side Panel for all site?', 'xhub' ),
+            'label'       => esc_html__( 'Side Panel for all site?', 'neatify' ),
             'section'     => 'main_header',
             'default'     => '1',
             'priority'    => 6,
         ),
         'sidepanel_layout'     => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Side Panel', 'xhub' ), 
-	 		'description' => esc_attr__( 'Choose the side panel on header.', 'xhub' ), 
+	 		'label'       => esc_attr__( 'Select Side Panel', 'neatify' ), 
+	 		'description' => esc_attr__( 'Choose the side panel on header.', 'neatify' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 6,
-	 		'placeholder' => esc_attr__( 'Select a panel', 'xhub' ), 
+	 		'placeholder' => esc_attr__( 'Select a panel', 'neatify' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
             'active_callback' => array(
                 array(
@@ -354,7 +354,7 @@ function xhub_customize_settings() {
 		),
 		'panel_left'     => array(
             'type'        => 'toggle',
-			'label'       => esc_html__( 'Side Panel On Left', 'xhub' ),
+			'label'       => esc_html__( 'Side Panel On Left', 'neatify' ),
             'section'     => 'main_header',
 			'default'     => '0',
 			'priority'    => 7,
@@ -374,14 +374,14 @@ function xhub_customize_settings() {
         /*page header */
         'pheader_switch'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Page Header On/Off', 'xhub' ),
+            'label'       => esc_html__( 'Page Header On/Off', 'neatify' ),
             'section'     => 'page_header',
             'default'     => 1,
             'priority'    => 10,
         ),
         'breadcrumbs'     => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Breadcrumbs On/Off', 'xhub' ),
+            'label'       => esc_html__( 'Breadcrumbs On/Off', 'neatify' ),
             'section'     => 'page_header',
             'default'     => 1,
             'priority'    => 10,
@@ -395,7 +395,7 @@ function xhub_customize_settings() {
         ),
         'left_bread'     => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Breadcrumbs On Left', 'xhub' ),
+            'label'       => esc_html__( 'Breadcrumbs On Left', 'neatify' ),
             'section'     => 'page_header',
             'default'     => 0,
             'priority'    => 10,
@@ -414,7 +414,7 @@ function xhub_customize_settings() {
         ),
         'pheader_img'  => array(
             'type'     => 'image',
-            'label'    => esc_html__( 'Background Image', 'xhub' ),
+            'label'    => esc_html__( 'Background Image', 'neatify' ),
             'section'  => 'page_header',
             'default'  => '',
             'priority' => 10,
@@ -434,7 +434,7 @@ function xhub_customize_settings() {
         ),
         'pheader_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'xhub' ),
+            'label'    => esc_html__( 'Background Color', 'neatify' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -453,7 +453,7 @@ function xhub_customize_settings() {
         ),
         'ptitle_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Title Color', 'xhub' ),
+            'label'    => esc_html__( 'Title Color', 'neatify' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -472,7 +472,7 @@ function xhub_customize_settings() {
         ),
         'bread_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Breadcrumbs Color', 'xhub' ),
+            'label'    => esc_html__( 'Breadcrumbs Color', 'neatify' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -496,14 +496,14 @@ function xhub_customize_settings() {
         ),
         'pheader_height'  => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Page Header Height (Ex: 300px)', 'xhub' ),
+            'label'    => esc_html__( 'Page Header Height (Ex: 300px)', 'neatify' ),
             'section'  => 'page_header',
             'transport' => 'auto',
             'priority' => 10,
             'choices'   => array(
-                'desktop' => esc_attr__( 'Desktop', 'xhub' ),
-                'tablet'  => esc_attr__( 'Tablet', 'xhub' ),
-                'mobile'  => esc_attr__( 'Mobile', 'xhub' ),
+                'desktop' => esc_attr__( 'Desktop', 'neatify' ),
+                'tablet'  => esc_attr__( 'Tablet', 'neatify' ),
+                'mobile'  => esc_attr__( 'Mobile', 'neatify' ),
             ),
             'output'   => array(
                 array(
@@ -540,14 +540,14 @@ function xhub_customize_settings() {
         ),
         'head_size'  => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Page Title Size (Ex: 30px)', 'xhub' ),
+            'label'    => esc_html__( 'Page Title Size (Ex: 30px)', 'neatify' ),
             'section'  => 'page_header',
             'transport' => 'auto',
             'priority' => 10,
             'choices'   => array(
-                'desktop' => esc_attr__( 'Desktop', 'xhub' ),
-                'tablet'  => esc_attr__( 'Tablet', 'xhub' ),
-                'mobile'  => esc_attr__( 'Mobile', 'xhub' ),
+                'desktop' => esc_attr__( 'Desktop', 'neatify' ),
+                'tablet'  => esc_attr__( 'Tablet', 'neatify' ),
+                'mobile'  => esc_attr__( 'Mobile', 'neatify' ),
             ),
             'output'   => array(
                 array(
@@ -585,11 +585,11 @@ function xhub_customize_settings() {
         /* blog settings */
 		'blog_layout'           => array(
 			'type'        => 'radio-image',
-			'label'       => esc_html__( 'Blog Layout', 'xhub' ),
+			'label'       => esc_html__( 'Blog Layout', 'neatify' ),
 			'section'     => 'blog_page',
 			'default'     => 'content-sidebar',
 			'priority'    => 7,
-			'description' => esc_html__( 'Select default sidebar for the blog page.', 'xhub' ),
+			'description' => esc_html__( 'Select default sidebar for the blog page.', 'neatify' ),
 			'choices'     => array(
 				'content-sidebar' 	=> get_template_directory_uri() . '/inc/backend/images/right.png',
 				'sidebar-content' 	=> get_template_directory_uri() . '/inc/backend/images/left.png',
@@ -598,27 +598,27 @@ function xhub_customize_settings() {
 		),
         'blog_style'           => array(
             'type'        => 'select',
-            'label'       => esc_html__( 'Blog Style', 'xhub' ),
+            'label'       => esc_html__( 'Blog Style', 'neatify' ),
             'section'     => 'blog_page',
             'default'     => 'list',
             'priority'    => 8,
-            'description' => esc_html__( 'Select style default for the blog page.', 'xhub' ),
+            'description' => esc_html__( 'Select style default for the blog page.', 'neatify' ),
             'choices'     => array(
-                'list' => esc_attr__( 'Blog List', 'xhub' ),
-                'grid' => esc_attr__( 'Blog Grid', 'xhub' ),
+                'list' => esc_attr__( 'Blog List', 'neatify' ),
+                'grid' => esc_attr__( 'Blog Grid', 'neatify' ),
             ),
         ),
         'blog_columns'           => array(
             'type'        => 'select',
-            'label'       => esc_html__( 'Blog Columns', 'xhub' ),
+            'label'       => esc_html__( 'Blog Columns', 'neatify' ),
             'section'     => 'blog_page',
             'default'     => 'pf_2_cols',
             'priority'    => 8,
-            'description' => esc_html__( 'Select columns default for the blog page.', 'xhub' ),
+            'description' => esc_html__( 'Select columns default for the blog page.', 'neatify' ),
             'choices'     => array(
-                'pf_2_cols' => esc_attr__( '2 Columns', 'xhub' ),
-                'pf_3_cols' => esc_attr__( '3 Columns', 'xhub' ),
-                'pf_4_cols' => esc_attr__( '4 Columns', 'xhub' ),
+                'pf_2_cols' => esc_attr__( '2 Columns', 'neatify' ),
+                'pf_3_cols' => esc_attr__( '3 Columns', 'neatify' ),
+                'pf_4_cols' => esc_attr__( '4 Columns', 'neatify' ),
             ),
             'active_callback' => array(
                 array(
@@ -630,20 +630,20 @@ function xhub_customize_settings() {
         ),	
 		'post_entry_meta'              => array(
             'type'     => 'multicheck',
-            'label'    => esc_html__( 'Entry Meta', 'xhub' ),
+            'label'    => esc_html__( 'Entry Meta', 'neatify' ),
             'section'  => 'blog_page',
             'default'  => array( 'date', 'author', 'comm' ),
             'choices'  => array(
-                'date'    => esc_html__( 'Date', 'xhub' ),
-                'author'  => esc_html__( 'Author', 'xhub' ),
-                'comm'    => esc_html__( 'Comment', 'xhub' ),
+                'date'    => esc_html__( 'Date', 'neatify' ),
+                'author'  => esc_html__( 'Author', 'neatify' ),
+                'comm'    => esc_html__( 'Comment', 'neatify' ),
             ),
             'priority' => 10,
         ),
         /* single blog */
         'single_post_layout'           => array(
             'type'        => 'radio-image',
-            'label'       => esc_html__( 'Layout', 'xhub' ),
+            'label'       => esc_html__( 'Layout', 'neatify' ),
             'section'     => 'single_post',
             'default'     => 'content-sidebar',
             'priority'    => 10,
@@ -655,14 +655,14 @@ function xhub_customize_settings() {
         ),
         'ptitle_post'               => array(
 			'type'            => 'text',
-			'label'           => esc_html__( 'Page Title', 'xhub' ),
+			'label'           => esc_html__( 'Page Title', 'neatify' ),
 			'section'         => 'single_post',
-			'default'         => esc_html__( 'Blog Single', 'xhub' ),
+			'default'         => esc_html__( 'Blog Single', 'neatify' ),
 			'priority'        => 10,
 		),
 		'single_separator1'     => array(
 			'type'        => 'custom',
-			'label'       => esc_html__( 'Social Share', 'xhub' ),
+			'label'       => esc_html__( 'Social Share', 'neatify' ),
 			'section'     => 'single_post',
 			'default'     => '<hr>',
 			'priority'    => 10,
@@ -672,41 +672,41 @@ function xhub_customize_settings() {
             'section'  => 'single_post',
             'default'  => array( 'twitter', 'facebook', 'pinterest', 'linkedin' ),
             'choices'  => array(
-                'twit'  	=> esc_html__( 'Twitter', 'xhub' ),
-                'face'    	=> esc_html__( 'Facebook', 'xhub' ),
-                'pint'     	=> esc_html__( 'Pinterest', 'xhub' ),
-                'link'     	=> esc_html__( 'Linkedin', 'xhub' ),
-                'google'  	=> esc_html__( 'Google Plus', 'xhub' ),
-                'tumblr'    => esc_html__( 'Tumblr', 'xhub' ),
-                'reddit'    => esc_html__( 'Reddit', 'xhub' ),
-                'vk'     	=> esc_html__( 'VK', 'xhub' ),
+                'twit'  	=> esc_html__( 'Twitter', 'neatify' ),
+                'face'    	=> esc_html__( 'Facebook', 'neatify' ),
+                'pint'     	=> esc_html__( 'Pinterest', 'neatify' ),
+                'link'     	=> esc_html__( 'Linkedin', 'neatify' ),
+                'google'  	=> esc_html__( 'Google Plus', 'neatify' ),
+                'tumblr'    => esc_html__( 'Tumblr', 'neatify' ),
+                'reddit'    => esc_html__( 'Reddit', 'neatify' ),
+                'vk'     	=> esc_html__( 'VK', 'neatify' ),
             ),
             'priority' => 10,
         ),
         'single_separator2'     => array(
 			'type'        => 'custom',
-			'label'       => esc_html__( 'Entry Footer', 'xhub' ),
+			'label'       => esc_html__( 'Entry Footer', 'neatify' ),
 			'section'     => 'single_post',
 			'default'     => '<hr>',
 			'priority'    => 10,
 		),
         'author_box'      => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Author Info Box', 'xhub' ),
+			'label'       => esc_attr__( 'Author Info Box', 'neatify' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
 		),
 		'post_nav'     	  => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Post Navigation', 'xhub' ),
+			'label'       => esc_attr__( 'Post Navigation', 'neatify' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
 		),
 		'related_post'    => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Related Posts', 'xhub' ),
+			'label'       => esc_attr__( 'Related Posts', 'neatify' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
@@ -714,20 +714,20 @@ function xhub_customize_settings() {
         /* project settings */
 		'portfolio_archive'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Portfolio Archive', 'xhub' ),
+			'label'       => esc_html__( 'Portfolio Archive', 'neatify' ),
 			'section'     => 'portfolio_page',
 			'default'     => 'archive_default',
 			'priority'    => 1,
-			'description' => esc_html__( 'Select page default for the portfolio archive page.', 'xhub' ),
+			'description' => esc_html__( 'Select page default for the portfolio archive page.', 'neatify' ),
 			'choices'     => array(
-				'archive_default' => esc_attr__( 'Archive page default', 'xhub' ),
-				'archive_custom' => esc_attr__( 'Archive page custom', 'xhub' ),
+				'archive_default' => esc_attr__( 'Archive page default', 'neatify' ),
+				'archive_custom' => esc_attr__( 'Archive page custom', 'neatify' ),
 			),
 		),
 		'archive_page_custom'     => array(
 			'type'        => 'dropdown-pages',  
-	 		'label'       => esc_attr__( 'Select Page', 'xhub' ), 
-	 		'description' => esc_attr__( 'Choose a custom page for archive portfolio page.', 'xhub' ), 
+	 		'label'       => esc_attr__( 'Select Page', 'neatify' ), 
+	 		'description' => esc_attr__( 'Choose a custom page for archive portfolio page.', 'neatify' ), 
 	 		'section'     => 'portfolio_page', 
 	 		'default'     => '', 
 	 		'priority'    => 2,	 		
@@ -741,15 +741,15 @@ function xhub_customize_settings() {
 		),
 		'portfolio_column'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Portfolio Columns', 'xhub' ),
+			'label'       => esc_html__( 'Portfolio Columns', 'neatify' ),
 			'section'     => 'portfolio_page',
 			'default'     => '3cl',
 			'priority'    => 3,
-			'description' => esc_html__( 'Select default column for the portfolio page.', 'xhub' ),
+			'description' => esc_html__( 'Select default column for the portfolio page.', 'neatify' ),
 			'choices'     => array(
-				'2cl' => esc_attr__( '2 Column', 'xhub' ),
-				'3cl' => esc_attr__( '3 Column', 'xhub' ),
-				'4cl' => esc_attr__( '4 Column', 'xhub' ),
+				'2cl' => esc_attr__( '2 Column', 'neatify' ),
+				'3cl' => esc_attr__( '3 Column', 'neatify' ),
+				'4cl' => esc_attr__( '4 Column', 'neatify' ),
 			),
 			'active_callback' => array(
 				array(
@@ -761,15 +761,15 @@ function xhub_customize_settings() {
 		),
 		'portfolio_style'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Hover Style', 'xhub' ),
+			'label'       => esc_html__( 'Hover Style', 'neatify' ),
 			'section'     => 'portfolio_page',
 			'default'     => 'style1',
 			'priority'    => 4,
-			'description' => esc_html__( 'Select default style for the portfolio page.', 'xhub' ),
+			'description' => esc_html__( 'Select default style for the portfolio page.', 'neatify' ),
 			'choices'     => array(
-				'style1' => esc_attr__( 'Background Overlay', 'xhub' ),
-				'style2' => esc_attr__( 'Background Solid', 'xhub' ),
-				'style3' => esc_attr__( 'Hidden', 'xhub' ),
+				'style1' => esc_attr__( 'Background Overlay', 'neatify' ),
+				'style2' => esc_attr__( 'Background Solid', 'neatify' ),
+				'style3' => esc_attr__( 'Hidden', 'neatify' ),
 			),
 			'active_callback' => array(
 				array(
@@ -783,8 +783,8 @@ function xhub_customize_settings() {
 			'type'        => 'number',
 			'section'     => 'portfolio_page',
 			'priority'    => 5,
-			'label'       => esc_html__( 'Posts per page', 'xhub' ),			
-			'description' => esc_html__( 'Change Posts Per Page for Portfolio Archive, Taxonomy.', 'xhub' ),
+			'label'       => esc_html__( 'Posts per page', 'neatify' ),			
+			'description' => esc_html__( 'Change Posts Per Page for Portfolio Archive, Taxonomy.', 'neatify' ),
 			'default'     => '',
 			'active_callback' => array(
 				array(
@@ -796,23 +796,23 @@ function xhub_customize_settings() {
 		),
 		'pf_nav'     	  => array(
 			'type'        => 'toggle',
-			'label'       => esc_attr__( 'Projects Navigation On/Off', 'xhub' ),
+			'label'       => esc_attr__( 'Projects Navigation On/Off', 'neatify' ),
 			'section'     => 'portfolio_post',
 			'default'     => 1,
 			'priority'    => 7,
 		),
 		'pf_related_switch'     => array(
 			'type'        => 'toggle',
-			'label'       => esc_attr__( 'Related Projects On/Off', 'xhub' ),
+			'label'       => esc_attr__( 'Related Projects On/Off', 'neatify' ),
 			'section'     => 'portfolio_post',
 			'default'     => 1,
 			'priority'    => 7,
 		),
 		'pf_related_text'      => array(
 			'type'            => 'text',
-			'label'           => esc_html__( 'Related Projects Heading', 'xhub' ),
+			'label'           => esc_html__( 'Related Projects Heading', 'neatify' ),
 			'section'         => 'portfolio_post',
-			'default'         => esc_html__( 'Related Projects', 'xhub' ),
+			'default'         => esc_html__( 'Related Projects', 'neatify' ),
 			'priority'        => 7,
 			'active_callback' => array(
 				array(
@@ -825,17 +825,17 @@ function xhub_customize_settings() {
         /* footer settings */
 		'footer_layout'     => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Footer', 'xhub' ), 
-	 		'description' => esc_attr__( 'Choose a footer for all site here.', 'xhub' ), 
+	 		'label'       => esc_attr__( 'Select Footer', 'neatify' ), 
+	 		'description' => esc_attr__( 'Choose a footer for all site here.', 'neatify' ), 
 	 		'section'     => 'footer', 
 	 		'default'     => '', 
 	 		'priority'    => 1,
-	 		'placeholder' => esc_attr__( 'Select a footer', 'xhub' ), 
+	 		'placeholder' => esc_attr__( 'Select a footer', 'neatify' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_footer_builders', 'posts_per_page' => -1 ) ) : array(),
 		),
         'footer_fixed'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Footer Fixed On/Off?', 'xhub' ),
+            'label'       => esc_html__( 'Footer Fixed On/Off?', 'neatify' ),
             'section'     => 'footer',
             'default'     => 0,
             'priority'    => 2,
@@ -849,14 +849,14 @@ function xhub_customize_settings() {
 		),
 		'backtotop'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Back To Top On/Off?', 'xhub' ),
+            'label'       => esc_html__( 'Back To Top On/Off?', 'neatify' ),
             'section'     => 'footer',
             'default'     => 1,
             'priority'    => 4,
         ),
         'bg_backtotop'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'xhub' ),
+            'label'    => esc_html__( 'Background Color', 'neatify' ),
             'section'  => 'footer',
             'priority' => 5,
             'default'     => '',
@@ -876,7 +876,7 @@ function xhub_customize_settings() {
         ),
         'color_backtotop' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Color', 'xhub' ),
+            'label'    => esc_html__( 'Color', 'neatify' ),
             'section'  => 'footer',
             'priority' => 6,
             'default'     => '',
@@ -896,7 +896,7 @@ function xhub_customize_settings() {
         ),
         'spacing_backtotop' => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Spacing', 'xhub' ),
+            'label'    => esc_html__( 'Spacing', 'neatify' ),
             'section'  => 'footer',
             'priority' => 7,
             'default'     => array(
@@ -905,8 +905,8 @@ function xhub_customize_settings() {
 			),
 			'choices'     => array(
 				'labels' => array(
-					'bottom'  => esc_html__( 'Bottom (Ex: 20px)', 'xhub' ),
-					'right'   => esc_html__( 'Right (Ex: 20px)', 'xhub' ),
+					'bottom'  => esc_html__( 'Bottom (Ex: 20px)', 'neatify' ),
+					'right'   => esc_html__( 'Right (Ex: 20px)', 'neatify' ),
 				),
 			),
             'output'    => array(
@@ -932,7 +932,7 @@ function xhub_customize_settings() {
 		/* typography */
         'body_typo'    => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Body Font 1', 'xhub' ),
+            'label'    => esc_html__( 'Body Font 1', 'neatify' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -951,7 +951,7 @@ function xhub_customize_settings() {
         ),
         'second_font'    => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Body Font 2', 'xhub' ),
+            'label'    => esc_html__( 'Body Font 2', 'neatify' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -960,7 +960,7 @@ function xhub_customize_settings() {
         ),
         'heading1_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 1', 'xhub' ),
+            'label'    => esc_html__( 'Heading 1', 'neatify' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -979,7 +979,7 @@ function xhub_customize_settings() {
         ),
         'heading2_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 2', 'xhub' ),
+            'label'    => esc_html__( 'Heading 2', 'neatify' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -998,7 +998,7 @@ function xhub_customize_settings() {
         ),
         'heading3_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 3', 'xhub' ),
+            'label'    => esc_html__( 'Heading 3', 'neatify' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1017,7 +1017,7 @@ function xhub_customize_settings() {
         ),
         'heading4_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 4', 'xhub' ),
+            'label'    => esc_html__( 'Heading 4', 'neatify' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1036,7 +1036,7 @@ function xhub_customize_settings() {
         ),
         'heading5_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 5', 'xhub' ),
+            'label'    => esc_html__( 'Heading 5', 'neatify' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1055,7 +1055,7 @@ function xhub_customize_settings() {
         ),
         'heading6_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 6', 'xhub' ),
+            'label'    => esc_html__( 'Heading 6', 'neatify' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1076,9 +1076,9 @@ function xhub_customize_settings() {
 		/* 404 */
 		'page_404'   	  => array(
 			'type'        => 'dropdown-pages',  
-	 		'label'       => esc_attr__( 'Select Page', 'xhub' ), 
-	 		'description' => esc_attr__( 'Choose a custom page for page 404.', 'xhub' ),
-	 		'placeholder' => esc_attr__( 'Select a page 404', 'xhub' ), 
+	 		'label'       => esc_attr__( 'Select Page', 'neatify' ), 
+	 		'description' => esc_attr__( 'Choose a custom page for page 404.', 'neatify' ),
+	 		'placeholder' => esc_attr__( 'Select a page 404', 'neatify' ), 
 	 		'section'     => 'error_404', 
 	 		'default'     => '', 
 			'priority'    => 3,
@@ -1087,7 +1087,7 @@ function xhub_customize_settings() {
 		/*color scheme*/
         'bg_body'      => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Body', 'xhub' ),
+            'label'    => esc_html__( 'Background Body', 'neatify' ),
             'section'  => 'color_scheme',
             'default'  => '',
             'priority' => 10,
@@ -1100,21 +1100,21 @@ function xhub_customize_settings() {
         ),
         'main_color'   => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Primary Color', 'xhub' ),
+            'label'    => esc_html__( 'Primary Color', 'neatify' ),
             'section'  => 'color_scheme',
             'default'  => '#C19977',
             'priority' => 10,
         ),
         'heading_color'   => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Heading Color', 'xhub' ),
+            'label'    => esc_html__( 'Heading Color', 'neatify' ),
             'section'  => 'color_scheme',
             'default'  => '#191717',
             'priority' => 10,
         ),
         'btn_hover_dark'   => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Button Hover & Dark', 'xhub' ),
+            'label'    => esc_html__( 'Button Hover & Dark', 'neatify' ),
             'section'  => 'color_scheme',
             'default'  => '#191717',
             'priority' => 10,
@@ -1123,7 +1123,7 @@ function xhub_customize_settings() {
         /*google atlantic*/
         'js_code'  => array(
             'type'        => 'code',
-            'label'       => esc_html__( 'Code', 'xhub' ),
+            'label'       => esc_html__( 'Code', 'neatify' ),
             'section'     => 'script_code',
             'choices'     => [
 				'language' => 'js',
@@ -1132,11 +1132,11 @@ function xhub_customize_settings() {
         ),
 		
 	);
-	$settings['panels']   = apply_filters( 'xhub_customize_panels', $panels );
-	$settings['sections'] = apply_filters( 'xhub_customize_sections', $sections );
-	$settings['fields']   = apply_filters( 'xhub_customize_fields', $fields );
+	$settings['panels']   = apply_filters( 'neatify_customize_panels', $panels );
+	$settings['sections'] = apply_filters( 'neatify_customize_sections', $sections );
+	$settings['fields']   = apply_filters( 'neatify_customize_fields', $fields );
 
 	return $settings;
 }
 
-$xhub_customize = new Xhub_Customize( xhub_customize_settings() );
+$neatify_customize = new Neatify_Customize( neatify_customize_settings() );

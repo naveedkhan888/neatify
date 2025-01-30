@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Image Box
  */
-class Xhub_Image_Box_2 extends Widget_Base{
+class Neatify_Image_Box_2 extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Image Box 2', 'xhub' );
+		return __( 'XP Image Box 2', 'neatify' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xhub' ];
+		return [ 'category_neatify' ];
 	}
 
 	protected function register_controls() {
@@ -33,25 +33,25 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Image Box', 'xhub' ),
+				'label' => __( 'Image Box', 'neatify' ),
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'xhub' ),
+				'label' => __( 'Alignment', 'neatify' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xhub' ),
+						'title' => __( 'Left', 'neatify' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xhub' ),
+						'title' => __( 'Center', 'neatify' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xhub' ),
+						'title' => __( 'Right', 'neatify' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -63,7 +63,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_control(
 	       'image_box',
 	        [
-	           'label' => esc_html__( 'Image Box', 'xhub' ),
+	           'label' => esc_html__( 'Image Box', 'neatify' ),
 	           'type'  => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -84,15 +84,15 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'xhub' ),
+				'label' => __( 'Title', 'neatify' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Marketing Research', 'xhub' ),
+				'default' => __( 'Marketing Research', 'neatify' ),
 			]
 		);
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'xhub' ),
+				'label' => __( 'Title HTML Tag', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -114,16 +114,16 @@ class Xhub_Image_Box_2 extends Widget_Base{
 			[
 				'label' => 'Description',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Analysis of the market as a whole and its particular components (competitors, consumers, product, etc.)', 'xhub' ),
+				'default' => __( 'Analysis of the market as a whole and its particular components (competitors, consumers, product, etc.)', 'neatify' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'xhub' ),
+				'label' => __( 'Link', 'neatify' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'xhub' ),
+				'placeholder' => __( 'https://your-link.com', 'neatify' ),
 				'default' => [
 					'url' => '#'
 				],
@@ -134,7 +134,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 			[
 				'label' => 'Label Button',
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Explore More', 'xhub' ),
+				'default' => __( 'Explore More', 'neatify' ),
 				'label_block' => true,
 				'condition' => [
 					'link[url]!' => '',
@@ -149,7 +149,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'xhub' ),
+				'label' => __( 'Content', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -158,14 +158,14 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_control(
 			'heading_gereral',
 			[
-				'label' => __( 'Gereral', 'xhub' ),
+				'label' => __( 'Gereral', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_control(
 			'box_bg',
 			[
-				'label' => __( 'Background', 'xhub' ),
+				'label' => __( 'Background', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -176,7 +176,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'xhub' ),
+				'label' => __( 'Padding Box', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -187,7 +187,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'xhub' ),
+				'label' => __( 'Border Radius', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -207,7 +207,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xhub' ),
+				'label' => __( 'Title', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -215,7 +215,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -231,7 +231,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -242,7 +242,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'xhub' ),
+				'label' => __( 'Hover Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -276,7 +276,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_btn_normal',
 			[
-				'label' => __( 'Normal', 'xhub' ),
+				'label' => __( 'Normal', 'neatify' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -285,7 +285,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_control(
 			'btn_bg_color',
 			[
-				'label' => __( 'Background Color', 'xhub' ),
+				'label' => __( 'Background Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -299,7 +299,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -313,7 +313,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_control(
 			'btn_bcolor',
 			[
-				'label' => __( 'Border Color', 'xhub' ),
+				'label' => __( 'Border Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -329,7 +329,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_btn_hover',
 			[
-				'label' => __( 'Hover', 'xhub' ),
+				'label' => __( 'Hover', 'neatify' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -338,7 +338,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_control(
 			'hover_btn_bg_color',
 			[
-				'label' => __( 'Background Color', 'xhub' ),
+				'label' => __( 'Background Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -352,7 +352,7 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		$this->add_control(
 			'hover_btn_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -408,5 +408,5 @@ class Xhub_Image_Box_2 extends Widget_Base{
 		return [ 'service' ];
 	}
 }
-// After the Xhub_Image_Box_2 class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_Image_Box_2() );
+// After the Neatify_Image_Box_2 class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Neatify_Image_Box_2() );

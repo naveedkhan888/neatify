@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Xhub_Elementor_Text_Marquee extends Widget_Base {
+class Neatify_Elementor_Text_Marquee extends Widget_Base {
 
 	public function get_name() {
-		return 'xhub_elementor_text_marquee';
+		return 'neatify_elementor_text_marquee';
 	}
 
 	public function get_title() {
-		return esc_html__( 'Text Marquee', 'xhub' );
+		return esc_html__( 'Text Marquee', 'neatify' );
 	}
 
 	public function get_icon() {
@@ -18,7 +18,7 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'xhub' ];
+		return [ 'neatify' ];
 	}
 
 	public function get_script_depends() {
@@ -31,14 +31,14 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => esc_html__( 'Content', 'xhub' ),
+				'label' => esc_html__( 'Content', 'neatify' ),
 			]
 		);	
 
 			$this->add_control(
 				'icon',
 				[
-					'label' => esc_html__( 'Icon', 'xhub' ),
+					'label' => esc_html__( 'Icon', 'neatify' ),
 					'type' => \Elementor\Controls_Manager::ICONS,
 					'default' => [
 						'value' => 'flaticon flaticon-flower',
@@ -52,9 +52,9 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 			$repeater->add_control(
 				'text',
 				[
-					'label' => esc_html__( 'Text', 'xhub' ),
+					'label' => esc_html__( 'Text', 'neatify' ),
 					'type' => \Elementor\Controls_Manager::TEXTAREA,
-					'default' => esc_html__( 'Your Text' , 'xhub' ),
+					'default' => esc_html__( 'Your Text' , 'neatify' ),
 					'show_label' => true,
 				]
 			);
@@ -70,7 +70,7 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 			$repeater->add_control(
 				'color',
 				[
-					'label' => esc_html__( 'Color', 'xhub' ),
+					'label' => esc_html__( 'Color', 'neatify' ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'selectors' => [
 						'{{WRAPPER}} {{CURRENT_ITEM}}' => 'color: {{VALUE}}',
@@ -81,21 +81,21 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'items',
 				[
-					'label' => esc_html__( 'Items', 'xhub' ),
+					'label' => esc_html__( 'Items', 'neatify' ),
 					'type' => \Elementor\Controls_Manager::REPEATER,
 					'fields' => $repeater->get_controls(),
 					'default' => [
 						[
-							'text' => esc_html__( '100% Natural & Paraben-Free','xhub' ),
+							'text' => esc_html__( '100% Natural & Paraben-Free','neatify' ),
 						],
 						[
-							'text' => esc_html__( 'Get 20% Off For Your First Order','xhub' ),
+							'text' => esc_html__( 'Get 20% Off For Your First Order','neatify' ),
 						],
 						[
-							'text' => esc_html__( 'No Artificial Fragrances', 'xhub' ),
+							'text' => esc_html__( 'No Artificial Fragrances', 'neatify' ),
 						],
 						[
-							'text' => esc_html__( 'Completely Aluminum Free', 'xhub' ),
+							'text' => esc_html__( 'Completely Aluminum Free', 'neatify' ),
 						],
 					],
 				]
@@ -106,7 +106,7 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'general_section_style',
 			[
-				'label' => esc_html__( 'General', 'xhub' ),
+				'label' => esc_html__( 'General', 'neatify' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -123,7 +123,7 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'general_opacity',
 				[
-					'label' => esc_html__( 'Opacity', 'xhub' ),
+					'label' => esc_html__( 'Opacity', 'neatify' ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range' => [
@@ -142,7 +142,7 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'general_padding',
 				[
-					'label' => esc_html__( 'Padding', 'xhub' ),
+					'label' => esc_html__( 'Padding', 'neatify' ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em', 'rem' ],
 					'selectors' => [
@@ -156,7 +156,7 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'icon_section_style',
 			[
-				'label' => esc_html__( 'Icon', 'xhub' ),
+				'label' => esc_html__( 'Icon', 'neatify' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -164,7 +164,7 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'icon_size',
 				[
-					'label' => esc_html__( 'Size', 'xhub' ),
+					'label' => esc_html__( 'Size', 'neatify' ),
 					'type' => Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range' => [
@@ -184,7 +184,7 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'icon_color',
 				[
-					'label' => esc_html__( 'Color', 'xhub' ),
+					'label' => esc_html__( 'Color', 'neatify' ),
 					'type' => Controls_Manager::COLOR,
 					'selectors' => [
 						'{{WRAPPER}} .xp-text-marquee .icon i' => 'color : {{VALUE}};',
@@ -196,7 +196,7 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'icon_margin',
 				[
-					'label' => esc_html__( 'Margin', 'xhub' ),
+					'label' => esc_html__( 'Margin', 'neatify' ),
 					'type' => Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', 'em', '%' ],
 					'selectors' => [
@@ -210,7 +210,7 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'text_section_style',
 			[
-				'label' => esc_html__( 'Text', 'xhub' ),
+				'label' => esc_html__( 'Text', 'neatify' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -226,7 +226,7 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'text_color',
 				[
-					'label' => esc_html__( 'Color', 'xhub' ),
+					'label' => esc_html__( 'Color', 'neatify' ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'selectors' => [
 						'{{WRAPPER}} .xp-text-marquee .content .text' => 'color: {{VALUE}}',
@@ -237,7 +237,7 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'text_wrapper_width',
 				[
-					'label' => esc_html__( 'Width (%)', 'xhub' ),
+					'label' => esc_html__( 'Width (%)', 'neatify' ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ '%' ],
 					'range' => [
@@ -259,7 +259,7 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'space_between',
 				[
-					'label' => esc_html__( 'Space Between', 'xhub' ),
+					'label' => esc_html__( 'Space Between', 'neatify' ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%', 'em', 'rem' ],
 					'range' => [
@@ -282,13 +282,13 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'time_duration',
 				[
-					'label' => esc_html__( 'Time Duration', 'xhub' ),
+					'label' => esc_html__( 'Time Duration', 'neatify' ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'normal',
 					'options' => [
-						'slow' => esc_html__( 'Slow', 'xhub' ),
-						'normal' => esc_html__( 'Normal', 'xhub' ),
-						'fast' => esc_html__( 'Fast', 'xhub' ),
+						'slow' => esc_html__( 'Slow', 'neatify' ),
+						'normal' => esc_html__( 'Normal', 'neatify' ),
+						'fast' => esc_html__( 'Fast', 'neatify' ),
 					],
 				]
 			);
@@ -296,12 +296,12 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'direction',
 				[
-					'label' => esc_html__( 'Direction', 'xhub' ),
+					'label' => esc_html__( 'Direction', 'neatify' ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'rtl',
 					'options' => [
-						'ltr' => esc_html__( 'Left to Right', 'xhub' ),
-						'rtl' => esc_html__( 'Right to Left', 'xhub' ),
+						'ltr' => esc_html__( 'Left to Right', 'neatify' ),
+						'rtl' => esc_html__( 'Right to Left', 'neatify' ),
 					],
 				]
 			);
@@ -371,4 +371,4 @@ class Xhub_Elementor_Text_Marquee extends Widget_Base {
 
 	
 }
-Plugin::instance()->widgets_manager->register_widget_type( new Xhub_Elementor_Text_Marquee() );
+Plugin::instance()->widgets_manager->register_widget_type( new Neatify_Elementor_Text_Marquee() );

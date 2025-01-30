@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Xhub
+ * @package Neatify
  */
 
 get_header();
@@ -21,19 +21,19 @@ get_header();
     endwhile; // End of the loop.
 ?>
 
-<?php if( xhub_get_option('pf_nav') || xhub_get_option('pf_related_switch') ) { ?>
+<?php if( neatify_get_option('pf_nav') || neatify_get_option('pf_related_switch') ) { ?>
 <div class="container">
     <div class="project-bottom">        
-        <?php if( xhub_get_option('pf_nav') ) { ?>
+        <?php if( neatify_get_option('pf_nav') ) { ?>
         <div class="single-portfolio-navigation">
-            <?php xhub_single_post_nav(); ?>
+            <?php neatify_single_post_nav(); ?>
         </div>
         <?php } ?>
 
-        <?php if( xhub_get_option('pf_related_switch') ) { ?>
+        <?php if( neatify_get_option('pf_related_switch') ) { ?>
         <div class="portfolio-related-posts-wrap">
             <div class="portfolio-related-title-wrap">
-                <h4 class="portfolio-related-title"><?php echo xhub_get_option('pf_related_text'); ?></h4>
+                <h4 class="portfolio-related-title"><?php echo neatify_get_option('pf_related_text'); ?></h4>
             </div>
             <div class="portfolio-related-posts projects-grid img-scale">
                 <div class="owl-carousel owl-theme">   

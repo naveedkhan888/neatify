@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Flip Box
  */
-class Xhub_Flip_Box extends Widget_Base{
+class Neatify_Flip_Box extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Xhub_Flip_Box extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Flip Box', 'xhub' );
+		return __( 'XP Flip Box', 'neatify' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Xhub_Flip_Box extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xhub' ];
+		return [ 'category_neatify' ];
 	}
 
 	protected function register_controls() {
@@ -33,13 +33,13 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Flip Box', 'xhub' ),
+				'label' => __( 'Flip Box', 'neatify' ),
 			]
 		);
 		$this->add_control(
 	       'image_box',
 	        [
-	           'label' => esc_html__( 'Image Box', 'xhub' ),
+	           'label' => esc_html__( 'Image Box', 'neatify' ),
 	           'type'  => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -60,18 +60,18 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'number',
 			[
-				'label' => __( 'Number', 'xhub' ),
+				'label' => __( 'Number', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '01', 'xhub' ),
+				'default' => __( '01', 'neatify' ),
 			]
 		);
 
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'xhub' ),
+				'label' => __( 'Title', 'neatify' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Client Learning Programs', 'xhub' ),
+				'default' => __( 'Client Learning Programs', 'neatify' ),
 			]
 		);
 
@@ -80,7 +80,7 @@ class Xhub_Flip_Box extends Widget_Base{
 			[
 				'label' => 'Description',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Our firm has helped clients engaged in more than 100 different subsectors of the aerospace, space markets.', 'xhub' ),
+				'default' => __( 'Our firm has helped clients engaged in more than 100 different subsectors of the aerospace, space markets.', 'neatify' ),
 			]
 		);
 
@@ -89,16 +89,16 @@ class Xhub_Flip_Box extends Widget_Base{
 			[
 				'label' => 'Label Button',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<i class="xp-webicon-trajectory"></i> Explore More', 'xhub' ),
+				'default' => __( '<i class="xp-webicon-trajectory"></i> Explore More', 'neatify' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'xhub' ),
+				'label' => __( 'Link', 'neatify' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'xhub' ),
+				'placeholder' => __( 'https://your-link.com', 'neatify' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -112,7 +112,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'xhub' ),
+				'label' => __( 'Content', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -121,14 +121,14 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'heading_gereral',
 			[
-				'label' => __( 'Gereral', 'xhub' ),
+				'label' => __( 'Gereral', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'xhub' ),
+				'label' => __( 'Padding Box', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -139,7 +139,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'xhub' ),
+				'label' => __( 'Border Radius', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -152,7 +152,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xhub' ),
+				'label' => __( 'Title', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -160,7 +160,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -176,7 +176,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -196,7 +196,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'heading_num',
 			[
-				'label' => __( 'Number', 'xhub' ),
+				'label' => __( 'Number', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -205,7 +205,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'num_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -227,14 +227,14 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->start_controls_section(
 			'style_overlay_section',
 			[
-				'label' => __( 'Hover', 'xhub' ),
+				'label' => __( 'Hover', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'overlay_padding',
 			[
-				'label' => __( 'Padding Box', 'xhub' ),
+				'label' => __( 'Padding Box', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -246,7 +246,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'overlay_bg',
 			[
-				'label' => __( 'Background', 'xhub' ),
+				'label' => __( 'Background', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -259,7 +259,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Description', 'xhub' ),
+				'label' => __( 'Description', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -267,7 +267,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -287,7 +287,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'heading_btn',
 			[
-				'label' => __( 'Button', 'xhub' ),
+				'label' => __( 'Button', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -298,7 +298,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_space',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -317,7 +317,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -331,7 +331,7 @@ class Xhub_Flip_Box extends Widget_Base{
 		$this->add_control(
 			'btn_hcolor',
 			[
-				'label' => __( 'Hover Color', 'xhub' ),
+				'label' => __( 'Hover Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -397,5 +397,5 @@ class Xhub_Flip_Box extends Widget_Base{
 	}
 
 }
-// After the Xhub_Flip_Box class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_Flip_Box() );
+// After the Neatify_Flip_Box class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Neatify_Flip_Box() );

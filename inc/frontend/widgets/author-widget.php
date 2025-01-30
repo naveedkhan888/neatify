@@ -1,5 +1,5 @@
 <?php 
-class Xhub_Author_Widget extends WP_Widget {
+class Neatify_Author_Widget extends WP_Widget {
  	
  	/**
      * Register widget with WordPress.
@@ -11,14 +11,14 @@ class Xhub_Author_Widget extends WP_Widget {
         parent::__construct(
             'author_widget', // Base ID
             'XP Author', // Name
-            array( 'description' => esc_html__( 'A Author Widget', 'xhub' ), 'classname' => 'xhub_author-widget' ) // Args
+            array( 'description' => esc_html__( 'A Author Widget', 'neatify' ), 'classname' => 'neatify_author-widget' ) // Args
         );
     }
  	
  	public function author_scripts() {
 	   wp_enqueue_script( 'media-upload' );
 	   wp_enqueue_media();
-	   wp_enqueue_script('xhub_upload_media_admin', get_template_directory_uri() . '/inc/backend/js/upload_media_widget.js', array('jquery'));
+	   wp_enqueue_script('neatify_upload_media_admin', get_template_directory_uri() . '/inc/backend/js/upload_media_widget.js', array('jquery'));
 	}
 
  	/**
@@ -96,48 +96,48 @@ class Xhub_Author_Widget extends WP_Widget {
         $dribbble = ! empty( $instance['dribbble'] ) ? $instance['dribbble'] : '';
     	?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'image' ) ); ?>"><?php echo esc_html__( 'Avatar:', 'xhub' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'image' ) ); ?>"><?php echo esc_html__( 'Avatar:', 'neatify' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'image' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'image' ) ); ?>" type="text" value="<?php echo esc_url( $image ); ?>" />
-            <button class="upload_image_button button button-primary"><?php echo esc_html__( 'Upload Image', 'xhub' ); ?></button>
+            <button class="upload_image_button button button-primary"><?php echo esc_html__( 'Upload Image', 'neatify' ); ?></button>
        </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html__( 'Name:', 'xhub' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html__( 'Name:', 'neatify' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"><?php echo esc_html__( 'Description:', 'xhub' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"><?php echo esc_html__( 'Description:', 'neatify' ); ?></label>
             <textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>" type="text" cols="30" rows="10"><?php echo esc_html( $text ); ?></textarea>
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>"><?php esc_html_e( 'Facebook URL:', 'xhub' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>"><?php esc_html_e( 'Facebook URL:', 'neatify' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'facebook' ) ); ?>" type="text" value="<?php echo esc_attr( $facebook ); ?>" />
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>"><?php esc_html_e( 'Twitter URL:', 'xhub' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>"><?php esc_html_e( 'Twitter URL:', 'neatify' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'twitter' ) ); ?>" type="text" value="<?php echo esc_attr( $twitter ); ?>" />
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'google' ) ); ?>"><?php esc_html_e( 'Google Plus URL:', 'xhub' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'google' ) ); ?>"><?php esc_html_e( 'Google Plus URL:', 'neatify' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'google' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'google' ) ); ?>" type="text" value="<?php echo esc_attr( $google ); ?>" />
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'dribbble' ) ); ?>"><?php esc_html_e( 'Dribbble URL:', 'xhub' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'dribbble' ) ); ?>"><?php esc_html_e( 'Dribbble URL:', 'neatify' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'dribbble' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'dribbble' ) ); ?>" type="text" value="<?php echo esc_attr( $dribbble ); ?>" />
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'linkedin' ) ); ?>"><?php esc_html_e( 'Linkedin URL:', 'xhub' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'linkedin' ) ); ?>"><?php esc_html_e( 'Linkedin URL:', 'neatify' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'linkedin' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'linkedin' ) ); ?>" type="text" value="<?php echo esc_attr( $linkedin ); ?>" />
         </p>        
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'pinterest' ) ); ?>"><?php esc_html_e( 'Pinterest URL:', 'xhub' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'pinterest' ) ); ?>"><?php esc_html_e( 'Pinterest URL:', 'neatify' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'pinterest' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'pinterest' ) ); ?>" type="text" value="<?php echo esc_attr( $pinterest ); ?>" />
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'instagram' ) ); ?>"><?php esc_html_e( 'Instagram URL:', 'xhub' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'instagram' ) ); ?>"><?php esc_html_e( 'Instagram URL:', 'neatify' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'instagram' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'instagram' ) ); ?>" type="text" value="<?php echo esc_attr( $instagram ); ?>" />
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'youtube' ) ); ?>"><?php esc_html_e( 'Youtube URL:', 'xhub' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'youtube' ) ); ?>"><?php esc_html_e( 'Youtube URL:', 'neatify' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'youtube' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'youtube' ) ); ?>" type="text" value="<?php echo esc_attr( $youtube ); ?>" />
 
         </p>        

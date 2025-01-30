@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Xhub
+ * @package Neatify
  */
 
 ?>
@@ -31,4 +31,4 @@
 } ?>
 <!-- #site-content-open -->
 <div id="content" class="site-content">
-	<?php xhub_page_header(); ?>
+	<?php neatify_page_header(); ?>

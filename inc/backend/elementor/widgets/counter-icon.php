@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Counter 2
  */
-class Xhub_Counter2 extends Widget_Base{
+class Neatify_Counter2 extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Xhub_Counter2 extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Counter 2', 'xhub' );
+		return __( 'XP Counter 2', 'neatify' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Xhub_Counter2 extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xhub' ];
+		return [ 'category_neatify' ];
 	}
 
 	protected function register_controls() {
@@ -32,25 +32,25 @@ class Xhub_Counter2 extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Counter', 'xhub' ),
+				'label' => __( 'Counter', 'neatify' ),
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'xhub' ),
+				'label' => __( 'Alignment', 'neatify' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xhub' ),
+						'title' => __( 'Left', 'neatify' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xhub' ),
+						'title' => __( 'Center', 'neatify' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xhub' ),
+						'title' => __( 'Right', 'neatify' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -63,7 +63,7 @@ class Xhub_Counter2 extends Widget_Base{
 		$this->add_control(
 			'icon_font',
 			[
-				'label' => __( 'Icon', 'xhub' ),
+				'label' => __( 'Icon', 'neatify' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -76,9 +76,9 @@ class Xhub_Counter2 extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title:', 'xhub' ),
+				'label' => __( 'Title:', 'neatify' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Current Clients', 'xhub' ),
+				'default' => __( 'Current Clients', 'neatify' ),
 			]
 		);
 
@@ -87,23 +87,23 @@ class Xhub_Counter2 extends Widget_Base{
 			[
 				'label' => 'Number:',
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '180', 'xhub' ),
+				'default' => __( '180', 'neatify' ),
 			]
 		);
 
 		$this->add_control(
 			'after_number',
 			[
-				'label' => __( 'After Number:', 'xhub' ),
+				'label' => __( 'After Number:', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '', 'xhub' ),
+				'default' => __( '', 'neatify' ),
 			]
 		);		
 
 		$this->add_control(
 			'time',
 			[
-				'label' => __( 'Duration', 'xhub' ),
+				'label' => __( 'Duration', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -126,7 +126,7 @@ class Xhub_Counter2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Style', 'xhub' ),
+				'label' => __( 'Style', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -135,7 +135,7 @@ class Xhub_Counter2 extends Widget_Base{
 		$this->add_control(
 			'heading_icon',
 			[
-				'label' => __( 'Icon', 'xhub' ),
+				'label' => __( 'Icon', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -143,7 +143,7 @@ class Xhub_Counter2 extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_space',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -159,7 +159,7 @@ class Xhub_Counter2 extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -173,7 +173,7 @@ class Xhub_Counter2 extends Widget_Base{
 		$this->add_control(
 			'heading_number',
 			[
-				'label' => __( 'Number', 'xhub' ),
+				'label' => __( 'Number', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -181,7 +181,7 @@ class Xhub_Counter2 extends Widget_Base{
 		$this->add_control(
 			'number_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -201,7 +201,7 @@ class Xhub_Counter2 extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xhub' ),
+				'label' => __( 'Title', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -209,7 +209,7 @@ class Xhub_Counter2 extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -225,7 +225,7 @@ class Xhub_Counter2 extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -262,5 +262,5 @@ class Xhub_Counter2 extends Widget_Base{
 		return [ 'number', 'funfact' ];
 	}
 }
-// After the Xhub_Counter class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_Counter2() );
+// After the Neatify_Counter class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Neatify_Counter2() );

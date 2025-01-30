@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Menu
  */
-class Xhub_Menu extends Widget_Base{
+class Neatify_Menu extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Xhub_Menu extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Nav Menu', 'xhub' );
+		return __( 'XP Nav Menu', 'neatify' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Xhub_Menu extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xhub_header' ];
+		return [ 'category_neatify_header' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Xhub_Menu extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Menu', 'xhub' ),
+				'label' => __( 'Menu', 'neatify' ),
 			]
 		);
 
@@ -40,7 +40,7 @@ class Xhub_Menu extends Widget_Base{
 		$this->add_control(
 			'nav_menu',
 			[
-				'label' => esc_html__( 'Select Menu', 'xhub' ),
+				'label' => esc_html__( 'Select Menu', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'multiple' => false,
 				'options' => $menus,
@@ -52,19 +52,19 @@ class Xhub_Menu extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'xhub' ),
+				'label' => __( 'Alignment', 'neatify' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xhub' ),
+						'title' => __( 'Left', 'neatify' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xhub' ),
+						'title' => __( 'Center', 'neatify' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xhub' ),
+						'title' => __( 'Right', 'neatify' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -81,14 +81,14 @@ class Xhub_Menu extends Widget_Base{
 		$this->start_controls_section(
 			'style_menu_section',
 			[
-				'label' => __( 'Menu Parents', 'xhub' ),
+				'label' => __( 'Menu Parents', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'space_item',
 			[
-				'label' => __( 'Spacing Items', 'xhub' ),
+				'label' => __( 'Spacing Items', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -106,7 +106,7 @@ class Xhub_Menu extends Widget_Base{
 		$this->add_control(
 			'text_color',
 			[
-				'label' => __( 'Text Color', 'xhub' ),
+				'label' => __( 'Text Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -117,7 +117,7 @@ class Xhub_Menu extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Arrow Color', 'xhub' ),
+				'label' => __( 'Arrow Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -128,7 +128,7 @@ class Xhub_Menu extends Widget_Base{
 		$this->add_control(
 			'text_hover_color',
 			[
-				'label' => __( 'Text Hover Color', 'xhub' ),
+				'label' => __( 'Text Hover Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -162,14 +162,14 @@ class Xhub_Menu extends Widget_Base{
 		$this->start_controls_section(
 			'style_smenu_section',
 			[
-				'label' => __( 'Dropdown Menus', 'xhub' ),
+				'label' => __( 'Dropdown Menus', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'smenu_width',
 			[
-				'label' => __( 'Width', 'xhub' ),
+				'label' => __( 'Width', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -185,7 +185,7 @@ class Xhub_Menu extends Widget_Base{
 		$this->add_control(
 			'smenu_radius',
 			[
-				'label' => __( 'Border Radius', 'xhub' ),
+				'label' => __( 'Border Radius', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -205,7 +205,7 @@ class Xhub_Menu extends Widget_Base{
 		$this->add_control(
 			'bg_s_color',
 			[
-				'label' => __( 'Background Color', 'xhub' ),
+				'label' => __( 'Background Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -216,7 +216,7 @@ class Xhub_Menu extends Widget_Base{
 		$this->add_control(
 			'item_title',
 			[
-				'label' => __( 'Menu Items', 'xhub' ),
+				'label' => __( 'Menu Items', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -224,7 +224,7 @@ class Xhub_Menu extends Widget_Base{
 		$this->add_control(
 			'text_s_color',
 			[
-				'label' => __( 'Text Color', 'xhub' ),
+				'label' => __( 'Text Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -235,7 +235,7 @@ class Xhub_Menu extends Widget_Base{
 		$this->add_control(
 			'text_s_hover_color',
 			[
-				'label' => __( 'Text Hover Color', 'xhub' ),
+				'label' => __( 'Text Hover Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -246,7 +246,7 @@ class Xhub_Menu extends Widget_Base{
 		$this->add_control(
 			'bg_s_hover_color',
 			[
-				'label' => __( 'Background Hover Color', 'xhub' ),
+				'label' => __( 'Background Hover Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -257,7 +257,7 @@ class Xhub_Menu extends Widget_Base{
 		$this->add_control(
 			'border_s_color',
 			[
-				'label' => __( 'Border Color', 'xhub' ),
+				'label' => __( 'Border Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -311,5 +311,5 @@ class Xhub_Menu extends Widget_Base{
 	}
 
 }
-// After the Xhub_Menu class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_Menu() );
+// After the Neatify_Menu class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Neatify_Menu() );

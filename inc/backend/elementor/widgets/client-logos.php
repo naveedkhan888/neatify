@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Client Logos
  */
-class Xhub_Image_Carousel extends Widget_Base{
+class Neatify_Image_Carousel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Client Logos', 'xhub' );
+		return __( 'XP Client Logos', 'neatify' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xhub' ];
+		return [ 'category_neatify' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Logos', 'xhub' ),
+				'label' => __( 'Logos', 'neatify' ),
 			]
 		);
 
@@ -40,15 +40,15 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$repeater->add_control(
 			'title',
 			[
-				'label' => __( 'Name', 'xhub' ),
+				'label' => __( 'Name', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '', 'xhub' ),
+				'default' => __( '', 'neatify' ),
 			]
 		);
 		$repeater->add_control(
 			'image_partner',
 			[
-				'label' => __( 'Image', 'xhub' ),
+				'label' => __( 'Image', 'neatify' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -58,7 +58,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$repeater->add_control(
 			'image_link',
 			[
-				'label' => __( 'Link', 'xhub' ),
+				'label' => __( 'Link', 'neatify' ),
 				'type' => Controls_Manager::URL,
 				'default' => [],
 			]
@@ -90,10 +90,10 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides To Show', 'xhub' ),
+				'label' => __( 'Slides To Show', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'xhub' ),
+					'' => __( 'Default', 'neatify' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -102,31 +102,31 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'xhub' ),
+				'label' => __( 'Loop', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'xhub' ),
-					'false' => __( 'No', 'xhub' ),
+					'true' => __( 'Yes', 'neatify' ),
+					'false' => __( 'No', 'neatify' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'xhub' ),
+				'label' => __( 'Autoplay', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'xhub' ),
-					'false' => __( 'No', 'xhub' ),
+					'true' => __( 'Yes', 'neatify' ),
+					'false' => __( 'No', 'neatify' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'xhub' ),
+				'label' => __( 'Autoplay Timeout', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -146,24 +146,24 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'xhub' ),
+				'label' => __( 'Arrows', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'xhub' ),
-					'false'  => __( 'No', 'xhub' ),
+					'true'   => __( 'Yes', 'neatify' ),
+					'false'  => __( 'No', 'neatify' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'xhub' ),
+				'label' => __( 'Dots', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'xhub' ),
-					'false'  => __( 'No', 'xhub' ),
+					'true'   => __( 'Yes', 'neatify' ),
+					'false'  => __( 'No', 'neatify' ),
 				],
 			]
 		);
@@ -175,26 +175,26 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'image_style_section',
 			[
-				'label' => __( 'Style Logos', 'xhub' ),
+				'label' => __( 'Style Logos', 'neatify' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Vertical Align', 'xhub' ),
+				'label' => __( 'Vertical Align', 'neatify' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'flex-start'    => [
-						'title' => __( 'Top', 'xhub' ),
+						'title' => __( 'Top', 'neatify' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xhub' ),
+						'title' => __( 'Center', 'neatify' ),
 						'icon' => 'eicon-v-align-middle',
 					],
 					'flex-end' => [
-						'title' => __( 'Bottom', 'xhub' ),
+						'title' => __( 'Bottom', 'neatify' ),
 						'icon' => 'eicon-v-align-bottom',
 					],
 				],
@@ -207,7 +207,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'img_height',
 			[
-				'label' => __( 'Height', 'xhub' ),
+				'label' => __( 'Height', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -228,7 +228,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'img_spacing',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -247,14 +247,14 @@ class Xhub_Image_Carousel extends Widget_Base{
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'xhub' ),
+				'label' => __( 'Normal', 'neatify' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity',
 			[
-				'label' => __( 'Opacity', 'xhub' ),
+				'label' => __( 'Opacity', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -281,14 +281,14 @@ class Xhub_Image_Carousel extends Widget_Base{
 
 		$this->start_controls_tab( 'img_hover_effects',
 			[
-				'label' => __( 'Hover', 'xhub' ),
+				'label' => __( 'Hover', 'neatify' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity_hover',
 			[
-				'label' => __( 'Opacity', 'xhub' ),
+				'label' => __( 'Opacity', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -321,7 +321,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'xhub' ),
+				'label' => __( 'Dots', 'neatify' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -332,7 +332,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -349,7 +349,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'xhub' ),
+                'label' => __( 'Color', 'neatify' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -360,7 +360,7 @@ class Xhub_Image_Carousel extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'xhub' ),
+                'label' => __( 'Color Active', 'neatify' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -374,7 +374,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'xhub' ),
+				'label' => __( 'Arrows', 'neatify' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -384,7 +384,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -395,7 +395,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'xhub' ),
+				'label' => __( 'Color Hover', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -406,7 +406,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'xhub' ),
+				'label' => __( 'Background', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -417,7 +417,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'xhub' ),
+				'label' => __( 'Background Hover', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -428,7 +428,7 @@ class Xhub_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'xhub' ),
+				'label' => __( 'Border Radius', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -519,5 +519,5 @@ class Xhub_Image_Carousel extends Widget_Base{
 	}
 
 }
-// After the Xhub_Image_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_Image_Carousel() );
+// After the Neatify_Image_Carousel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Neatify_Image_Carousel() );

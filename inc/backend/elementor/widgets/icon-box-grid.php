@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Icon Box Grid
  */
-class Xhub_IconBox_Grid extends Widget_Base{
+class Neatify_IconBox_Grid extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Icon Box Grid', 'xhub' );
+		return __( 'XP Icon Box Grid', 'neatify' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xhub' ];
+		return [ 'category_neatify' ];
 	}
 
 	protected function register_controls() {
@@ -33,30 +33,30 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Icon Boxes', 'xhub' ),
+				'label' => __( 'Icon Boxes', 'neatify' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'xhub' ),
+				'label' => __( 'Alignment', 'neatify' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xhub' ),
+						'title' => __( 'Left', 'neatify' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xhub' ),
+						'title' => __( 'Center', 'neatify' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xhub' ),
+						'title' => __( 'Right', 'neatify' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'xhub%s-align-',
+				// 'prefix_class' => 'neatify%s-align-',
 				'selectors' => [
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
 				],
@@ -65,14 +65,14 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'column_grid',
 			[
-				'label' => __( 'Columns', 'xhub' ),
+				'label' => __( 'Columns', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'col-md-4',
 				'options' => [
-					'col-md-12' => __( '1', 'xhub' ),
-					'col-md-6'  => __( '2', 'xhub' ),
-					'col-md-4'  => __( '3', 'xhub' ),
-					'col-md-3'  => __( '4', 'xhub' ),
+					'col-md-12' => __( '1', 'neatify' ),
+					'col-md-6'  => __( '2', 'neatify' ),
+					'col-md-4'  => __( '3', 'neatify' ),
+					'col-md-3'  => __( '4', 'neatify' ),
 				]
 			]
 		);
@@ -83,7 +83,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$repeater->add_control(
 			'icon_font',
 			[
-				'label' => __( 'Icon', 'xhub' ),
+				'label' => __( 'Icon', 'neatify' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -96,10 +96,10 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$repeater->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'xhub' ),
+				'label' => __( 'Title', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => esc_html__( 'Content Marketing', 'xhub' ),
+				'default' => esc_html__( 'Content Marketing', 'neatify' ),
 			]
 		);
 
@@ -108,16 +108,16 @@ class Xhub_IconBox_Grid extends Widget_Base{
 			[
 				'label' => 'Description',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'xhub' ),
+				'default' => esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'neatify' ),
 			]
 		);
 
 		$repeater->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'xhub' ),
+				'label' => __( 'Link', 'neatify' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'xhub' ),
+				'placeholder' => __( 'https://your-link.com', 'neatify' ),
 			]
 		);
 
@@ -129,21 +129,21 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		        'show_label'  => false,
 		        'default'     => [
 		            [
-		            	'icon_font' => __( 'fas fa-star', 'xhub' ),
-		             	'title' => esc_html__( 'Content Marketing', 'xhub' ),
-		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'xhub' ),
+		            	'icon_font' => __( 'fas fa-star', 'neatify' ),
+		             	'title' => esc_html__( 'Content Marketing', 'neatify' ),
+		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'neatify' ),
 		             	'link' => '',
 		            ],
 		            [
-		            	'icon_font' => __( 'fas fa-star', 'xhub' ),
-		             	'title' => esc_html__( 'Content Marketing', 'xhub' ),
-		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'xhub' ),
+		            	'icon_font' => __( 'fas fa-star', 'neatify' ),
+		             	'title' => esc_html__( 'Content Marketing', 'neatify' ),
+		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'neatify' ),
 		             	'link' => '',
 		            ],
 		            [
-		            	'icon_font' => __( 'fas fa-star', 'xhub' ),
-		             	'title' => esc_html__( 'Content Marketing', 'xhub' ),
-		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'xhub' ),
+		            	'icon_font' => __( 'fas fa-star', 'neatify' ),
+		             	'title' => esc_html__( 'Content Marketing', 'neatify' ),
+		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'neatify' ),
 		             	'link' => '',
 		            ]
 		        ],
@@ -154,7 +154,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'xhub' ),
+				'label' => __( 'Title HTML Tag', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -177,14 +177,14 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'style_box_section',
 			[
-				'label' => __( 'Boxes', 'xhub' ),
+				'label' => __( 'Boxes', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background', 'xhub' ),
+				'label' => __( 'Background', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .icon-box' => 'background: {{VALUE}};',
@@ -194,7 +194,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'bg_hover_box',
 			[
-				'label' => __( 'Border Color', 'xhub' ),
+				'label' => __( 'Border Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .icon-box' => 'border-color: {{VALUE}};',
@@ -204,7 +204,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'box_radius',
 			[
-				'label' => __( 'Border Radius', 'xhub' ),
+				'label' => __( 'Border Radius', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -215,7 +215,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'xhub' ),
+				'label' => __( 'Padding Box', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -226,7 +226,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'heading_shadow',
 			[
-				'label' => __( 'Hover Box Shadow', 'xhub' ),
+				'label' => __( 'Hover Box Shadow', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -244,7 +244,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'xhub' ),
+				'label' => __( 'Icon', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -252,7 +252,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -264,7 +264,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Size', 'xhub' ),
+				'label' => __( 'Size', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -281,7 +281,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_space',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -300,7 +300,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'xhub' ),
+				'label' => __( 'Content', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -309,7 +309,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xhub' ),
+				'label' => __( 'Title', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -317,7 +317,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -333,7 +333,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -353,7 +353,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Description', 'xhub' ),
+				'label' => __( 'Description', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -361,7 +361,7 @@ class Xhub_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -424,4 +424,4 @@ class Xhub_IconBox_Grid extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_IconBox_Grid() );
+Plugin::instance()->widgets_manager->register( new Neatify_IconBox_Grid() );

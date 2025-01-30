@@ -10,19 +10,19 @@
  *
  * @return array All registered meta boxes
  */
-function xhub_register_meta_boxes( $meta_boxes ) {
+function neatify_register_meta_boxes( $meta_boxes ) {
 	
 	// Post format's meta box
 	$meta_boxes[] = array(
 		'id'       => 'format_detail',
-		'title'    => esc_html__( 'Format Details', 'xhub' ),
+		'title'    => esc_html__( 'Format Details', 'neatify' ),
 		'pages'    => array( 'post' ),
 		'context'  => 'normal',
 		'priority' => 'high',
 		'autosave' => true,
 		'fields'   => array(
 			array(
-				'name'             => esc_html__( 'Image', 'xhub' ),
+				'name'             => esc_html__( 'Image', 'neatify' ),
 				'id'               => 'post_image',
 				'type'             => 'image_advanced',
 				'class'            => 'image',
@@ -31,7 +31,7 @@ function xhub_register_meta_boxes( $meta_boxes ) {
     			'image_size'       => 'thumbnail',
 			),
 			array(
-				'name'  => esc_html__( 'Gallery', 'xhub' ),
+				'name'  => esc_html__( 'Gallery', 'neatify' ),
 				'id'    => 'post_gallery',
 				'type'  => 'image_advanced',
 				'class' => 'gallery',
@@ -39,7 +39,7 @@ function xhub_register_meta_boxes( $meta_boxes ) {
     			'image_size'       => 'thumbnail',
 			),			
 			array(
-				'name'  => esc_html__( 'Audio', 'xhub' ),
+				'name'  => esc_html__( 'Audio', 'neatify' ),
 				'id'    => 'post_audio',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -48,7 +48,7 @@ function xhub_register_meta_boxes( $meta_boxes ) {
 				'desc'  => 'Example: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/139083759',
 			),
 			array(
-				'name'  => esc_html__( 'Video', 'xhub' ),
+				'name'  => esc_html__( 'Video', 'neatify' ),
 				'id'    => 'post_video',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -57,14 +57,14 @@ function xhub_register_meta_boxes( $meta_boxes ) {
 				'desc'  => 'Example: https://vimeo.com/87959439',
 			),
 			array(
-				'name'  => esc_html__( 'Background Video', 'xhub' ),
+				'name'  => esc_html__( 'Background Video', 'neatify' ),
 				'id'    => 'bg_video',
 				'type'  => 'image_advanced',
 				'class' => 'video',
 				'max_file_uploads' => 1,
 			),
 			array(
-				'name'  => esc_html__( 'Link', 'xhub' ),
+				'name'  => esc_html__( 'Link', 'neatify' ),
 				'id'    => 'post_link',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -72,7 +72,7 @@ function xhub_register_meta_boxes( $meta_boxes ) {
 				'class' => 'link',
 			),
 			array(
-				'name'  => esc_html__( 'Text Link', 'xhub' ),
+				'name'  => esc_html__( 'Text Link', 'neatify' ),
 				'id'    => 'text_link',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -80,13 +80,13 @@ function xhub_register_meta_boxes( $meta_boxes ) {
 				'class' => 'link',
 			),
 			array(
-				'name'  => esc_html__( 'Quote', 'xhub' ),
+				'name'  => esc_html__( 'Quote', 'neatify' ),
 				'id'    => 'post_quote',
 				'type'  => 'textarea',
 				'class' => 'quote',
 			),
 			array(
-				'name'  => esc_html__( 'Quote Name', 'xhub' ),
+				'name'  => esc_html__( 'Quote Name', 'neatify' ),
 				'id'    => 'quote_name',
 				'type'  => 'text',
 				'class' => 'quote',
@@ -97,7 +97,7 @@ function xhub_register_meta_boxes( $meta_boxes ) {
 	// Page Settings
 	$meta_boxes[] = array(
 		'id'       => 'page-settings',
-		'title'    => esc_html__( 'Page Header Settings', 'xhub' ),
+		'title'    => esc_html__( 'Page Header Settings', 'neatify' ),
 		'pages'    => array( 'page' ),
 		'context'  => 'normal',
 		'priority' => 'high',
@@ -105,7 +105,7 @@ function xhub_register_meta_boxes( $meta_boxes ) {
 		'fields'   => array(
             array(
                 'id'        => 'page_layout',
-                'name'      => esc_html__( 'Page Layout', 'xhub' ),
+                'name'      => esc_html__( 'Page Layout', 'neatify' ),
                 'type'      => 'image_select',
                 'options'   => array(
                     'full-content'    => get_template_directory_uri() . '/inc/backend/images/full.png',
@@ -115,7 +115,7 @@ function xhub_register_meta_boxes( $meta_boxes ) {
                 'std'       => 'full-content'
             ),
             array(
-                'name'             => esc_html__( 'Page Header On/Off', 'xhub' ),
+                'name'             => esc_html__( 'Page Header On/Off', 'neatify' ),
                 'id'               => 'pheader_switch',
                 'type'             => 'switch',
                 'style'            => 'rounded',
@@ -124,7 +124,7 @@ function xhub_register_meta_boxes( $meta_boxes ) {
                 'std'              => 'on'
             ),
             array(
-                'name'             => esc_html__( 'Background Page Header', 'xhub' ),
+                'name'             => esc_html__( 'Background Page Header', 'neatify' ),
                 'id'               => 'pheader_bg_image',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -155,7 +155,7 @@ function xhub_register_meta_boxes( $meta_boxes ) {
 		    	),
 			),
 			array(
-                'name'             => esc_html__( 'Header Transparent?', 'xhub' ),
+                'name'             => esc_html__( 'Header Transparent?', 'neatify' ),
                 'id'               => 'is_trans',
 				'type'             => 'select',
 				'options'   => array(
@@ -198,14 +198,14 @@ function xhub_register_meta_boxes( $meta_boxes ) {
 
 	$meta_boxes[] = array(
         'id'       => 'ppheader-settings',
-        'title'    => esc_html__( 'Page Header Settings', 'xhub' ),
+        'title'    => esc_html__( 'Page Header Settings', 'neatify' ),
         'pages'    => array( 'xp_portfolio' ),
         'context'  => 'normal',
         'priority' => 'high',
         'autosave' => true,
         'fields'   => array(
             array(
-                'name'             => esc_html__( 'Page Header On/Off', 'xhub' ),
+                'name'             => esc_html__( 'Page Header On/Off', 'neatify' ),
                 'id'               => 'pheader_switch',
                 'type'             => 'switch',
                 'style'            => 'rounded',
@@ -214,7 +214,7 @@ function xhub_register_meta_boxes( $meta_boxes ) {
                 'std'              => 'on'
             ),
             array(
-                'name'             => esc_html__( 'Background Page Header', 'xhub' ),
+                'name'             => esc_html__( 'Background Page Header', 'neatify' ),
                 'id'               => 'pheader_bg_image',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -223,14 +223,14 @@ function xhub_register_meta_boxes( $meta_boxes ) {
 	);
 	$meta_boxes[] = array(
         'id'       => 'case-settings',
-        'title'    => esc_html__( 'Project Settings', 'xhub' ),
+        'title'    => esc_html__( 'Project Settings', 'neatify' ),
         'pages'    => array( 'xp_portfolio' ),
         'context'  => 'normal',
         'priority' => 'high',
         'autosave' => true,
         'fields'   => array(
             array(
-                'name'             => esc_html__( 'Carousel Image', 'xhub' ),
+                'name'             => esc_html__( 'Carousel Image', 'neatify' ),
                 'id'               => 'slide_img',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -240,7 +240,7 @@ function xhub_register_meta_boxes( $meta_boxes ) {
 
     $meta_boxes[] = array(
         'id'       => 'pthumb-settings',
-        'title'    => esc_html__( 'Thumbnail Image Settings', 'xhub' ),
+        'title'    => esc_html__( 'Thumbnail Image Settings', 'neatify' ),
         'pages'    => array( 'xp_portfolio' ),
         'context'  => 'normal',
         'priority' => 'high',
@@ -248,7 +248,7 @@ function xhub_register_meta_boxes( $meta_boxes ) {
         'fields'   => array(
             array(
                 'id'        => 'thumb_size',
-                'name'      => esc_html__( 'Select Size', 'xhub' ),
+                'name'      => esc_html__( 'Select Size', 'neatify' ),
                 'type'      => 'select',
                 'options'   => array(
                     'normal' 	=> 'Normal Width',
@@ -263,4 +263,4 @@ function xhub_register_meta_boxes( $meta_boxes ) {
 	return $meta_boxes;
 }
 
-add_filter( 'rwmb_meta_boxes', 'xhub_register_meta_boxes' );
+add_filter( 'rwmb_meta_boxes', 'neatify_register_meta_boxes' );

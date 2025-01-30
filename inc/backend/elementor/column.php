@@ -37,7 +37,7 @@ class XP_Element_Column extends Module {
 		$element->add_responsive_control(
 			'_xp_column_min_width',
 			[
-				'label'        => esc_html__( 'Min Width (px)', 'xhub' ),
+				'label'        => esc_html__( 'Min Width (px)', 'neatify' ),
 				'type'      => Controls_Manager::SLIDER,
 				'default'   => [
 					'unit' => 'px',
@@ -72,15 +72,15 @@ class XP_Element_Column extends Module {
 		$element->add_control(
 			'_xp_content_align',
 			[
-				'label'        => esc_html__( 'Content Align', 'xhub' ),
+				'label'        => esc_html__( 'Content Align', 'neatify' ),
 				'type'         => Controls_Manager::CHOOSE,
 				'options'      => [
 					'vertical'   => [
-						'title' => esc_html__( 'Vertical', 'xhub' ),
+						'title' => esc_html__( 'Vertical', 'neatify' ),
 						'icon'  => 'fa fa-ellipsis-v',
 					],
 					'horizontal' => [
-						'title' => esc_html__( 'Horizontal', 'xhub' ),
+						'title' => esc_html__( 'Horizontal', 'neatify' ),
 						'icon'  => 'fa fa-ellipsis-h',
 					],
 				],

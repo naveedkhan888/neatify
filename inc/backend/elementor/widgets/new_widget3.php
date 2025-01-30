@@ -15,7 +15,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
 
     public function get_title()
     {
-        return esc_html__('XP Service 2', 'xhub');
+        return esc_html__('XP Service 2', 'neatify');
     }
 
     public function get_icon()
@@ -25,7 +25,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
 
     public function get_categories()
     {
-        return ['category_xhub'];
+        return ['category_neatify'];
     }
 
     protected function register_controls()
@@ -34,7 +34,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->start_controls_section(
             'content_section',
             [
-                'label' => esc_html__('Services', 'xhub'),
+                'label' => esc_html__('Services', 'neatify'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -43,7 +43,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_responsive_control(
             'columns',
             [
-                'label' => esc_html__('Columns', 'xhub'),
+                'label' => esc_html__('Columns', 'neatify'),
                 'type' => Controls_Manager::SELECT,
                 'default' => '3',
                 'tablet_default' => '2',
@@ -65,7 +65,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_responsive_control(
             'column_gap',
             [
-                'label' => esc_html__('Columns Gap', 'xhub'),
+                'label' => esc_html__('Columns Gap', 'neatify'),
                 'type' => Controls_Manager::SLIDER,
                 'default' => [
                     'size' => 30,
@@ -86,7 +86,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_responsive_control(
             'row_gap',
             [
-                'label' => esc_html__('Rows Gap', 'xhub'),
+                'label' => esc_html__('Rows Gap', 'neatify'),
                 'type' => Controls_Manager::SLIDER,
                 'default' => [
                     'size' => 30,
@@ -107,7 +107,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_control(
             'global_title_tag',
             [
-                'label' => esc_html__('Default Title HTML Tag', 'xhub'),
+                'label' => esc_html__('Default Title HTML Tag', 'neatify'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'h3',
                 'options' => [
@@ -129,7 +129,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'service_icon',
             [
-                'label' => esc_html__('Icon', 'xhub'),
+                'label' => esc_html__('Icon', 'neatify'),
                 'type' => Controls_Manager::ICONS,
                 'default' => [
                     'value' => 'fas fa-plus-circle',
@@ -141,9 +141,9 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'service_title',
             [
-                'label' => esc_html__('Title', 'xhub'),
+                'label' => esc_html__('Title', 'neatify'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('Service Title', 'xhub'),
+                'default' => esc_html__('Service Title', 'neatify'),
             ]
         );
 
@@ -151,10 +151,10 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'custom_title_tag',
             [
-                'label' => esc_html__('Custom Title Tag', 'xhub'),
+                'label' => esc_html__('Custom Title Tag', 'neatify'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Yes', 'xhub'),
-                'label_off' => esc_html__('No', 'xhub'),
+                'label_on' => esc_html__('Yes', 'neatify'),
+                'label_off' => esc_html__('No', 'neatify'),
                 'return_value' => 'yes',
                 'default' => 'no',
             ]
@@ -163,7 +163,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'title_tag',
             [
-                'label' => esc_html__('Title HTML Tag', 'xhub'),
+                'label' => esc_html__('Title HTML Tag', 'neatify'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'h3',
                 'options' => [
@@ -186,18 +186,18 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'read_more_text',
             [
-                'label' => esc_html__('Read More Text', 'xhub'),
+                'label' => esc_html__('Read More Text', 'neatify'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('Read More', 'xhub'),
+                'default' => esc_html__('Read More', 'neatify'),
             ]
         );
 
         $repeater->add_control(
             'link',
             [
-                'label' => esc_html__('Link', 'xhub'),
+                'label' => esc_html__('Link', 'neatify'),
                 'type' => Controls_Manager::URL,
-                'placeholder' => esc_html__('https://your-link.com', 'xhub'),
+                'placeholder' => esc_html__('https://your-link.com', 'neatify'),
                 'default' => [
                     'url' => '#',
                 ],
@@ -208,7 +208,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'custom_style',
             [
-                'label' => esc_html__('Custom Style', 'xhub'),
+                'label' => esc_html__('Custom Style', 'neatify'),
                 'type' => Controls_Manager::SWITCHER,
                 'default' => 'no',
                 'separator' => 'before',
@@ -227,7 +227,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->start_controls_tab(
             'style_normal_tab',
             [
-                'label' => esc_html__('Normal', 'xhub'),
+                'label' => esc_html__('Normal', 'neatify'),
             ]
         );
 
@@ -235,7 +235,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'background_color',
             [
-                'label' => esc_html__('Background Color', 'xhub'),
+                'label' => esc_html__('Background Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} {{CURRENT_ITEM}}' => 'background-color: {{VALUE}};',
@@ -247,7 +247,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'individual_icon_heading',
             [
-                'label' => esc_html__('Icon', 'xhub'),
+                'label' => esc_html__('Icon', 'neatify'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -256,7 +256,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'icon_color',
             [
-                'label' => esc_html__('Color', 'xhub'),
+                'label' => esc_html__('Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} {{CURRENT_ITEM}} .service-icon-wrapper i' => 'color: {{VALUE}};',
@@ -268,7 +268,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_responsive_control(
             'icon_size',
             [
-                'label' => esc_html__('Size', 'xhub'),
+                'label' => esc_html__('Size', 'neatify'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -287,7 +287,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'individual_heading_heading',
             [
-                'label' => esc_html__('Heading', 'xhub'),
+                'label' => esc_html__('Heading', 'neatify'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -296,7 +296,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'heading_color',
             [
-                'label' => esc_html__('Color', 'xhub'),
+                'label' => esc_html__('Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} {{CURRENT_ITEM}} .service-title' => 'color: {{VALUE}};',
@@ -307,7 +307,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_responsive_control(
             'heading_spacing',
             [
-                'label' => esc_html__('Top Spacing', 'xhub'),
+                'label' => esc_html__('Top Spacing', 'neatify'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -326,7 +326,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'heading_typography',
-                'label' => esc_html__('Typography', 'xhub'),
+                'label' => esc_html__('Typography', 'neatify'),
                 'selector' => '{{WRAPPER}} {{CURRENT_ITEM}} .service-title',
             ]
         );
@@ -335,7 +335,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'individual_read_more_heading',
             [
-                'label' => esc_html__('Read More Link', 'xhub'),
+                'label' => esc_html__('Read More Link', 'neatify'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -344,7 +344,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'read_more_color',
             [
-                'label' => esc_html__('Text Color', 'xhub'),
+                'label' => esc_html__('Text Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} {{CURRENT_ITEM}} .service-link' => 'color: {{VALUE}};',
@@ -356,7 +356,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'read_more_typography',
-                'label' => esc_html__('Typography', 'xhub'),
+                'label' => esc_html__('Typography', 'neatify'),
                 'selector' => '{{WRAPPER}} {{CURRENT_ITEM}} .service-link',
             ]
         );
@@ -364,7 +364,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_responsive_control(
             'read_more_spacing',
             [
-                'label' => esc_html__('Top Spacing', 'xhub'),
+                'label' => esc_html__('Top Spacing', 'neatify'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -383,7 +383,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'custom_padding_heading',
             [
-                'label' => esc_html__('Padding', 'xhub'),
+                'label' => esc_html__('Padding', 'neatify'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => [
@@ -395,7 +395,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_responsive_control(
             'item_padding',
             [
-                'label' => esc_html__('Padding', 'xhub'),
+                'label' => esc_html__('Padding', 'neatify'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -411,14 +411,14 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->start_controls_tab(
             'style_hover_tab',
             [
-                'label' => esc_html__('Hover', 'xhub'),
+                'label' => esc_html__('Hover', 'neatify'),
             ]
         );
 
         $repeater->add_control(
             'background_hover_color',
             [
-                'label' => esc_html__('Background Color', 'xhub'),
+                'label' => esc_html__('Background Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} {{CURRENT_ITEM}}:hover' => 'background-color: {{VALUE}};',
@@ -430,7 +430,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'icon_hover_color',
             [
-                'label' => esc_html__('Icon Hover Color', 'xhub'),
+                'label' => esc_html__('Icon Hover Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} {{CURRENT_ITEM}}:hover .service-icon-wrapper i' => 'color: {{VALUE}} !important;',
@@ -445,7 +445,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'read_more_hover_color',
             [
-                'label' => esc_html__('Read More Color', 'xhub'),
+                'label' => esc_html__('Read More Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} {{CURRENT_ITEM}} .service-link:hover' => 'color: {{VALUE}};',
@@ -459,26 +459,26 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_control(
             'services',
             [
-                'label' => esc_html__('Services', 'xhub'),
+                'label' => esc_html__('Services', 'neatify'),
                 'type' => Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
                 'default' => [
                     [
-                        'service_title' => esc_html__('Service 1', 'xhub'),
+                        'service_title' => esc_html__('Service 1', 'neatify'),
                         'service_icon' => [
                             'value' => 'fas fa-phone-alt',
                             'library' => 'fa-solid',
                         ],
                     ],
                     [
-                        'service_title' => esc_html__('Service 2', 'xhub'),
+                        'service_title' => esc_html__('Service 2', 'neatify'),
                         'service_icon' => [
                             'value' => 'fas fa-microscope',
                             'library' => 'fa-solid',
                         ],
                     ],
                     [
-                        'service_title' => esc_html__('Service 3', 'xhub'),
+                        'service_title' => esc_html__('Service 3', 'neatify'),
                         'service_icon' => [
                             'value' => 'fas fa-stethoscope',
                             'library' => 'fa-solid',
@@ -496,7 +496,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->start_controls_section(
             'style_section',
             [
-                'label' => esc_html__('Global Styles', 'xhub'),
+                'label' => esc_html__('Global Styles', 'neatify'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -516,7 +516,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_control(
             'background_color',
             [
-                'label' => esc_html__('Background Color', 'xhub'),
+                'label' => esc_html__('Background Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -529,7 +529,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_control(
             'icon_style_heading',
             [
-                'label' => esc_html__('Icon', 'xhub'),
+                'label' => esc_html__('Icon', 'neatify'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -539,7 +539,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $repeater->add_control(
             'icon_hover_color_simple',
             [
-                'label' => esc_html__('Icon Color', 'xhub'),
+                'label' => esc_html__('Icon Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} {{CURRENT_ITEM}}:hover .service-icon-wrapper i' => 'color: {{VALUE}} !important;',
@@ -555,7 +555,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_control(
             'icon_color',
             [
-                'label' => esc_html__('Color', 'xhub'),
+                'label' => esc_html__('Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -568,7 +568,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_control(
             'icon_hover_color',
             [
-                'label' => esc_html__('Hover Color', 'xhub'),
+                'label' => esc_html__('Hover Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -582,7 +582,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_control(
             'icon_size',
             [
-                'label' => esc_html__('Size', 'xhub'),
+                'label' => esc_html__('Size', 'neatify'),
                 'type' => Controls_Manager::SLIDER,
                 'default' => [
                     'size' => 80,
@@ -603,7 +603,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_control(
             'heading_style_heading',
             [
-                'label' => esc_html__('Heading', 'xhub'),
+                'label' => esc_html__('Heading', 'neatify'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -612,7 +612,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_control(
             'heading_color',
             [
-                'label' => esc_html__('Color', 'xhub'),
+                'label' => esc_html__('Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
@@ -624,7 +624,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_responsive_control(
             'heading_spacing',
             [
-                'label' => esc_html__('Top Spacing', 'xhub'),
+                'label' => esc_html__('Top Spacing', 'neatify'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -643,7 +643,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'heading_typography',
-                'label' => esc_html__('Typography', 'xhub'),
+                'label' => esc_html__('Typography', 'neatify'),
                 'selector' => '{{WRAPPER}} .service-title',
             ]
         );
@@ -652,7 +652,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_control(
             'read_more_style_heading',
             [
-                'label' => esc_html__('Read More Link', 'xhub'),
+                'label' => esc_html__('Read More Link', 'neatify'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -661,7 +661,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_control(
             'read_more_color',
             [
-                'label' => esc_html__('Text Color', 'xhub'),
+                'label' => esc_html__('Text Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -673,7 +673,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_control(
             'read_more_hover_color',
             [
-                'label' => esc_html__('Text Hover Color', 'xhub'),
+                'label' => esc_html__('Text Hover Color', 'neatify'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -686,7 +686,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'read_more_typography',
-                'label' => esc_html__('Typography', 'xhub'),
+                'label' => esc_html__('Typography', 'neatify'),
                 'selector' => '{{WRAPPER}} .service-link',
             ]
         );
@@ -694,7 +694,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_responsive_control(
             'read_more_spacing',
             [
-                'label' => esc_html__('Top Spacing', 'xhub'),
+                'label' => esc_html__('Top Spacing', 'neatify'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -713,7 +713,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_control(
             'padding_style_heading',
             [
-                'label' => esc_html__('Padding', 'xhub'),
+                'label' => esc_html__('Padding', 'neatify'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -722,7 +722,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_responsive_control(
             'global_item_padding',
             [
-                'label' => esc_html__('Item Padding', 'xhub'),
+                'label' => esc_html__('Item Padding', 'neatify'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'default' => [
@@ -742,7 +742,7 @@ class Custom_Medical_Services_Widget extends Widget_Base
         $this->add_responsive_control(
             'width_control',
             [
-                'label' => esc_html__('Width', 'xhub'),
+                'label' => esc_html__('Width', 'neatify'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['%', 'px', 'em', 'vw'], // Supported units
                 'range' => [

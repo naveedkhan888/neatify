@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Team Carousel
  */
-class Xhub_Team_Carousel extends Widget_Base{
+class Neatify_Team_Carousel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Team Carousel', 'xhub' );
+		return __( 'XP Team Carousel', 'neatify' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xhub' ];
+		return [ 'category_neatify' ];
 	}
 
 	protected function register_controls() {
@@ -33,7 +33,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => esc_html__( 'Team', 'xhub' ),
+				'label' => esc_html__( 'Team', 'neatify' ),
 			]
 		);
 
@@ -42,7 +42,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 	       'member_image',
 	        [
-	            'label' => esc_html__( 'Photo', 'xhub' ),
+	            'label' => esc_html__( 'Photo', 'neatify' ),
 	            'type'  => Controls_Manager::MEDIA,
 		    ]
 		);
@@ -50,9 +50,9 @@ class Xhub_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 		    'member_name',
 	      	[
-	          	'label' => esc_html__( 'Name', 'xhub' ),
+	          	'label' => esc_html__( 'Name', 'neatify' ),
 	          	'type'  => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Peter Perish', 'xhub' ),
+				'default' => esc_html__( 'Peter Perish', 'neatify' ),
 				'label_block' => true
 	    	]
 	    );
@@ -60,28 +60,28 @@ class Xhub_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 		    'member_extra',
 	      	[
-	          	'label' => esc_html__( 'Extra/Job', 'xhub' ),
+	          	'label' => esc_html__( 'Extra/Job', 'neatify' ),
 	          	'type'  => Controls_Manager::TEXTAREA,
-	          	'default' => esc_html__( 'co-founder of company', 'xhub' ),
+	          	'default' => esc_html__( 'co-founder of company', 'neatify' ),
 	    	]
 	    );
 
 	    $repeater->add_control(
 			'link',
 			[
-				'label' => __( 'Link To Details', 'xhub' ),
+				'label' => __( 'Link To Details', 'neatify' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://', 'xhub' ),
+				'placeholder' => __( 'https://', 'neatify' ),
 			]
 		);
 
 		$repeater->add_control(
 			'socials',
 			[
-				'label' => __( 'Socials', 'xhub' ),
+				'label' => __( 'Socials', 'neatify' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'xhub' ),
-				'label_off' => __( 'Hide', 'xhub' ),
+				'label_on' => __( 'Show', 'neatify' ),
+				'label_off' => __( 'Hide', 'neatify' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'separator' => 'before',
@@ -91,7 +91,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 		    'social1',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 1', 'xhub' ),
+	          	'label' => esc_html__( 'Icon Social 1', 'neatify' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -106,9 +106,9 @@ class Xhub_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social1_link',
 			[
-				'label' => __( 'Link Social 1', 'xhub' ),
+				'label' => __( 'Link Social 1', 'neatify' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://twitter.com/', 'xhub' ),
+				'placeholder' => __( 'https://twitter.com/', 'neatify' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -118,7 +118,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 		    'social2',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 2', 'xhub' ),
+	          	'label' => esc_html__( 'Icon Social 2', 'neatify' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -134,9 +134,9 @@ class Xhub_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social2_link',
 			[
-				'label' => __( 'Link Social 2', 'xhub' ),
+				'label' => __( 'Link Social 2', 'neatify' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://facebook.com/', 'xhub' ),
+				'placeholder' => __( 'https://facebook.com/', 'neatify' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -146,7 +146,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 		    'social3',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 3', 'xhub' ),
+	          	'label' => esc_html__( 'Icon Social 3', 'neatify' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -162,9 +162,9 @@ class Xhub_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social3_link',
 			[
-				'label' => __( 'Link Social 3', 'xhub' ),
+				'label' => __( 'Link Social 3', 'neatify' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://pinterest.com/', 'xhub' ),
+				'placeholder' => __( 'https://pinterest.com/', 'neatify' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -174,7 +174,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 		    'members',
 		    [
-		        'label'       => esc_html__( 'Team', 'xhub' ),
+		        'label'       => esc_html__( 'Team', 'neatify' ),
 		        'type'        => Controls_Manager::REPEATER,
 		        'show_label'  => false,
 		        'default'     => [],
@@ -198,10 +198,10 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides To Show', 'xhub' ),
+				'label' => __( 'Slides To Show', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'xhub' ),
+					'' => __( 'Default', 'neatify' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -209,31 +209,31 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'xhub' ),
+				'label' => __( 'Loop', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'xhub' ),
-					'false' => __( 'No', 'xhub' ),
+					'true' => __( 'Yes', 'neatify' ),
+					'false' => __( 'No', 'neatify' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'xhub' ),
+				'label' => __( 'Autoplay', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'xhub' ),
-					'false' => __( 'No', 'xhub' ),
+					'true' => __( 'Yes', 'neatify' ),
+					'false' => __( 'No', 'neatify' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'xhub' ),
+				'label' => __( 'Autoplay Timeout', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -253,31 +253,31 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'xhub' ),
+				'label' => __( 'Arrows', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'xhub' ),
-					'false'  => __( 'No', 'xhub' ),
+					'true'   => __( 'Yes', 'neatify' ),
+					'false'  => __( 'No', 'neatify' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'xhub' ),
+				'label' => __( 'Dots', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'xhub' ),
-					'false'  => __( 'No', 'xhub' ),
+					'true'   => __( 'Yes', 'neatify' ),
+					'false'  => __( 'No', 'neatify' ),
 				],
 			]
 		);
 		$this->add_responsive_control(
 			'w_gaps',
 			[
-				'label' => __( 'Gap Width', 'xhub' ),
+				'label' => __( 'Gap Width', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -294,7 +294,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_style',
 			[
-				'label' => esc_html__( 'General', 'xhub' ),
+				'label' => esc_html__( 'General', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -302,7 +302,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'xhub' ),
+				'label' => __( 'Border Radius', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -324,14 +324,14 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'info_style',
 			[
-				'label' => esc_html__( 'Info Box', 'xhub' ),
+				'label' => esc_html__( 'Info Box', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_info_box',
 			[
-				'label' => __( 'General', 'xhub' ),
+				'label' => __( 'General', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -339,19 +339,19 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'xhub' ),
+				'label' => __( 'Alignment', 'neatify' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xhub' ),
+						'title' => __( 'Left', 'neatify' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xhub' ),
+						'title' => __( 'Center', 'neatify' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xhub' ),
+						'title' => __( 'Right', 'neatify' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -363,7 +363,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'padding_box',
 			[
-				'label' => __( 'Padding Box', 'xhub' ),
+				'label' => __( 'Padding Box', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -374,7 +374,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background', 'xhub' ),
+				'label' => __( 'Background', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -393,7 +393,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xhub' ),
+				'label' => __( 'Title', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -402,7 +402,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => esc_html__( 'Spacing', 'xhub' ),
+				'label' => esc_html__( 'Spacing', 'neatify' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -419,7 +419,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label'     => esc_html__( 'Color', 'xhub' ),
+				'label'     => esc_html__( 'Color', 'neatify' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -430,7 +430,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label'     => esc_html__( 'Color Hover', 'xhub' ),
+				'label'     => esc_html__( 'Color Hover', 'neatify' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -445,7 +445,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 			Group_Control_Typography::get_type(),
 			[
 				'name'     => 'title_typography',
-				'label'    => esc_html__( 'Typography', 'xhub' ),
+				'label'    => esc_html__( 'Typography', 'neatify' ),
 				'selector' => '{{WRAPPER}} .xp-team h6',
 			]
 		);
@@ -454,7 +454,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_job',
 			[
-				'label' => __( 'Extra/Job', 'xhub' ),
+				'label' => __( 'Extra/Job', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -463,7 +463,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'job_space',
 			[
-				'label' => esc_html__( 'Spacing', 'xhub' ),
+				'label' => esc_html__( 'Spacing', 'neatify' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -479,7 +479,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'job_color',
 			[
-				'label'     => esc_html__( 'Color', 'xhub' ),
+				'label'     => esc_html__( 'Color', 'neatify' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -491,7 +491,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 			Group_Control_Typography::get_type(),
 				[
 					'name'     => 'job_typography',
-					'label'    => esc_html__( 'Typography', 'xhub' ),
+					'label'    => esc_html__( 'Typography', 'neatify' ),
 					'selector' => '{{WRAPPER}} .team-info span',
 				]
 		);
@@ -502,7 +502,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'icon_style',
 			[
-				'label' => esc_html__( 'Socials', 'xhub' ),
+				'label' => esc_html__( 'Socials', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -510,7 +510,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_social_space',
 			[
-				'label' => esc_html__( 'Spacing', 'xhub' ),
+				'label' => esc_html__( 'Spacing', 'neatify' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -526,7 +526,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_socials',
 			[
-				'label' => __( 'Border Radius', 'xhub' ),
+				'label' => __( 'Border Radius', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -538,7 +538,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_social_color',
 			[
-				'label'     => esc_html__( 'Color', 'xhub' ),
+				'label'     => esc_html__( 'Color', 'neatify' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -550,7 +550,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_social_bg',
 			[
-				'label'     => esc_html__( 'Background', 'xhub' ),
+				'label'     => esc_html__( 'Background', 'neatify' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -561,7 +561,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_hover_color',
 			[
-				'label'     => esc_html__( 'Color Hover', 'xhub' ),
+				'label'     => esc_html__( 'Color Hover', 'neatify' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -573,7 +573,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'social_hover_bg',
 			[
-				'label'     => esc_html__( 'Background Hover', 'xhub' ),
+				'label'     => esc_html__( 'Background Hover', 'neatify' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -588,7 +588,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'xhub' ),
+				'label' => __( 'Dots', 'neatify' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -599,7 +599,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -616,7 +616,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'xhub' ),
+                'label' => __( 'Color', 'neatify' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -627,7 +627,7 @@ class Xhub_Team_Carousel extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'xhub' ),
+                'label' => __( 'Color Active', 'neatify' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -641,7 +641,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'xhub' ),
+				'label' => __( 'Arrows', 'neatify' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -651,7 +651,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_spacing',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -668,7 +668,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_width',
 			[
-				'label' => __( 'Width', 'xhub' ),
+				'label' => __( 'Width', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -684,7 +684,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -696,7 +696,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'xhub' ),
+				'label' => __( 'Background', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -707,7 +707,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'xhub' ),
+				'label' => __( 'Color Hover', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -718,7 +718,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'xhub' ),
+				'label' => __( 'Background Hover', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -729,7 +729,7 @@ class Xhub_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'xhub' ),
+				'label' => __( 'Border Radius', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -820,5 +820,5 @@ class Xhub_Team_Carousel extends Widget_Base{
 	    <?php
 	}
 }
-// After the Xhub_Team_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_Team_Carousel() );
+// After the Neatify_Team_Carousel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Neatify_Team_Carousel() );

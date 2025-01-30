@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Testimonial Carousel 1
  */
-class Xhub_Testimonials extends Widget_Base{
+class Neatify_Testimonials extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Xhub_Testimonials extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Testimonial Carousel 1', 'xhub' );
+		return __( 'XP Testimonial Carousel 1', 'neatify' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Xhub_Testimonials extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xhub' ];
+		return [ 'category_neatify' ];
 	}
 
 	protected function register_controls() {
@@ -32,14 +32,14 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->start_controls_section(
 			'section_testimonials',
 			[
-				'label' => __( 'Testimonials', 'xhub' ),
+				'label' => __( 'Testimonials', 'neatify' ),
 			]
 		);
 		$repeater = new Repeater();
 		$repeater->add_control(
 			'timage',
 			[
-				'label' => __( 'Avatar:', 'xhub' ),
+				'label' => __( 'Avatar:', 'neatify' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => get_template_directory_uri().'/images/avatar-3.png',
@@ -50,7 +50,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$repeater->add_control(
 			'tname',
 			[
-				'label' => __( 'Name:', 'xhub' ),
+				'label' => __( 'Name:', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Emilia Clarke',
 			]
@@ -59,7 +59,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$repeater->add_control(
 			'tjob',
 			[
-				'label' => __( 'Job:', 'xhub' ),
+				'label' => __( 'Job:', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Developer',
 			]
@@ -67,7 +67,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$repeater->add_control(
 			'tcontent',
 			[
-				'label' => __( 'Content:', 'xhub' ),
+				'label' => __( 'Content:', 'neatify' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'rows' => '10',
 				'default' => '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."',
@@ -82,7 +82,7 @@ class Xhub_Testimonials extends Widget_Base{
 		        'show_label'  => false,
 		        'default'     => [
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'xhub' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'neatify' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
@@ -91,7 +91,7 @@ class Xhub_Testimonials extends Widget_Base{
 		 
 		            ],
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'xhub' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'neatify' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
@@ -100,7 +100,7 @@ class Xhub_Testimonials extends Widget_Base{
 		 
 		            ],
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'xhub' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'neatify' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
@@ -120,10 +120,10 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides To Show', 'xhub' ),
+				'label' => __( 'Slides To Show', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'xhub' ),
+					'' => __( 'Default', 'neatify' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -131,31 +131,31 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'xhub' ),
+				'label' => __( 'Loop', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'xhub' ),
-					'false' => __( 'No', 'xhub' ),
+					'true' => __( 'Yes', 'neatify' ),
+					'false' => __( 'No', 'neatify' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'xhub' ),
+				'label' => __( 'Autoplay', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'xhub' ),
-					'false' => __( 'No', 'xhub' ),
+					'true' => __( 'Yes', 'neatify' ),
+					'false' => __( 'No', 'neatify' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'xhub' ),
+				'label' => __( 'Autoplay Timeout', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -175,24 +175,24 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'xhub' ),
+				'label' => __( 'Arrows', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'xhub' ),
-					'false'  => __( 'No', 'xhub' ),
+					'true'   => __( 'Yes', 'neatify' ),
+					'false'  => __( 'No', 'neatify' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'xhub' ),
+				'label' => __( 'Dots', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'xhub' ),
-					'false'  => __( 'No', 'xhub' ),
+					'true'   => __( 'Yes', 'neatify' ),
+					'false'  => __( 'No', 'neatify' ),
 				],
 			]
 		);
@@ -203,14 +203,14 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->start_controls_section(
 			'style_general',
 			[
-				'label' => __( 'General', 'xhub' ),
+				'label' => __( 'General', 'neatify' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'is_reverse',
 			[
-				'label'   => esc_html__( 'Reverse content', 'xhub' ),
+				'label'   => esc_html__( 'Reverse content', 'neatify' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'return_value' => 'yes',
 				'default' => 'no',
@@ -220,7 +220,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'tcontent_bg',
 			[
-				'label' => __( 'Background Color', 'xhub' ),
+				'label' => __( 'Background Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -232,7 +232,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'tcontent_color',
 			[
-				'label' => __( 'Text Color', 'xhub' ),
+				'label' => __( 'Text Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -244,7 +244,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'line_color',
 			[
-				'label' => __( 'Line Color', 'xhub' ),
+				'label' => __( 'Line Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -267,7 +267,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'tcontent_padding',
 			[
-				'label' => __( 'Padding', 'xhub' ),
+				'label' => __( 'Padding', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -278,7 +278,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'radius_boxes',
 			[
-				'label' => __( 'Border Radius', 'xhub' ),
+				'label' => __( 'Border Radius', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -299,7 +299,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->start_controls_section(
 			'style_tinfo',
 			[
-				'label' => __( 'Information', 'xhub' ),
+				'label' => __( 'Information', 'neatify' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -308,7 +308,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'style_timage',
 			[
-				'label' => __( 'Photo', 'xhub' ),
+				'label' => __( 'Photo', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -316,7 +316,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'spacing_img',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -334,7 +334,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'image_border_radius',
 			[
-				'label' => __( 'Border Radius', 'xhub' ),
+				'label' => __( 'Border Radius', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -346,7 +346,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'quote_color',
 			[
-				'label' => __( 'Icon Color', 'xhub' ),
+				'label' => __( 'Icon Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -357,7 +357,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'quote_bg',
 			[
-				'label' => __( 'Icon Background', 'xhub' ),
+				'label' => __( 'Icon Background', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -370,7 +370,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'style_tname',
 			[
-				'label' => __( 'Name', 'xhub' ),
+				'label' => __( 'Name', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -378,7 +378,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'spacing_name',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -395,7 +395,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'name_color',
 			[
-				'label' => __( 'Text Color', 'xhub' ),
+				'label' => __( 'Text Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -416,7 +416,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'style_tjob',
 			[
-				'label' => __( 'Job', 'xhub' ),
+				'label' => __( 'Job', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -425,7 +425,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'job_color',
 			[
-				'label' => __( 'Text Color', 'xhub' ),
+				'label' => __( 'Text Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -448,7 +448,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'xhub' ),
+				'label' => __( 'Dots', 'neatify' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -459,7 +459,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -476,7 +476,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'xhub' ),
+                'label' => __( 'Color', 'neatify' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -487,7 +487,7 @@ class Xhub_Testimonials extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'xhub' ),
+                'label' => __( 'Color Active', 'neatify' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -501,7 +501,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'xhub' ),
+				'label' => __( 'Arrows', 'neatify' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -511,7 +511,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_spacing',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -528,7 +528,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_width',
 			[
-				'label' => __( 'Width', 'xhub' ),
+				'label' => __( 'Width', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -544,7 +544,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -556,7 +556,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'xhub' ),
+				'label' => __( 'Background', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -567,7 +567,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'xhub' ),
+				'label' => __( 'Color Hover', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -578,7 +578,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'xhub' ),
+				'label' => __( 'Background Hover', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -589,7 +589,7 @@ class Xhub_Testimonials extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'xhub' ),
+				'label' => __( 'Border Radius', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -645,4 +645,4 @@ class Xhub_Testimonials extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_Testimonials() );
+Plugin::instance()->widgets_manager->register( new Neatify_Testimonials() );

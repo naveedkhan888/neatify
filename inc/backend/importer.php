@@ -2,7 +2,7 @@
 /**
  * Hooks for importer
  *
- * @package Xhub
+ * @package Neatify
  */
 
 
@@ -12,7 +12,7 @@
  * @since  1.0
  *
  */
-function xhub_importer() {
+function neatify_importer() {
 	return array(
 		array(
 			'name'       => 'Main Demo (all layout)',
@@ -36,4 +36,4 @@ function xhub_importer() {
 	);
 }
 
-add_filter( 'soo_demo_packages', 'xhub_importer', 30 );
+add_filter( 'soo_demo_packages', 'neatify_importer', 30 );

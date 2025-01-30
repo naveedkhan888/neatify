@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Pricing Table
  */
-class Xhub_Pricing_Table extends Widget_Base{
+class Neatify_Pricing_Table extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Pricing Table', 'xhub' );
+		return __( 'XP Pricing Table', 'neatify' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xhub' ];
+		return [ 'category_neatify' ];
 	}
 
 	protected function register_controls() {
@@ -33,17 +33,17 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Pricing Table', 'xhub' ),
+				'label' => __( 'Pricing Table', 'neatify' ),
 			]
 		);
 
 		$this->add_control(
 			'is_featured',
 			[
-				'label' => __( 'Pricing Table Featured', 'xhub' ),
+				'label' => __( 'Pricing Table Featured', 'neatify' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'xhub' ),
-				'label_off' => __( 'No', 'xhub' ),
+				'label_on' => __( 'Yes', 'neatify' ),
+				'label_off' => __( 'No', 'neatify' ),
 				'return_value' => 'yes',
 				'default' => '',
 			]
@@ -52,9 +52,9 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'xhub' ),
+				'label' => __( 'Title', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Standard', 'xhub' ),
+				'default' => __( 'Standard', 'neatify' ),
 				'label_block' => true,
 			]
 		);
@@ -62,9 +62,9 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price',
 			[
-				'label' => __( 'Price', 'xhub' ),
+				'label' => __( 'Price', 'neatify' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<sup>$</sup> 29', 'xhub' ),
+				'default' => __( '<sup>$</sup> 29', 'neatify' ),
 				'label_block' => true,
 			]
 		);
@@ -72,9 +72,9 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price_for',
 			[
-				'label' => __( 'Text Under Price', 'xhub' ),
+				'label' => __( 'Text Under Price', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'per m2', 'xhub' ),
+				'default' => __( 'per m2', 'neatify' ),
 				'label_block' => true,
 			]
 		);
@@ -84,7 +84,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 			[
 				'label' => 'Short Text',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Discover the emerging technologies most relevant to your strategy by working.', 'xhub' ),
+				'default' => __( 'Discover the emerging technologies most relevant to your strategy by working.', 'neatify' ),
 			]
 		);
 
@@ -93,7 +93,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 			[
 				'label' => 'Details',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<ul><li class="active">Structure of a project</li><li class="active">Measurement of the room</li><li>3D-Visualization of premises</li></ul>', 'xhub' ),
+				'default' => __( '<ul><li class="active">Structure of a project</li><li class="active">Measurement of the room</li><li>3D-Visualization of premises</li></ul>', 'neatify' ),
 			]
 		);
 
@@ -102,16 +102,16 @@ class Xhub_Pricing_Table extends Widget_Base{
 			[
 				'label' => 'Button',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Choose Plane', 'xhub' ),
+				'default' => __( 'Choose Plane', 'neatify' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'xhub' ),
+				'label' => __( 'Link', 'neatify' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'xhub' ),
+				'placeholder' => __( 'https://your-link.com', 'neatify' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -124,14 +124,14 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->start_controls_section(
 			'style_table_section',
 			[
-				'label' => __( 'Table', 'xhub' ),
+				'label' => __( 'Table', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'xhub' ),
+				'label' => __( 'Padding Box', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -142,7 +142,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'xhub' ),
+				'label' => __( 'Border Radius', 'neatify' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -153,7 +153,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background', 'xhub' ),
+				'label' => __( 'Background', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -182,7 +182,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'xhub' ),
+				'label' => __( 'Content', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -191,7 +191,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xhub' ),
+				'label' => __( 'Title', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -199,7 +199,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -215,7 +215,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -226,7 +226,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'title_bgcolor',
 			[
-				'label' => __( 'Background', 'xhub' ),
+				'label' => __( 'Background', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -246,7 +246,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_price',
 			[
-				'label' => __( 'Price', 'xhub' ),
+				'label' => __( 'Price', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -254,7 +254,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'price_space',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -270,7 +270,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -290,7 +290,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_price_for',
 			[
-				'label' => __( 'Under Price', 'xhub' ),
+				'label' => __( 'Under Price', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -298,7 +298,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price_for_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -319,7 +319,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_stext',
 			[
-				'label' => __( 'Short Text', 'xhub' ),
+				'label' => __( 'Short Text', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -327,7 +327,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'stext_spacing',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -343,7 +343,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'stext_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -363,7 +363,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Details', 'xhub' ),
+				'label' => __( 'Details', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -371,7 +371,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'des_padding',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -387,7 +387,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'des_border_color',
 			[
-				'label' => __( 'Line Color', 'xhub' ),
+				'label' => __( 'Line Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -398,7 +398,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -409,7 +409,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'des_active_color',
 			[
-				'label' => __( 'Active Color', 'xhub' ),
+				'label' => __( 'Active Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -427,10 +427,10 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'icon_list',
 			[
-				'label' => __( 'Icon List', 'xhub' ),
+				'label' => __( 'Icon List', 'neatify' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'xhub' ),
-				'label_off' => __( 'No', 'xhub' ),
+				'label_on' => __( 'Yes', 'neatify' ),
+				'label_off' => __( 'No', 'neatify' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -440,7 +440,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_btn',
 			[
-				'label' => __( 'Button', 'xhub' ),
+				'label' => __( 'Button', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -464,7 +464,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_btn_normal',
 			[
-				'label' => __( 'Normal', 'xhub' ),
+				'label' => __( 'Normal', 'neatify' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -474,7 +474,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'btn_bg_color',
 			[
-				'label' => __( 'Background Color', 'xhub' ),
+				'label' => __( 'Background Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -488,7 +488,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -502,7 +502,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'btn_bcolor',
 			[
-				'label' => __( 'Border Color', 'xhub' ),
+				'label' => __( 'Border Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -518,7 +518,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_btn_hover',
 			[
-				'label' => __( 'Hover', 'xhub' ),
+				'label' => __( 'Hover', 'neatify' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -527,7 +527,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'hover_btn_bg_color',
 			[
-				'label' => __( 'Background Color', 'xhub' ),
+				'label' => __( 'Background Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -541,7 +541,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'hover_btn_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -555,7 +555,7 @@ class Xhub_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'hover_btn_bcolor',
 			[
-				'label' => __( 'Border Color', 'xhub' ),
+				'label' => __( 'Border Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -611,5 +611,5 @@ class Xhub_Pricing_Table extends Widget_Base{
 	}
 
 }
-// After the Xhub_Pricing_Table class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_Pricing_Table() );
+// After the Neatify_Pricing_Table class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Neatify_Pricing_Table() );

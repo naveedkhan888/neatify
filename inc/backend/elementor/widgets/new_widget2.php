@@ -15,7 +15,7 @@ class Counter_Widget extends Widget_Base
 
     public function get_title()
     {
-        return esc_html__('XP Membership', 'xhub');
+        return esc_html__('XP Membership', 'neatify');
     }
 
     public function get_icon()
@@ -25,7 +25,7 @@ class Counter_Widget extends Widget_Base
 
     public function get_categories()
     {
-        return ['category_xhub'];
+        return ['category_neatify'];
     }
 
     public function get_keywords()
@@ -37,35 +37,35 @@ class Counter_Widget extends Widget_Base
     {
         // Content Section
         $this->start_controls_section('content_section', [
-            'label' => esc_html__('Content', 'xhub'),
+            'label' => esc_html__('Content', 'neatify'),
             'tab' => Controls_Manager::TAB_CONTENT,
         ]);
 
         $repeater = new Repeater();
 
         $repeater->add_control('counter_number', [
-            'label' => esc_html__('Number', 'xhub'),
+            'label' => esc_html__('Number', 'neatify'),
             'type' => Controls_Manager::TEXT,
             'default' => '01',
             'label_block' => true,
         ]);
 
         $repeater->add_control('heading', [
-            'label' => esc_html__('Heading', 'xhub'),
+            'label' => esc_html__('Heading', 'neatify'),
             'type' => Controls_Manager::TEXT,
-            'default' => esc_html__('Receive packages', 'xhub'),
+            'default' => esc_html__('Receive packages', 'neatify'),
             'label_block' => true,
         ]);
 
         $repeater->add_control('description', [
-            'label' => esc_html__('Description', 'xhub'),
+            'label' => esc_html__('Description', 'neatify'),
             'type' => Controls_Manager::TEXTAREA,
-            'default' => esc_html__('Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus.', 'xhub'),
+            'default' => esc_html__('Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus.', 'neatify'),
             'rows' => 5,
         ]);
 
         $repeater->add_control('icon', [
-            'label' => esc_html__('Icon', 'xhub'),
+            'label' => esc_html__('Icon', 'neatify'),
             'type' => Controls_Manager::ICONS,
             'default' => [
                 'value' => 'xpicon xpicon-next-4',
@@ -74,20 +74,20 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $repeater->add_control('show_divider', [
-            'label' => esc_html__('Show Divider', 'xhub'),
+            'label' => esc_html__('Show Divider', 'neatify'),
             'type' => Controls_Manager::SWITCHER,
             'default' => 'yes',
         ]);
 
         $this->add_control('counters', [
-            'label' => esc_html__('Counters', 'xhub'),
+            'label' => esc_html__('Counters', 'neatify'),
             'type' => Controls_Manager::REPEATER,
             'fields' => $repeater->get_controls(),
             'default' => [
                 [
                     'counter_number' => '01',
-                    'heading' => esc_html__('Receive packages', 'xhub'),
-                    'description' => esc_html__('Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus.', 'xhub'),
+                    'heading' => esc_html__('Receive packages', 'neatify'),
+                    'description' => esc_html__('Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Sed ut perspiciatis unde omnis iste natus.', 'neatify'),
                 ],
             ],
             'title_field' => '{{{ counter_number }}} - {{{ heading }}}',
@@ -97,7 +97,7 @@ class Counter_Widget extends Widget_Base
 
         // Style Section
         $this->start_controls_section('style_section', [
-            'label' => esc_html__('Style', 'xhub'),
+            'label' => esc_html__('Style', 'neatify'),
             'tab' => Controls_Manager::TAB_STYLE,
         ]);
 
@@ -107,12 +107,12 @@ class Counter_Widget extends Widget_Base
         $this->start_controls_tab(
             'number_normal_tab',
             [
-                'label' => esc_html__('Normal', 'xhub'),
+                'label' => esc_html__('Normal', 'neatify'),
             ]
         );
 
         $this->add_control('number_color', [
-            'label' => esc_html__('Number Color', 'xhub'),
+            'label' => esc_html__('Number Color', 'neatify'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -125,12 +125,12 @@ class Counter_Widget extends Widget_Base
         $this->start_controls_tab(
             'number_hover_tab',
             [
-                'label' => esc_html__('Hover', 'xhub'),
+                'label' => esc_html__('Hover', 'neatify'),
             ]
         );
 
         $this->add_control('number_hover_color', [
-            'label' => esc_html__('Number Hover Color', 'xhub'),
+            'label' => esc_html__('Number Hover Color', 'neatify'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -144,14 +144,14 @@ class Counter_Widget extends Widget_Base
 
         $this->add_group_control(Group_Control_Typography::get_type(), [
             'name' => 'number_typography',
-            'label' => esc_html__('Number Typography', 'xhub'),
+            'label' => esc_html__('Number Typography', 'neatify'),
             'selector' => '{{WRAPPER}} .counter-number',
             'separator' => 'before',
         ]);
 
         // Heading Style
         $this->add_control('heading_color', [
-            'label' => esc_html__('Heading Color', 'xhub'),
+            'label' => esc_html__('Heading Color', 'neatify'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -162,13 +162,13 @@ class Counter_Widget extends Widget_Base
 
         $this->add_group_control(Group_Control_Typography::get_type(), [
             'name' => 'heading_typography',
-            'label' => esc_html__('Heading Typography', 'xhub'),
+            'label' => esc_html__('Heading Typography', 'neatify'),
             'selector' => '{{WRAPPER}} .counter-heading',
         ]);
 
         // Description Style
         $this->add_control('description_color', [
-            'label' => esc_html__('Description Color', 'xhub'),
+            'label' => esc_html__('Description Color', 'neatify'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -179,13 +179,13 @@ class Counter_Widget extends Widget_Base
 
         $this->add_group_control(Group_Control_Typography::get_type(), [
             'name' => 'description_typography',
-            'label' => esc_html__('Description Typography', 'xhub'),
+            'label' => esc_html__('Description Typography', 'neatify'),
             'selector' => '{{WRAPPER}} .counter-description',
         ]);
 
         // Container Style
         $this->add_control('container_background', [
-            'label' => esc_html__('Container Background', 'xhub'),
+            'label' => esc_html__('Container Background', 'neatify'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -195,7 +195,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_responsive_control('container_padding', [
-            'label' => esc_html__('Container Padding', 'xhub'),
+            'label' => esc_html__('Container Padding', 'neatify'),
             'type' => Controls_Manager::DIMENSIONS,
             'size_units' => ['px', 'em', '%'],
             'selectors' => [
@@ -204,7 +204,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_responsive_control('container_margin', [
-            'label' => esc_html__('Container Margin', 'xhub'),
+            'label' => esc_html__('Container Margin', 'neatify'),
             'type' => Controls_Manager::DIMENSIONS,
             'size_units' => ['px', 'em', '%'],
             'selectors' => [
@@ -221,7 +221,7 @@ class Counter_Widget extends Widget_Base
         $this->add_control(
             'element_spacing_heading',
             [
-                'label' => esc_html__('Element Spacing', 'xhub'),
+                'label' => esc_html__('Element Spacing', 'neatify'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -231,7 +231,7 @@ class Counter_Widget extends Widget_Base
         $this->add_responsive_control(
             'number_spacing',
             [
-                'label' => esc_html__('Number Spacing', 'xhub'),
+                'label' => esc_html__('Number Spacing', 'neatify'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -262,7 +262,7 @@ class Counter_Widget extends Widget_Base
         $this->add_responsive_control(
             'heading_spacing',
             [
-                'label' => esc_html__('Heading Spacing', 'xhub'),
+                'label' => esc_html__('Heading Spacing', 'neatify'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -293,7 +293,7 @@ class Counter_Widget extends Widget_Base
         $this->add_responsive_control(
             'description_spacing',
             [
-                'label' => esc_html__('Description Spacing', 'xhub'),
+                'label' => esc_html__('Description Spacing', 'neatify'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -324,7 +324,7 @@ class Counter_Widget extends Widget_Base
         $this->add_responsive_control(
             'icon_spacing',
             [
-                'label' => esc_html__('Icon Spacing', 'xhub'),
+                'label' => esc_html__('Icon Spacing', 'neatify'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -357,7 +357,7 @@ class Counter_Widget extends Widget_Base
 
         // Icon Style Section
         $this->start_controls_section('icon_style_section', [
-            'label' => esc_html__('Icon Style', 'xhub'),
+            'label' => esc_html__('Icon Style', 'neatify'),
             'tab' => Controls_Manager::TAB_STYLE,
         ]);
 
@@ -366,12 +366,12 @@ class Counter_Widget extends Widget_Base
         $this->start_controls_tab(
             'icon_normal_tab',
             [
-                'label' => esc_html__('Normal', 'xhub'),
+                'label' => esc_html__('Normal', 'neatify'),
             ]
         );
 
         $this->add_control('icon_color', [
-            'label' => esc_html__('Icon Color', 'xhub'),
+            'label' => esc_html__('Icon Color', 'neatify'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -380,7 +380,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_control('icon_border_color', [
-            'label' => esc_html__('Border Color', 'xhub'),
+            'label' => esc_html__('Border Color', 'neatify'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -393,12 +393,12 @@ class Counter_Widget extends Widget_Base
         $this->start_controls_tab(
             'icon_hover_tab',
             [
-                'label' => esc_html__('Hover', 'xhub'),
+                'label' => esc_html__('Hover', 'neatify'),
             ]
         );
 
         $this->add_control('icon_hover_color', [
-            'label' => esc_html__('Icon Hover Color', 'xhub'),
+            'label' => esc_html__('Icon Hover Color', 'neatify'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -407,7 +407,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_control('icon_hover_border_color', [
-            'label' => esc_html__('Border Hover Color', 'xhub'),
+            'label' => esc_html__('Border Hover Color', 'neatify'),
             'type' => Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
@@ -420,7 +420,7 @@ class Counter_Widget extends Widget_Base
         $this->end_controls_tabs();
 
         $this->add_control('icon_size', [
-            'label' => esc_html__('Icon Size', 'xhub'),
+            'label' => esc_html__('Icon Size', 'neatify'),
             'type' => Controls_Manager::SLIDER,
             'size_units' => ['px'],
             'range' => [
@@ -440,7 +440,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_control('icon_wrapper_size', [
-            'label' => esc_html__('Icon Wrapper Size', 'xhub'),
+            'label' => esc_html__('Icon Wrapper Size', 'neatify'),
             'type' => Controls_Manager::SLIDER,
             'size_units' => ['px'],
             'range' => [
@@ -459,7 +459,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_control('icon_border_width', [
-            'label' => esc_html__('Border Width', 'xhub'),
+            'label' => esc_html__('Border Width', 'neatify'),
             'type' => Controls_Manager::SLIDER,
             'size_units' => ['px'],
             'range' => [
@@ -481,12 +481,12 @@ class Counter_Widget extends Widget_Base
 
         // Divider Style Section
         $this->start_controls_section('divider_style_section', [
-            'label' => esc_html__('Divider Style', 'xhub'),
+            'label' => esc_html__('Divider Style', 'neatify'),
             'tab' => Controls_Manager::TAB_STYLE,
         ]);
 
         $this->add_control('divider_color', [
-            'label' => esc_html__('Divider Color', 'xhub'),
+            'label' => esc_html__('Divider Color', 'neatify'),
             'type' => Controls_Manager::COLOR,
             'default' => 'rgba(255, 255, 255, 0.1)',
             'selectors' => [
@@ -495,7 +495,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_control('divider_width', [
-            'label' => esc_html__('Divider Width', 'xhub'),
+            'label' => esc_html__('Divider Width', 'neatify'),
             'type' => Controls_Manager::SLIDER,
             'size_units' => ['px', '%'],
             'range' => [
@@ -518,7 +518,7 @@ class Counter_Widget extends Widget_Base
         ]);
 
         $this->add_control('divider_height', [
-            'label' => esc_html__('Divider Height', 'xhub'),
+            'label' => esc_html__('Divider Height', 'neatify'),
             'type' => Controls_Manager::SLIDER,
             'size_units' => ['px'],
             'range' => [
@@ -542,7 +542,7 @@ class Counter_Widget extends Widget_Base
         $this->add_responsive_control(
             'divider_margin',
             [
-                'label' => esc_html__('Divider Margin', 'xhub'),
+                'label' => esc_html__('Divider Margin', 'neatify'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'default' => [

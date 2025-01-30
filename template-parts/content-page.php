@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Xhub
+ * @package Neatify
  */
 
 ?>
@@ -16,7 +16,7 @@
 	    the_content();
 
 	    wp_link_pages( array(
-	        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'xhub' ),
+	        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'neatify' ),
 	        'after'  => '</div>',
 	    ) );
 	    ?>

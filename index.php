@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Xhub
+ * @package Neatify
  */
 
 get_header();
@@ -18,8 +18,8 @@ get_header();
 <div class="entry-content">
 	<div class="container">
 		<div class="row">
-			<div id="primary" class="content-area <?php xhub_content_columns(); ?>">
-				<main id="main" class="site-main <?php xhub_blog_style(); ?>">
+			<div id="primary" class="content-area <?php neatify_content_columns(); ?>">
+				<main id="main" class="site-main <?php neatify_blog_style(); ?>">
 
 				<?php
 				if ( have_posts() ) :
@@ -37,7 +37,7 @@ get_header();
 
 					endwhile;
 
-					xhub_posts_navigation();
+					neatify_posts_navigation();
 
 				else :
 

@@ -13,7 +13,7 @@
 <?php
 
 if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'single' ) ) {
-	xhub_404_builder();
+	neatify_404_builder();
 } 
 
 ?>

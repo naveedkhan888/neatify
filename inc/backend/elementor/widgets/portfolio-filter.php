@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Portfolio Filter
  */
-class Xhub_PortfolioGrid extends Widget_Base{
+class Neatify_PortfolioGrid extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Portfolio Filter', 'xhub' );
+		return __( 'XP Portfolio Filter', 'neatify' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xhub' ];
+		return [ 'category_neatify' ];
 	}
 
 	protected function register_controls() {
@@ -33,41 +33,41 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'General', 'xhub' ),
+				'label' => __( 'General', 'neatify' ),
 			]
 		);
 		$this->add_control(
 			'style',
 			[
-				'label' => __( 'Style Layout', 'xhub' ),
+				'label' => __( 'Style Layout', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'p-grid',
 				'options' => [
-					'p-grid'  	 => __( 'Grid', 'xhub' ),
-					'p-masonry'  => __( 'Masonry', 'xhub' ),
-					'p-metro'  => __( 'Metro', 'xhub' ),
+					'p-grid'  	 => __( 'Grid', 'neatify' ),
+					'p-masonry'  => __( 'Masonry', 'neatify' ),
+					'p-metro'  => __( 'Metro', 'neatify' ),
 				],
 			]
 		);
 		$this->add_control(
 			'project_cat',
 			[
-				'label' => __( 'Select Categories', 'xhub' ),
+				'label' => __( 'Select Categories', 'neatify' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_project(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'xhub' ),
+				'placeholder' => __( 'All Categories', 'neatify' ),
 				'separator' => 'before',
 			]
 		);
 		$this->add_control(
 			'filter',
 			[
-				'label' => __( 'Show Filter', 'xhub' ),
+				'label' => __( 'Show Filter', 'neatify' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'xhub' ),
-				'label_off' => __( 'Hide', 'xhub' ),
+				'label_on' => __( 'Show', 'neatify' ),
+				'label_off' => __( 'Hide', 'neatify' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'separator' => 'before',
@@ -76,7 +76,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'all_text',
 			[
-				'label' => __( 'All Text', 'xhub' ),
+				'label' => __( 'All Text', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'All',
 				'condition' => [
@@ -87,10 +87,10 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'count',
 			[
-				'label' => __( 'Show Count', 'xhub' ),
+				'label' => __( 'Show Count', 'neatify' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'xhub' ),
-				'label_off' => __( 'Hide', 'xhub' ),
+				'label_on' => __( 'Show', 'neatify' ),
+				'label_off' => __( 'Hide', 'neatify' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -101,10 +101,10 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'arrow',
 			[
-				'label' => __( 'Show Arrow', 'xhub' ),
+				'label' => __( 'Show Arrow', 'neatify' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'xhub' ),
-				'label_off' => __( 'Hide', 'xhub' ),
+				'label_on' => __( 'Show', 'neatify' ),
+				'label_off' => __( 'Hide', 'neatify' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -115,14 +115,14 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'column',
 			[
-				'label' => __( 'Columns', 'xhub' ),
+				'label' => __( 'Columns', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'pf_3_cols',
 				'options' => [
-					'pf_2_cols' => __( '2 Column', 'xhub' ),
-					'pf_3_cols'	=> __( '3 Column', 'xhub' ),
-					'pf_4_cols' => __( '4 Column', 'xhub' ),
-					'pf_5_cols' => __( '5 Column', 'xhub' ),
+					'pf_2_cols' => __( '2 Column', 'neatify' ),
+					'pf_3_cols'	=> __( '3 Column', 'neatify' ),
+					'pf_4_cols' => __( '4 Column', 'neatify' ),
+					'pf_5_cols' => __( '5 Column', 'neatify' ),
 				],
 				'separator' => 'before',
 			]
@@ -130,7 +130,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'w_gaps',
 			[
-				'label' => __( 'Gap Width', 'xhub' ),
+				'label' => __( 'Gap Width', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -149,7 +149,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'project_num',
 			[
-				'label' => __( 'Show Number Projects', 'xhub' ),
+				'label' => __( 'Show Number Projects', 'neatify' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '6',
 				'separator' => 'before',
@@ -158,7 +158,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'load_more',
 			[
-				'label' => __( 'Load More Button', 'xhub' ),
+				'label' => __( 'Load More Button', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Load More',
 				'separator' => 'before',
@@ -167,7 +167,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'loading_more',
 			[
-				'label' => __( 'Loading Text', 'xhub' ),
+				'label' => __( 'Loading Text', 'neatify' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Loading...',
 				'condition' => [
@@ -178,7 +178,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'p_more',
 			[
-				'label' => __( 'Load Number Projects', 'xhub' ),
+				'label' => __( 'Load Number Projects', 'neatify' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '3',
 				'condition' => [
@@ -189,13 +189,13 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'layout',
 			[
-				'label' => __( 'Info Box Style', 'xhub' ),
+				'label' => __( 'Info Box Style', 'neatify' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style-1',
 				'options' => [
-					'style-1'  	=> __( 'Background Overlay', 'xhub' ),
-					'style-2' 	=> __( 'Background Solid', 'xhub' ),
-					'style-3' 	=> __( 'Hidden', 'xhub' ),
+					'style-1'  	=> __( 'Background Overlay', 'neatify' ),
+					'style-2' 	=> __( 'Background Solid', 'neatify' ),
+					'style-3' 	=> __( 'Hidden', 'neatify' ),
 				],
 				'separator' => 'before',
 			]
@@ -203,10 +203,10 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'popup_thumb',
 			[
-				'label' => __( 'Popup Gallery', 'xhub' ),
+				'label' => __( 'Popup Gallery', 'neatify' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'xhub' ),
-				'label_off' => __( 'No', 'xhub' ),
+				'label_on' => __( 'Yes', 'neatify' ),
+				'label_off' => __( 'No', 'neatify' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -220,7 +220,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->start_controls_section(
 			'filter_style_section',
 			[
-				'label' => __( 'Filter', 'xhub' ),
+				'label' => __( 'Filter', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'filter' => 'yes',
@@ -230,19 +230,19 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'filter_align',
 			[
-				'label' => __( 'Alignment', 'xhub' ),
+				'label' => __( 'Alignment', 'neatify' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xhub' ),
+						'title' => __( 'Left', 'neatify' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xhub' ),
+						'title' => __( 'Center', 'neatify' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xhub' ),
+						'title' => __( 'Right', 'neatify' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -255,7 +255,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'filter_spacing',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -271,7 +271,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'filter_color',
 			[
-				'label' => __( 'Button Color', 'xhub' ),
+				'label' => __( 'Button Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -282,7 +282,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'filter_hcolor',
 			[
-				'label' => __( 'Active Color', 'xhub' ),
+				'label' => __( 'Active Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -300,7 +300,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'count_color',
 			[
-				'label' => __( 'Count Color', 'xhub' ),
+				'label' => __( 'Count Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -328,14 +328,14 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->start_controls_section(
 			'overlay_style_section',
 			[
-				'label' => __( 'Project Items', 'xhub' ),
+				'label' => __( 'Project Items', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'xhub' ),
+				'label' => __( 'General', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -343,19 +343,19 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'overlay_align',
 			[
-				'label' => __( 'Alignment Info', 'xhub' ),
+				'label' => __( 'Alignment Info', 'neatify' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xhub' ),
+						'title' => __( 'Left', 'neatify' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xhub' ),
+						'title' => __( 'Center', 'neatify' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xhub' ),
+						'title' => __( 'Right', 'neatify' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -370,20 +370,20 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'position',
 			[
-				'label' => __( 'Position Info', 'xhub' ),
+				'label' => __( 'Position Info', 'neatify' ),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'top',
 				'options' => [
 					'flex-start' => [
-						'title' => __( 'Top', 'xhub' ),
+						'title' => __( 'Top', 'neatify' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'center' => [
-						'title' => __( 'Middle', 'xhub' ),
+						'title' => __( 'Middle', 'neatify' ),
 						'icon' => 'eicon-v-align-middle',
 					],
 					'flex-end' => [
-						'title' => __( 'Bottom', 'xhub' ),
+						'title' => __( 'Bottom', 'neatify' ),
 						'icon' => 'eicon-v-align-bottom',
 					],
 				],
@@ -398,7 +398,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'overlay_background',
 			[
-				'label' => __( 'Background Overlay', 'xhub' ),
+				'label' => __( 'Background Overlay', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -412,7 +412,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'info_background',
 			[
-				'label' => __( 'Background Info', 'xhub' ),
+				'label' => __( 'Background Info', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -440,10 +440,10 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'scale_thumb',
 			[
-				'label' => __( 'Animation Image Hover', 'xhub' ),
+				'label' => __( 'Animation Image Hover', 'neatify' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'xhub' ),
-				'label_off' => __( 'No', 'xhub' ),
+				'label_on' => __( 'Yes', 'neatify' ),
+				'label_off' => __( 'No', 'neatify' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -451,7 +451,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'radius_thumb',
 			[
-				'label' => __( 'Border Radius Image', 'xhub' ),
+				'label' => __( 'Border Radius Image', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -469,7 +469,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'heading_icon',
 			[
-				'label' => __( 'Icon Button', 'xhub' ),
+				'label' => __( 'Icon Button', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -480,10 +480,10 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'show_icon',
 			[
-				'label' => __( 'Show Button', 'xhub' ),
+				'label' => __( 'Show Button', 'neatify' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'xhub' ),
-				'label_off' => __( 'Hide', 'xhub' ),
+				'label_on' => __( 'Show', 'neatify' ),
+				'label_off' => __( 'Hide', 'neatify' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -494,7 +494,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -509,7 +509,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'icon_bg',
 			[
-				'label' => __( 'Background', 'xhub' ),
+				'label' => __( 'Background', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -526,7 +526,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xhub' ),
+				'label' => __( 'Title', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -537,7 +537,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -556,7 +556,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -570,7 +570,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'xhub' ),
+				'label' => __( 'Hover Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -596,7 +596,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'heading_cat',
 			[
-				'label' => __( 'Category', 'xhub' ),
+				'label' => __( 'Category', 'neatify' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -607,10 +607,10 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'show_cat',
 			[
-				'label' => __( 'Show Category', 'xhub' ),
+				'label' => __( 'Show Category', 'neatify' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'xhub' ),
-				'label_off' => __( 'Hide', 'xhub' ),
+				'label_on' => __( 'Show', 'neatify' ),
+				'label_off' => __( 'Hide', 'neatify' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -621,7 +621,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'cat_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -637,7 +637,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'cat_hcolor',
 			[
-				'label' => __( 'Hover', 'xhub' ),
+				'label' => __( 'Hover', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -666,7 +666,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Load More Button', 'xhub' ),
+				'label' => __( 'Load More Button', 'neatify' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'load_more[value]!' => '',
@@ -677,19 +677,19 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_align',
 			[
-				'label' => __( 'Alignment', 'xhub' ),
+				'label' => __( 'Alignment', 'neatify' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xhub' ),
+						'title' => __( 'Left', 'neatify' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xhub' ),
+						'title' => __( 'Center', 'neatify' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xhub' ),
+						'title' => __( 'Right', 'neatify' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -702,7 +702,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_spacing',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'neatify' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -721,14 +721,14 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'xhub' ),
+				'label' => __( 'Normal', 'neatify' ),
 			]
 		);
 
 		$this->add_control(
 			'button_text_color',
 			[
-				'label' => __( 'Text Color', 'xhub' ),
+				'label' => __( 'Text Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -740,7 +740,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'background_color',
 			[
-				'label' => __( 'Background Color', 'xhub' ),
+				'label' => __( 'Background Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .xptf-btn' => 'background-color: {{VALUE}};',
@@ -753,14 +753,14 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'xhub' ),
+				'label' => __( 'Hover', 'neatify' ),
 			]
 		);
 
 		$this->add_control(
 			'hover_color',
 			[
-				'label' => __( 'Text Color', 'xhub' ),
+				'label' => __( 'Text Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'color: {{VALUE}};',
@@ -771,7 +771,7 @@ class Xhub_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'button_background_hover_color',
 			[
-				'label' => __( 'Background Color', 'xhub' ),
+				'label' => __( 'Background Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'background-color: {{VALUE}};',
@@ -914,4 +914,4 @@ class Xhub_PortfolioGrid extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_PortfolioGrid() );
+Plugin::instance()->widgets_manager->register( new Neatify_PortfolioGrid() );
