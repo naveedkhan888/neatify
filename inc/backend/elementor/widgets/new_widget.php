@@ -766,9 +766,9 @@ class Triple_Widget_Container extends Widget_Base
                             <div class="custom-widget__heading">
                                 <<?php echo esc_attr($item['heading_tag']); ?> class="custom-heading">
                                     <?php if (!empty($item['widget_link']['url'])) : ?>
-                                        <a href="<?php echo esc_url($item['link_url']); ?>" 
-                                           target="<?php echo esc_attr($item['link_target']); ?>" 
-                                           rel="<?php echo esc_attr($item['link_rel']); ?>" 
+                                        <a href="<?php echo esc_url($item['widget_link']['url']); ?>" 
+                                           target="<?php echo !empty($item['widget_link']['is_external']) ? '_blank' : '_self'; ?>" 
+                                           rel="<?php echo !empty($item['widget_link']['nofollow']) ? 'nofollow' : ''; ?>" 
                                            class="custom-heading-link">
                                             <?php echo esc_html($item['heading']); ?>
                                         </a>
