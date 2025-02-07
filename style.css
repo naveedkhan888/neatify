@@ -9045,7 +9045,12 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   display: inline-block;
   font-family: xpicon !important;
   transition: all 0.3s ease-out;
-  
+  margin: 0 0 -70px 0;
+  opacity: 0;
+}
+.xpic-card:hover .xpic-title-box a::after {
+  margin: 0;
+  opacity: 1;
 }
 
 /* Hide Original Link */
