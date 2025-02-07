@@ -8979,6 +8979,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 1;
   z-index: 1;
   transition: all 0.3s ease;
 }
@@ -9005,7 +9006,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 30px;
+  padding: 25px 30px;
   z-index: 2;
   
 }
