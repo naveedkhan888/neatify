@@ -8984,11 +8984,19 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   transition: all 0.3s ease;
 }
 
+.link_h_bx {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
 
 /* Image Styles */
 .xpic-card img {
   width: 100%;
-  height: 450px;
   object-fit: cover;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   backface-visibility: hidden;
@@ -8997,7 +9005,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 }
 
 .xpic-card:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* Content Area */
