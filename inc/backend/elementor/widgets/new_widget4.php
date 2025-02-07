@@ -775,7 +775,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
                     $this->add_render_attribute('m_link' . $key, 'class', 'xpic-link font-second');
                 ?>
                     <div class="xpic-card">
-                        <a href="<?php echo esc_url($boxes['url']); ?>" class="class_name"></a>
+                        <a href="<?php echo esc_url(['url']); ?>" class="class_name"></a>
                         <?php if ($boxes['image_box']['url']) {
                             echo wp_kses_post($photo);
                         ?>
