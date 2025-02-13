@@ -752,7 +752,7 @@ WooCommerce styles override
   font-weight: 600;
 }
 .woocommerce .site ul.product_list_widget li {
-  margin-bottom: 28px;
+  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -764,6 +764,7 @@ WooCommerce styles override
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 .woocommerce .site ul.product_list_widget li .widget-prthumb img {
   width: 70px;
