@@ -56,7 +56,7 @@ if(!function_exists('neatify_color_scheme')){
 
 
 	  	//Main Color
-	  	if( neatify_get_option('main_color') != '#C19977' ){
+	  	if( neatify_get_option('main_color') != '#2ab97e' ){
 			$color_scheme = 
 			'
 		  	/****Main Color****/

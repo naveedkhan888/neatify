@@ -1102,7 +1102,7 @@ function neatify_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Primary Color', 'neatify' ),
             'section'  => 'color_scheme',
-            'default'  => '#C19977',
+            'default'  => '#2ab97e',
             'priority' => 10,
         ),
         'heading_color'   => array(

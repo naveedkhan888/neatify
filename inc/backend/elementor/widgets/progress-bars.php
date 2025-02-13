@@ -132,7 +132,7 @@ class Neatify_Progress_Bars extends Widget_Base{
 			[
 				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '#C19977',
+				'default' => '#2ab97e',
 				'condition' => [
 					'bar_style' => 'circle',
 				]
@@ -181,7 +181,7 @@ class Neatify_Progress_Bars extends Widget_Base{
 			[
 				'label' => __( 'Color', 'neatify' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '#C19977',
+				'default' => '#2ab97e',
 				'selectors' => [
 					'{{WRAPPER}} .progress-bar' => 'background: {{VALUE}};',
 				],
